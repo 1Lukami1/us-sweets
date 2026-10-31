@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – [NÁZEV]</title>
+  <meta name="description" content="Máš dotaz k objednávce nebo ke krabicím? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
+  <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14254a">
+
+  <!-- Open Graph (náhled při sdílení odkazu) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="[NÁZEV]">
+  <meta property="og:title" content="Kontakt – [NÁZEV]">
+  <meta property="og:description" content="Máš dotaz k objednávce nebo ke krabicím? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
+  <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c1121f'/%3E%3Cpath fill='%23fff8e7' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="site-header" id="nahoru">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__star" aria-hidden="true">★</span> [NÁZEV]</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" tabindex="-1">
+    <section class="page-hero on-dark">
+      <div class="container">
+        <h1>Kontakt</h1>
+        <p class="page-hero__lead">Máš dotaz k objednávce nebo ke krabicím? Napiš nám, rádi poradíme.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="napis-nadpis">
+      <div class="container">
+        <h2 class="section-title" id="napis-nadpis">Napiš nám</h2>
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="info-card__icon" aria-hidden="true">✉️</span>
+            <h3>E-mail</h3>
+            <p><a class="contact-link" href="mailto:[E-MAIL]">[E-MAIL]</a></p>
+            <p>Pro dotazy k objednávkám, krabicím i dopravě.</p>
+          </article>
+          <article class="info-card">
+            <span class="info-card__icon" aria-hidden="true">📸</span>
+            <h3>Instagram</h3>
+            <p><a class="contact-link" href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></p>
+            <p>Novinky, nové krabice a ukázky, co v nich najdeš.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="prodavajici" aria-labelledby="prodavajici-nadpis">
+      <div class="container narrow">
+        <h2 class="section-title" id="prodavajici-nadpis">Údaje prodávajícího</h2>
+        <div class="info-card">
+          <address class="seller">
+            <dl class="specs">
+              <div><dt>Prodávající</dt><dd>[JMÉNO A PŘÍJMENÍ]</dd></div>
+              <div><dt>Adresa</dt><dd>[ULICE A ČÍSLO, PSČ MĚSTO]</dd></div>
+              <div><dt>IČO</dt><dd>[IČO]</dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:[E-MAIL]">[E-MAIL]</a></dd></div>
+            </dl>
+          </address>
+          <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="container site-footer__grid">
+      <div>
+        <p class="site-footer__logo"><span aria-hidden="true">★</span> [NÁZEV]</p>
+        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
+      </div>
+
+      <nav aria-labelledby="paticka-stranky">
+        <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
+        <ul class="site-footer__list">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__title">Napiš nám</h2>
+        <ul class="site-footer__list">
+          <li><a href="mailto:[E-MAIL]">[E-MAIL]</a></li>
+          <li><a href="https://www.instagram.com/[ÚČET]/">Instagram [@ÚČET]</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>© 2026 [NÁZEV]</p>
+        <ul class="site-footer__legal">
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+        </ul>
+        <a href="#nahoru">Nahoru <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
