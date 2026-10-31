@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[NÁZEV] – dárkové krabice s americkými sladkostmi</title>
+  <meta name="description" content="Dárkové krabice plné amerických sladkostí, slaných snacků a nápojů. Vyber velikost a téma, objednej a potěš sebe nebo své blízké.">
+  <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14254a">
+
+  <!-- Open Graph (náhled při sdílení odkazu) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="[NÁZEV]">
+  <meta property="og:title" content="[NÁZEV] – dárkové krabice s americkými sladkostmi">
+  <meta property="og:description" content="Dárkové krabice plné amerických sladkostí, slaných snacků a nápojů. Vyber velikost a téma, objednej a potěš sebe nebo své blízké.">
+  <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c1121f'/%3E%3Cpath fill='%23fff8e7' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <header class="site-header" id="nahoru">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html"><span class="logo__star" aria-hidden="true">★</span> [NÁZEV]</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
+        <ul class="site-nav__list">
+          <li><a href="index.html" aria-current="page">Domů</a></li>
+          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="obsah" tabindex="-1">
+    <section class="hero on-dark" aria-labelledby="hero-nadpis">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Sladkosti · Snacky · Nápoje</p>
+          <h1 class="hero__title" id="hero-nadpis">[NÁZEV]</h1>
+          <p class="hero__slogan">Kousek Ameriky v dárkové krabici!</p>
+          <p class="hero__lead">Americké sladkosti, slané snacky a nápoje poskládané do krabice, která udělá radost. Kamarádovi, rodině, nebo jen tak sobě.</p>
+          <div class="btn-row">
+            <a class="btn btn--large" href="objednavka.html">Objednat</a>
+            <a class="btn btn--light" href="#jak-to-funguje">Jak to funguje?</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="placeholder placeholder--hero" role="img" aria-label="Zástupný obrázek: dárková krabice plná amerických dobrot">
+            <span aria-hidden="true">🎁</span>
+          </div>
+          <p class="sticker">od<br>390&nbsp;Kč</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="co-najdes-nadpis">
+      <div class="container">
+        <h2 class="section-title" id="co-najdes-nadpis">Co v krabici najdeš</h2>
+        <ul class="goodies">
+          <li class="goodies__item">
+            <span class="goodies__icon" aria-hidden="true">🍫</span>
+            <div>
+              <h3 class="goodies__title">Sladkosti</h3>
+              <p class="goodies__text">Čokolády, bonbony, sušenky a další mlsání.</p>
+            </div>
+          </li>
+          <li class="goodies__item">
+            <span class="goodies__icon" aria-hidden="true">🥨</span>
+            <div>
+              <h3 class="goodies__title">Slané snacky</h3>
+              <p class="goodies__text">Chipsy, preclíky a další křupavé dobroty.</p>
+            </div>
+          </li>
+          <li class="goodies__item">
+            <span class="goodies__icon" aria-hidden="true">🥤</span>
+            <div>
+              <h3 class="goodies__title">Nápoje</h3>
+              <p class="goodies__text">Limonády a pití s typickou americkou chutí.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tinted" id="jak-to-funguje" aria-labelledby="jak-nadpis">
+      <div class="container">
+        <h2 class="section-title" id="jak-nadpis">Jak to funguje</h2>
+        <p class="section-lead">Tři jednoduché kroky a dárek je na cestě.</p>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">📦</span>
+            <h3 class="step__title">Vyber krabici</h3>
+            <p>Malá, střední, nebo velká? K tomu téma podle chuti: gamer, pálivé, sladké, nebo vánoční.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">📝</span>
+            <h3 class="step__title">Vyplň objednávku</h3>
+            <p>Krátký online formulář zabere pár minut. Pak se ti ozveme e-mailem a objednávku potvrdíme.</p>
+          </li>
+          <li class="step">
+            <span class="step__icon" aria-hidden="true">🎉</span>
+            <h3 class="step__title">Těš se na dárek</h3>
+            <p>Krabici ti předáme osobně, nebo ji pošleme Zásilkovnou. Pak už jen rozbalit a mlsat!</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="krabice" aria-labelledby="krabice-nadpis">
+      <div class="container">
+        <h2 class="section-title" id="krabice-nadpis">Naše krabice</h2>
+        <p class="section-lead">Tři velikosti, čtyři témata. Vyber tu, která potěší nejvíc.</p>
+
+        <ul class="card-grid">
+          <li>
+            <article class="card">
+              <div class="placeholder placeholder--blue" role="img" aria-label="Zástupný obrázek: krabice Malý">
+                <span aria-hidden="true">🎁</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Malý</h3>
+                <p class="card__text">Malá pozornost, velká radost. Ideální jako drobný dárek nebo první ochutnávka.</p>
+                <div class="card__footer">
+                  <p class="price">390 Kč</p>
+                  <a class="btn btn--secondary btn--block" href="krabice.html?velikost=maly">Prohlédnout <span class="visually-hidden">krabice Malý</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <p class="card__badge">Náš tip</p>
+              <div class="placeholder placeholder--red" role="img" aria-label="Zástupný obrázek: krabice Střední">
+                <span aria-hidden="true">🎁🎁</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Střední</h3>
+                <p class="card__text">Zlatá střední cesta. Pořádná porce sladkého, slaného i něčeho na zapití.</p>
+                <div class="card__footer">
+                  <p class="price">690 Kč</p>
+                  <a class="btn btn--secondary btn--block" href="krabice.html?velikost=stredni">Prohlédnout <span class="visually-hidden">krabice Střední</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <div class="placeholder placeholder--navy" role="img" aria-label="Zástupný obrázek: krabice Velký">
+                <span aria-hidden="true">🎁🎁🎁</span>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">Velký</h3>
+                <p class="card__text">Pro velké mlsouny a společné večery. Tahle krabice jen tak nedojde.</p>
+                <div class="card__footer">
+                  <p class="price">990 Kč</p>
+                  <a class="btn btn--secondary btn--block" href="krabice.html?velikost=velky">Prohlédnout <span class="visually-hidden">krabice Velký</span></a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <h3 class="text-center">Vyber si téma</h3>
+        <ul class="chips">
+          <li><a class="chip" href="krabice.html?tema=gamer"><span aria-hidden="true">🎮</span> Gamer</a></li>
+          <li><a class="chip" href="krabice.html?tema=palivy"><span aria-hidden="true">🌶️</span> Pálivý</a></li>
+          <li><a class="chip" href="krabice.html?tema=sladky"><span aria-hidden="true">🍬</span> Sladký</a></li>
+          <li><a class="chip" href="krabice.html?tema=vanocni"><span aria-hidden="true">🎄</span> Vánoční</a></li>
+        </ul>
+
+        <div class="btn-row btn-row--center">
+          <a class="btn btn--large" href="krabice.html">Zobrazit všechny krabice</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-nadpis">
+      <div class="container">
+        <div class="cta">
+          <h2 id="cta-nadpis">Hledáš dárek, který překvapí?</h2>
+          <p>Krabice plná amerických dobrot potěší k narozeninám, k Vánocům i jen tak pro radost.</p>
+          <a class="btn btn--large" href="objednavka.html">Objednat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="container site-footer__grid">
+      <div>
+        <p class="site-footer__logo"><span aria-hidden="true">★</span> [NÁZEV]</p>
+        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
+      </div>
+
+      <nav aria-labelledby="paticka-stranky">
+        <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
+        <ul class="site-footer__list">
+          <li><a href="index.html" aria-current="page">Domů</a></li>
+          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="site-footer__title">Napiš nám</h2>
+        <ul class="site-footer__list">
+          <li><a href="mailto:[E-MAIL]">[E-MAIL]</a></li>
+          <li><a href="https://www.instagram.com/[ÚČET]/">Instagram [@ÚČET]</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <p>© 2026 [NÁZEV]</p>
+        <ul class="site-footer__legal">
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+        </ul>
+        <a href="#nahoru">Nahoru <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
