@@ -18,7 +18,17 @@ Stačí otevřít `index.html` v prohlížeči, žádný server ani instalace ne
 | `ochrana-osobnich-udaju.html` | Kostra s nadpisy |
 | `css/style.css` | Veškeré styly, barvy a písma jsou v proměnných na začátku souboru |
 | `js/script.js` | Mobilní menu, filtr krabic, hladké rolování |
+| `fonts/` | Písmo Yellowtail pro nadpisy (uložené lokálně, žádné načítání z Google; licence v `fonts/LICENSE.txt`) |
 | `img/` | Zatím prázdné (místo fotek jsou zástupné bloky s emoji) |
+
+## Vzhled
+
+Retro americký diner: paprsky za úvodním nadpisem, šachovnice, chromová lišta,
+jídelní lístek s tečkovanými cenami, cenovky ve tvaru hvězdy, visačky, razítka,
+vstupenka s výzvou k objednání, poštovní známky (doprava), účtenky (platba)
+a pohlednice s okrajem letecké pošty (kontakt). Barvy a písma jsou
+v proměnných na začátku `css/style.css`. Ilustrace na úvodní stránce jsou
+kreslené přímo v HTML jako SVG, takže nepotřebují žádné soubory.
 
 Hlavička a patička jsou na všech stránkách stejné. Když je měníš, uprav je ve všech 7 souborech.
 Aktivní stránka se v menu označuje atributem `aria-current="page"`.
