@@ -7,7 +7,7 @@
   <meta name="description" content="Objednávka dárkové krabice zabere pár minut: vyber krabici, vyplň krátký formulář a počkej na potvrzení e-mailem.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#14254a">
+  <meta name="theme-color" content="#1f3557">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:description" content="Objednávka dárkové krabice zabere pár minut: vyber krabici, vyplň krátký formulář a počkej na potvrzení e-mailem.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c1121f'/%3E%3Cpath fill='%23fff8e7' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,8 +25,12 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
+    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html"><span class="logo__star" aria-hidden="true">★</span> [NÁZEV]</a>
+      <a class="logo" href="index.html">
+        <span class="logo__name">[NÁZEV]</span>
+        <span class="logo__tag">americké dobroty</span>
+      </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -46,56 +50,65 @@
   </header>
 
   <main id="obsah" tabindex="-1">
-    <section class="page-hero on-dark">
+    <section class="page-hero">
       <div class="container">
-        <h1>Jak objednat</h1>
-        <p class="page-hero__lead">Objednávka zabere jen pár minut. Tady je celý postup krok za krokem.</p>
+        <p class="kicker kicker--light">Krok za krokem</p>
+        <h1 class="page-hero__title">Jak objednat</h1>
+        <p class="page-hero__lead">Objednávka zabere jen pár minut. Tady je celý postup.</p>
       </div>
     </section>
 
     <section class="section" id="postup" aria-labelledby="postup-nadpis">
       <div class="container">
-        <h2 class="section-title" id="postup-nadpis">Postup objednávky</h2>
-        <ol class="steps steps--timeline">
-          <li class="step">
-            <h3 class="step__title"><span aria-hidden="true">📦</span> Vyber krabici</h3>
-            <p>Na stránce <a href="krabice.html">Krabice</a> si vyber velikost a téma.</p>
-          </li>
-          <li class="step">
-            <h3 class="step__title"><span aria-hidden="true">📝</span> Vyplň objednávkový formulář</h3>
-            <p>Uveď, jakou krabici chceš, způsob dopravy a platby a kontakt na sebe. Do poznámky můžeš připsat přání nebo dotaz.</p>
-          </li>
-          <li class="step">
-            <h3 class="step__title"><span aria-hidden="true">📧</span> Počkej na potvrzení</h3>
-            <p>Ozveme se ti e-mailem, objednávku potvrdíme a pošleme platební údaje.</p>
-          </li>
-          <li class="step">
-            <h3 class="step__title"><span aria-hidden="true">💳</span> Zaplať</h3>
-            <p>Převodem na účet, nebo hotově při osobním předání. Podrobnosti najdeš na stránce <a href="doprava-a-platba.html">Doprava a platba</a>.</p>
-          </li>
-          <li class="step">
-            <h3 class="step__title"><span aria-hidden="true">🎁</span> Převezmi krabici</h3>
-            <p>Osobně, nebo na výdejním místě Zásilkovny. A pak už jen rozbalit a mlsat!</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="formular" aria-labelledby="formular-nadpis">
-      <div class="container">
-        <div class="form-cta">
-          <h2 id="formular-nadpis">Objednávkový formulář</h2>
-          <p>Objednávku vyřídíme přes krátký online formulář. Před odesláním si prosím přečti <a href="obchodni-podminky.html">obchodní podmínky</a>. Údaje z formuláře použijeme jen k vyřízení objednávky, více v <a href="ochrana-osobnich-udaju.html">ochraně osobních údajů</a>.</p>
-          <!-- DOPLNIT: href="#formular" nahraď odkazem na Google formulář ([odkaz na Google formulář]) a smaž poznámku pod tlačítkem. -->
-          <a class="btn btn--large" href="#formular">Vyplnit objednávkový formulář</a>
-          <p class="form-cta__note">Odkaz na formulář doplníme před spuštěním webu.</p>
+        <h2 class="title" id="postup-nadpis">Postup objednávky</h2>
+        <div class="check">
+          <p class="check__head" aria-hidden="true"><span>Objednávka</span><span>č. ______</span></p>
+          <ol class="check__list">
+            <li class="check__row">
+              <h3 class="check__title">Vyber krabici</h3>
+              <p>Na stránce <a href="krabice.html">Krabice</a> si vyber velikost a téma.</p>
+            </li>
+            <li class="check__row">
+              <h3 class="check__title">Vyplň objednávkový formulář</h3>
+              <p>Uveď, jakou krabici chceš, způsob dopravy a platby a kontakt na sebe. Do poznámky můžeš připsat přání nebo dotaz.</p>
+            </li>
+            <li class="check__row">
+              <h3 class="check__title">Počkej na potvrzení</h3>
+              <p>Ozveme se ti e-mailem, objednávku potvrdíme a pošleme platební údaje.</p>
+            </li>
+            <li class="check__row">
+              <h3 class="check__title">Zaplať</h3>
+              <p>Převodem na účet, nebo hotově při osobním předání. Podrobnosti najdeš na stránce <a href="doprava-a-platba.html">Doprava a platba</a>.</p>
+            </li>
+            <li class="check__row">
+              <h3 class="check__title">Převezmi krabici</h3>
+              <p>Osobně, nebo na výdejním místě Zásilkovny. A pak už jen rozbalit a mlsat!</p>
+            </li>
+          </ol>
+          <p class="check__total" aria-hidden="true"><span>Celkem</span><span>spousta radosti</span></p>
         </div>
       </div>
     </section>
 
-    <section class="section section--tinted" id="dotazy" aria-labelledby="dotazy-nadpis">
+    <section class="section section--sky" id="formular" aria-labelledby="formular-nadpis">
+      <div class="container">
+        <div class="ticket">
+          <div class="ticket__main">
+            <h2 class="ticket__title" id="formular-nadpis">Objednávkový formulář</h2>
+            <p>Objednávku vyřídíme přes krátký online formulář. Před odesláním si prosím přečti <a href="obchodni-podminky.html">obchodní podmínky</a>. Údaje z formuláře použijeme jen k vyřízení objednávky, více v <a href="ochrana-osobnich-udaju.html">ochraně osobních údajů</a>.</p>
+          </div>
+          <div class="ticket__stub">
+            <!-- DOPLNIT: href="#formular" nahraď odkazem na Google formulář ([odkaz na Google formulář]) a smaž poznámku pod tlačítkem. -->
+            <a class="btn btn--cream btn--large" href="#formular">Vyplnit formulář</a>
+            <p class="ticket__note">Odkaz doplníme před spuštěním.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dotazy" aria-labelledby="dotazy-nadpis">
       <div class="container narrow">
-        <h2 class="section-title" id="dotazy-nadpis">Časté dotazy</h2>
+        <h2 class="title" id="dotazy-nadpis">Časté dotazy</h2>
         <div class="faq">
           <details>
             <summary>Je krabice připravená jako dárek?</summary>
@@ -118,11 +131,12 @@
     </section>
   </main>
 
-  <footer class="site-footer on-dark">
+  <footer class="site-footer">
     <div class="container site-footer__grid">
-      <div>
-        <p class="site-footer__logo"><span aria-hidden="true">★</span> [NÁZEV]</p>
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">[NÁZEV]</p>
         <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
+        <p class="neon">Díky a zase přijď!</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">

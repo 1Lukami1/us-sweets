@@ -7,7 +7,7 @@
   <meta name="description" content="Krabici předáme osobně, nebo ji pošleme Zásilkovnou. Zaplatit můžeš bankovním převodem, nebo hotově při osobním předání.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#14254a">
+  <meta name="theme-color" content="#1f3557">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:description" content="Krabici předáme osobně, nebo ji pošleme Zásilkovnou. Zaplatit můžeš bankovním převodem, nebo hotově při osobním předání.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c1121f'/%3E%3Cpath fill='%23fff8e7' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,8 +25,12 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
+    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html"><span class="logo__star" aria-hidden="true">★</span> [NÁZEV]</a>
+      <a class="logo" href="index.html">
+        <span class="logo__name">[NÁZEV]</span>
+        <span class="logo__tag">americké dobroty</span>
+      </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -46,97 +50,116 @@
   </header>
 
   <main id="obsah" tabindex="-1">
-    <section class="page-hero on-dark">
+    <section class="page-hero">
       <div class="container">
-        <h1>Doprava a platba</h1>
+        <p class="kicker kicker--light">Jak se k tobě dostane</p>
+        <h1 class="page-hero__title">Doprava a platba</h1>
         <p class="page-hero__lead">Krabici ti předáme osobně, nebo ji pošleme Zásilkovnou. Zaplatit můžeš převodem nebo hotově.</p>
-        <ul class="anchor-nav">
-          <li><a class="chip" href="#doprava"><span aria-hidden="true">🚚</span> Doprava</a></li>
-          <li><a class="chip" href="#platba"><span aria-hidden="true">💳</span> Platba</a></li>
+        <ul class="tags">
+          <li><a class="tag" href="#doprava">Doprava</a></li>
+          <li><a class="tag" href="#platba">Platba</a></li>
         </ul>
       </div>
     </section>
 
     <section class="section" id="doprava" aria-labelledby="doprava-nadpis">
       <div class="container">
-        <h2 class="section-title" id="doprava-nadpis">Doprava</h2>
-        <div class="info-grid">
-          <article class="info-card">
-            <span class="info-card__icon" aria-hidden="true">🤝</span>
-            <h3>Osobní předání</h3>
-            <p>Krabici si převezmeš osobně. Místo a čas spolu domluvíme e-mailem.</p>
-            <dl class="specs">
-              <div><dt>Místo</dt><dd>doplníme</dd></div>
-              <div><dt>Cena</dt><dd>doplníme</dd></div>
-            </dl>
-          </article>
-          <article class="info-card">
-            <span class="info-card__icon" aria-hidden="true">📦</span>
-            <h3>Zásilkovna</h3>
-            <p>Krabici pošleme na výdejní místo, které si vybereš. Jakmile tam dorazí, dostaneš zprávu.</p>
-            <dl class="specs">
-              <div><dt>Cena</dt><dd>doplníme</dd></div>
-              <div><dt>Doba doručení</dt><dd>doplníme</dd></div>
-            </dl>
-          </article>
-        </div>
+        <h2 class="title" id="doprava-nadpis">Doprava</h2>
+        <ul class="stamps">
+          <li>
+            <article class="stamp-card">
+              <div class="stamp-card__inner">
+                <p class="stamp-card__label">Doprava 1</p>
+                <h3 class="stamp-card__title">Osobní předání</h3>
+                <p>Krabici si převezmeš osobně. Místo a čas spolu domluvíme e-mailem.</p>
+                <dl class="specs">
+                  <div><dt>Místo</dt><dd>doplníme</dd></div>
+                  <div><dt>Cena</dt><dd>doplníme</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="stamp-card">
+              <div class="stamp-card__inner">
+                <p class="stamp-card__label">Doprava 2</p>
+                <h3 class="stamp-card__title">Zásilkovna</h3>
+                <p>Krabici pošleme na výdejní místo, které si vybereš. Jakmile tam dorazí, dostaneš zprávu.</p>
+                <dl class="specs">
+                  <div><dt>Cena</dt><dd>doplníme</dd></div>
+                  <div><dt>Doba doručení</dt><dd>doplníme</dd></div>
+                </dl>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section section--tinted" id="platba" aria-labelledby="platba-nadpis">
+    <section class="section section--sky" id="platba" aria-labelledby="platba-nadpis">
       <div class="container">
-        <h2 class="section-title" id="platba-nadpis">Platba</h2>
-        <div class="info-grid">
-          <article class="info-card">
-            <span class="info-card__icon" aria-hidden="true">🏦</span>
-            <h3>Bankovní převod</h3>
-            <p>Číslo účtu a variabilní symbol ti pošleme e-mailem spolu s potvrzením objednávky. Krabici předáme nebo odešleme, jakmile platba dorazí na účet.</p>
-          </article>
-          <article class="info-card">
-            <span class="info-card__icon" aria-hidden="true">💵</span>
-            <h3>Hotově</h3>
-            <p>Při osobním předání. Pokud můžeš, připrav si prosím přesnou částku.</p>
-          </article>
-        </div>
+        <h2 class="title" id="platba-nadpis">Platba</h2>
+        <ul class="receipts">
+          <li class="receipt-wrap">
+            <article class="receipt">
+              <p class="receipt__head">Platba 1</p>
+              <h3 class="receipt__title">Bankovní převod</h3>
+              <p>Číslo účtu a variabilní symbol ti pošleme e-mailem spolu s potvrzením objednávky. Krabici předáme nebo odešleme, jakmile platba dorazí na účet.</p>
+              <p class="receipt__foot" aria-hidden="true">* * * děkujeme * * *</p>
+            </article>
+          </li>
+          <li class="receipt-wrap">
+            <article class="receipt">
+              <p class="receipt__head">Platba 2</p>
+              <h3 class="receipt__title">Hotově</h3>
+              <p>Při osobním předání. Pokud můžeš, připrav si prosím přesnou částku.</p>
+              <p class="receipt__foot" aria-hidden="true">* * * děkujeme * * *</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="table-wrap">
-          <table class="table">
-            <caption>Co se s čím dá kombinovat</caption>
-            <thead>
-              <tr>
-                <th scope="col">Doprava</th>
-                <th scope="col">Převodem</th>
-                <th scope="col">Hotově</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Osobní předání</th>
-                <td class="yes"><span aria-hidden="true">✔</span> Ano</td>
-                <td class="yes"><span aria-hidden="true">✔</span> Ano</td>
-              </tr>
-              <tr>
-                <th scope="row">Zásilkovna</th>
-                <td class="yes"><span aria-hidden="true">✔</span> Ano</td>
-                <td class="no"><span aria-hidden="true">✘</span> Ne</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="notice">
-          <span class="notice__icon" aria-hidden="true">ℹ️</span>
-          <p>Platbu na dobírku ani platbu kartou online zatím nenabízíme.</p>
+    <section class="section" aria-labelledby="kombinace-nadpis">
+      <div class="container">
+        <div class="board board--narrow">
+          <h2 class="title" id="kombinace-nadpis">Co jde dohromady</h2>
+          <div class="table-scroll">
+            <table class="table">
+              <caption class="visually-hidden">Kombinace dopravy a platby</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Doprava</th>
+                  <th scope="col">Převodem</th>
+                  <th scope="col">Hotově</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Osobní předání</th>
+                  <td class="yes"><span aria-hidden="true">★</span> Ano</td>
+                  <td class="yes"><span aria-hidden="true">★</span> Ano</td>
+                </tr>
+                <tr>
+                  <th scope="row">Zásilkovna</th>
+                  <td class="yes"><span aria-hidden="true">★</span> Ano</td>
+                  <td class="no">Ne</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="board__note">Platbu na dobírku ani platbu kartou online zatím nenabízíme.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer on-dark">
+  <footer class="site-footer">
     <div class="container site-footer__grid">
-      <div>
-        <p class="site-footer__logo"><span aria-hidden="true">★</span> [NÁZEV]</p>
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">[NÁZEV]</p>
         <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
+        <p class="neon">Díky a zase přijď!</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">

@@ -7,7 +7,7 @@
   <meta name="description" content="Obchodní podmínky e-shopu [NÁZEV] s dárkovými krabicemi amerických sladkostí. Text doplníme před spuštěním.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#14254a">
+  <meta name="theme-color" content="#1f3557">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:description" content="Obchodní podmínky e-shopu [NÁZEV] s dárkovými krabicemi amerických sladkostí. Text doplníme před spuštěním.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c1121f'/%3E%3Cpath fill='%23fff8e7' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,8 +25,12 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
+    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html"><span class="logo__star" aria-hidden="true">★</span> [NÁZEV]</a>
+      <a class="logo" href="index.html">
+        <span class="logo__name">[NÁZEV]</span>
+        <span class="logo__tag">americké dobroty</span>
+      </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -46,72 +50,74 @@
   </header>
 
   <main id="obsah" tabindex="-1">
-    <section class="page-hero on-dark">
+    <section class="page-hero">
       <div class="container">
-        <h1>Obchodní podmínky</h1>
+        <p class="kicker kicker--light">Právní informace</p>
+        <h1 class="page-hero__title">Obchodní podmínky</h1>
         <p class="page-hero__lead">Pravidla nákupu dárkových krabic v e-shopu [NÁZEV].</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container prose">
-        <div class="notice" role="note">
-          <span class="notice__icon" aria-hidden="true">🚧</span>
-          <p><strong>Doplníme před spuštěním.</strong> Tato stránka je zatím jen kostra s nadpisy.</p>
-        </div>
+      <div class="container">
+        <article class="document">
+          <p class="stamp stamp--big document__stamp">Připravujeme</p>
+          <p class="document__intro"><strong>Doplníme před spuštěním.</strong> Tato stránka je zatím jen kostra s nadpisy.</p>
 
-        <nav class="toc" aria-labelledby="obsah-podminek">
-          <h2 id="obsah-podminek">Obsah</h2>
-          <ol>
-            <li><a href="#uvodni-ustanoveni">Úvodní ustanovení</a></li>
-            <li><a href="#objednavka-a-smlouva">Objednávka a uzavření kupní smlouvy</a></li>
-            <li><a href="#cena-a-platba">Cena a platební podmínky</a></li>
-            <li><a href="#dodani">Dodání zboží</a></li>
-            <li><a href="#odstoupeni">Odstoupení od smlouvy</a></li>
-            <li><a href="#reklamace">Práva z vadného plnění (reklamace)</a></li>
-            <li><a href="#spory">Mimosoudní řešení sporů</a></li>
-            <li><a href="#osobni-udaje">Ochrana osobních údajů</a></li>
-            <li><a href="#zaverecna-ustanoveni">Závěrečná ustanovení</a></li>
-          </ol>
-        </nav>
+          <nav class="toc" aria-labelledby="obsah-podminek">
+            <h2 class="toc__title" id="obsah-podminek">Obsah</h2>
+            <ol>
+              <li><a href="#uvodni-ustanoveni">Úvodní ustanovení</a></li>
+              <li><a href="#objednavka-a-smlouva">Objednávka a uzavření kupní smlouvy</a></li>
+              <li><a href="#cena-a-platba">Cena a platební podmínky</a></li>
+              <li><a href="#dodani">Dodání zboží</a></li>
+              <li><a href="#odstoupeni">Odstoupení od smlouvy</a></li>
+              <li><a href="#reklamace">Práva z vadného plnění (reklamace)</a></li>
+              <li><a href="#spory">Mimosoudní řešení sporů</a></li>
+              <li><a href="#osobni-udaje">Ochrana osobních údajů</a></li>
+              <li><a href="#zaverecna-ustanoveni">Závěrečná ustanovení</a></li>
+            </ol>
+          </nav>
 
-        <h2 id="uvodni-ustanoveni">1. Úvodní ustanovení</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="uvodni-ustanoveni"><span>1.</span> Úvodní ustanovení</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="objednavka-a-smlouva">2. Objednávka a uzavření kupní smlouvy</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="objednavka-a-smlouva"><span>2.</span> Objednávka a uzavření kupní smlouvy</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="cena-a-platba">3. Cena a platební podmínky</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="cena-a-platba"><span>3.</span> Cena a platební podmínky</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="dodani">4. Dodání zboží</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="dodani"><span>4.</span> Dodání zboží</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="odstoupeni">5. Odstoupení od smlouvy</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="odstoupeni"><span>5.</span> Odstoupení od smlouvy</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="reklamace">6. Práva z vadného plnění (reklamace)</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="reklamace"><span>6.</span> Práva z vadného plnění (reklamace)</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="spory">7. Mimosoudní řešení sporů</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="spory"><span>7.</span> Mimosoudní řešení sporů</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="osobni-udaje">8. Ochrana osobních údajů</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="osobni-udaje"><span>8.</span> Ochrana osobních údajů</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <h2 id="zaverecna-ustanoveni">9. Závěrečná ustanovení</h2>
-        <p class="todo">Doplníme před spuštěním.</p>
+          <h2 class="document__heading" id="zaverecna-ustanoveni"><span>9.</span> Závěrečná ustanovení</h2>
+          <p class="todo">Doplníme před spuštěním.</p>
 
-        <p class="todo">Tyto obchodní podmínky jsou platné od: doplníme.</p>
+          <p class="todo document__closing">Tyto obchodní podmínky jsou platné od: doplníme.</p>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer on-dark">
+  <footer class="site-footer">
     <div class="container site-footer__grid">
-      <div>
-        <p class="site-footer__logo"><span aria-hidden="true">★</span> [NÁZEV]</p>
+      <div class="site-footer__brand">
+        <p class="site-footer__logo">[NÁZEV]</p>
         <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
+        <p class="neon">Díky a zase přijď!</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">
