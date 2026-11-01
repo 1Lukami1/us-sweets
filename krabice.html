@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Krabice a ceny – [NÁZEV]</title>
-  <meta name="description" content="Dárkové krabice s americkými dobrotami ve velikostech Malý (390 Kč), Střední (690 Kč) a Velký (990 Kč). Témata Gamer, Pálivý, Sladký a Vánoční.">
+  <title>Americký box – [NÁZEV]</title>
+  <meta name="description" content="Co je v Americkém boxu: Dr Pepper, Fanta Berry, Nerds, Sour Patch Kids, Reese's Sticks a dva druhy popcornu. Cca 1,5 kg za 490 Kč.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1f3557">
+  <meta name="theme-color" content="#1B2A5C">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="[NÁZEV]">
-  <meta property="og:title" content="Krabice a ceny – [NÁZEV]">
-  <meta property="og:description" content="Dárkové krabice s americkými dobrotami ve velikostech Malý (390 Kč), Střední (690 Kč) a Velký (990 Kč). Témata Gamer, Pálivý, Sladký a Vánoční.">
+  <meta property="og:title" content="Americký box – [NÁZEV]">
+  <meta property="og:description" content="Co je v Americkém boxu: Dr Pepper, Fanta Berry, Nerds, Sour Patch Kids, Reese's Sticks a dva druhy popcornu. Cca 1,5 kg za 490 Kč.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,12 +25,9 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
-    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
+    <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html">
-        <span class="logo__name">[NÁZEV]</span>
-        <span class="logo__tag">americké dobroty</span>
-      </a>
+      <a class="logo" href="index.html"><svg class="star-icon logo__star" viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -40,7 +37,7 @@
       <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
         <ul class="site-nav__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html" aria-current="page">Krabice</a></li>
+          <li><a href="krabice.html" aria-current="page">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -52,345 +49,180 @@
   <main id="obsah" tabindex="-1">
     <section class="page-hero">
       <div class="container">
-        <p class="kicker kicker--light">Nabídka</p>
-        <h1 class="page-hero__title">Naše krabice</h1>
-        <p class="page-hero__lead">Vyber si velikost a téma. Každou krabici plníme americkými sladkostmi, snacky a nápoji.</p>
+        <h1 class="page-hero__title">Americký box</h1>
+        <p class="page-hero__lead">Sedm amerických dobrot v jedné krabici: dvě limonády, tři sladkosti a dva druhy popcornu.</p>
+      </div>
+    </section>
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="section" aria-labelledby="box-nadpis">
+      <div class="container">
+        <article class="box-card" data-reveal>
+          <div class="box-card__media">
+            <div class="combo" role="img" aria-label="Zástupný obrázek: Americký box a sedm dobrot kolem něj">
+                <span class="combo__main" aria-hidden="true">📦</span>
+                <span class="combo__item" aria-hidden="true">🍓</span>
+                <span class="combo__item" aria-hidden="true">🫐</span>
+                <span class="combo__item" aria-hidden="true">🍇</span>
+                <span class="combo__item" aria-hidden="true">🍬</span>
+                <span class="combo__item" aria-hidden="true">🥜</span>
+                <span class="combo__item" aria-hidden="true">🍿</span>
+                <span class="combo__item" aria-hidden="true">🧀</span>
+            </div>
+            <p class="sticker" aria-hidden="true"><span class="sticker__inner">490 Kč</span></p>
+          </div>
+          <div class="box-card__body">
+            <p class="box-card__tag">7 dobrot v jedné krabici</p>
+            <h2 class="box-card__title" id="box-nadpis">Americký box <span>(střední)</span></h2>
+            <p class="box-card__price">490 Kč <small>za box</small></p>
+            <ul class="facts">
+              <li><strong>7</strong> kusů</li>
+              <li>cca <strong>1,5 kg</strong></li>
+              <li>cca <strong>30 × 25 × 14 cm</strong></li>
+            </ul>
+            <p class="box-card__text">Dvě limonády, tři sladkosti a dva druhy popcornu. Hodí se jako dárek k narozeninám, na oslavu i jen tak pro radost.</p>
+            <div class="btn-row">
+              <a class="btn btn--red" href="objednavka.html">Objednat</a>
+              <a class="link-more" href="#obsah-boxu">Co je uvnitř</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="velikosti" aria-labelledby="velikosti-nadpis">
-      <div class="container">
-        <div class="board board--narrow">
-          <h2 class="title" id="velikosti-nadpis">Velikosti a ceny</h2>
-          <ul class="menu-list">
-            <li class="menu-item">
-              <div class="menu-item__row">
-                <h3 class="menu-item__name">Malý</h3>
-                <span class="menu-item__dots" aria-hidden="true"></span>
-                <p class="menu-item__price">390 Kč</p>
-              </div>
-              <p class="menu-item__desc">Malá pozornost, velká radost.</p>
-            </li>
-            <li class="menu-item">
-              <div class="menu-item__row">
-                <h3 class="menu-item__name">Střední</h3>
-                <span class="menu-item__dots" aria-hidden="true"></span>
-                <p class="menu-item__price">690 Kč</p>
-              </div>
-              <p class="menu-item__desc">Zlatá střední cesta.</p>
-            </li>
-            <li class="menu-item">
-              <div class="menu-item__row">
-                <h3 class="menu-item__name">Velký</h3>
-                <span class="menu-item__dots" aria-hidden="true"></span>
-                <p class="menu-item__price">990 Kč</p>
-              </div>
-              <p class="menu-item__desc">Pro opravdové mlsouny.</p>
-            </li>
-          </ul>
-          <p class="board__note">Cena záleží jen na velikosti, téma si vybereš libovolné.</p>
-        </div>
-      </div>
-    </section>
+    <div class="divider" aria-hidden="true"></div>
 
-    <section class="section section--sky" id="vyber" aria-labelledby="vyber-nadpis">
+    <section class="section section--yellow" id="obsah-boxu" aria-labelledby="obsah-nadpis">
       <div class="container">
-        <h2 class="title" id="vyber-nadpis">Vyber si téma</h2>
-        <ul class="flavors">
-          <li class="flavor flavor--gamer">
-            <h3 class="flavor__name">Gamer</h3>
-            <p>Palivo na dlouhé herní večery: křupavé snacky, sladkosti a něco na zapití.</p>
+        <h2 class="section-title" id="obsah-nadpis">Co je v boxu</h2>
+        <p class="section-lead">7 kusů, dohromady cca 1,5 kg. Krabice měří cca 30 × 25 × 14 cm.</p>
+        <ul class="items" data-reveal-group>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🍓</span>
+            <p class="item__type">Limonáda</p>
+            <h3 class="item__name">Dr Pepper Strawberries &amp; Cream</h3>
+            <p class="item__size">355 ml</p>
           </li>
-          <li class="flavor flavor--palivy">
-            <h3 class="flavor__name">Pálivý</h3>
-            <p>Pro odvážné! Pálivé chipsy, ostré snacky a něco na uhašení.</p>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🫐</span>
+            <p class="item__type">Limonáda</p>
+            <h3 class="item__name">Fanta Berry</h3>
+            <p class="item__size">355 ml</p>
           </li>
-          <li class="flavor flavor--sladky">
-            <h3 class="flavor__name">Sladký</h3>
-            <p>Čokolády, bonbony a sušenky pro všechny mlsné jazýčky.</p>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🍇</span>
+            <p class="item__type">Bonbony</p>
+            <h3 class="item__name">Nerds jahoda a hrozny</h3>
+            <p class="item__size">46,7 g</p>
           </li>
-          <li class="flavor flavor--vanocni">
-            <h3 class="flavor__name">Vánoční</h3>
-            <p>Sváteční dobroty a zimní nálada. Ideální dárek pod stromeček.</p>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🍬</span>
+            <p class="item__type">Kyselé želé</p>
+            <h3 class="item__name">Sour Patch Kids Blue Raspberry</h3>
+            <p class="item__size">102 g</p>
+          </li>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🥜</span>
+            <p class="item__type">Tyčinky</p>
+            <h3 class="item__name">Reese's Sticks King Size</h3>
+            <p class="item__size">85 g</p>
+          </li>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🍿</span>
+            <p class="item__type">Popcorn</p>
+            <h3 class="item__name">Jolly Time Healthy Pop Butter</h3>
+            <p class="item__size">85 g</p>
+          </li>
+          <li class="item" data-reveal>
+            <span class="item__emoji" aria-hidden="true">🧀</span>
+            <p class="item__type">Popcorn</p>
+            <h3 class="item__name">Jolly Time The Big Cheez</h3>
+            <p class="item__size">100 g</p>
           </li>
         </ul>
 
-        <!-- Filtr se zobrazí jen se zapnutým JavaScriptem, bez něj jsou vidět všechny krabice. -->
-        <div class="filter" data-filter hidden>
-          <div class="filter__group" role="group" aria-labelledby="filtr-tema" data-filter-group="tema">
-            <span class="filter__label" id="filtr-tema">Téma</span>
-            <button class="filter__btn" type="button" data-value="vse" aria-pressed="true">Vše</button>
-            <button class="filter__btn" type="button" data-value="gamer" aria-pressed="false">Gamer</button>
-            <button class="filter__btn" type="button" data-value="palivy" aria-pressed="false">Pálivý</button>
-            <button class="filter__btn" type="button" data-value="sladky" aria-pressed="false">Sladký</button>
-            <button class="filter__btn" type="button" data-value="vanocni" aria-pressed="false">Vánoční</button>
-          </div>
-          <div class="filter__group" role="group" aria-labelledby="filtr-velikost" data-filter-group="velikost">
-            <span class="filter__label" id="filtr-velikost">Velikost</span>
-            <button class="filter__btn" type="button" data-value="vse" aria-pressed="true">Vše</button>
-            <button class="filter__btn" type="button" data-value="maly" aria-pressed="false">Malý</button>
-            <button class="filter__btn" type="button" data-value="stredni" aria-pressed="false">Střední</button>
-            <button class="filter__btn" type="button" data-value="velky" aria-pressed="false">Velký</button>
-          </div>
-          <p class="filter__status" data-filter-status role="status"></p>
-        </div>
-
-        <ul class="product-grid" aria-label="Nabídka krabic">
-          <li data-filter-item data-tema="gamer" data-velikost="maly">
-            <article class="product">
-              <div class="placeholder placeholder--gamer" role="img" aria-label="Zástupný obrázek: krabice Gamer, velikost Malý">
-                <span aria-hidden="true">🎮</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>390&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Gamer</span> <span class="product__size">Malý</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Gamer – Malý</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="gamer" data-velikost="stredni">
-            <article class="product">
-              <div class="placeholder placeholder--gamer" role="img" aria-label="Zástupný obrázek: krabice Gamer, velikost Střední">
-                <span aria-hidden="true">🎮🕹️</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>690&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Gamer</span> <span class="product__size">Střední</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Gamer – Střední</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="gamer" data-velikost="velky">
-            <article class="product">
-              <div class="placeholder placeholder--gamer" role="img" aria-label="Zástupný obrázek: krabice Gamer, velikost Velký">
-                <span aria-hidden="true">🎮🕹️👾</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>990&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Gamer</span> <span class="product__size">Velký</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Gamer – Velký</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="palivy" data-velikost="maly">
-            <article class="product">
-              <div class="placeholder placeholder--palivy" role="img" aria-label="Zástupný obrázek: krabice Pálivý, velikost Malý">
-                <span aria-hidden="true">🌶️</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>390&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Pálivý</span> <span class="product__size">Malý</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Pálivý – Malý</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="palivy" data-velikost="stredni">
-            <article class="product">
-              <div class="placeholder placeholder--palivy" role="img" aria-label="Zástupný obrázek: krabice Pálivý, velikost Střední">
-                <span aria-hidden="true">🌶️🔥</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>690&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Pálivý</span> <span class="product__size">Střední</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Pálivý – Střední</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="palivy" data-velikost="velky">
-            <article class="product">
-              <div class="placeholder placeholder--palivy" role="img" aria-label="Zástupný obrázek: krabice Pálivý, velikost Velký">
-                <span aria-hidden="true">🌶️🔥🌶️</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>990&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Pálivý</span> <span class="product__size">Velký</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Pálivý – Velký</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="sladky" data-velikost="maly">
-            <article class="product">
-              <div class="placeholder placeholder--sladky" role="img" aria-label="Zástupný obrázek: krabice Sladký, velikost Malý">
-                <span aria-hidden="true">🍬</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>390&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Sladký</span> <span class="product__size">Malý</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Sladký – Malý</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="sladky" data-velikost="stredni">
-            <article class="product">
-              <div class="placeholder placeholder--sladky" role="img" aria-label="Zástupný obrázek: krabice Sladký, velikost Střední">
-                <span aria-hidden="true">🍬🍫</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>690&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Sladký</span> <span class="product__size">Střední</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Sladký – Střední</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="sladky" data-velikost="velky">
-            <article class="product">
-              <div class="placeholder placeholder--sladky" role="img" aria-label="Zástupný obrázek: krabice Sladký, velikost Velký">
-                <span aria-hidden="true">🍬🍫🍩</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>990&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Sladký</span> <span class="product__size">Velký</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Sladký – Velký</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="vanocni" data-velikost="maly">
-            <article class="product">
-              <p class="ribbon">Sezónní</p>
-              <div class="placeholder placeholder--vanocni" role="img" aria-label="Zástupný obrázek: krabice Vánoční, velikost Malý">
-                <span aria-hidden="true">🎄</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>390&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Vánoční</span> <span class="product__size">Malý</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Vánoční – Malý</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="vanocni" data-velikost="stredni">
-            <article class="product">
-              <p class="ribbon">Sezónní</p>
-              <div class="placeholder placeholder--vanocni" role="img" aria-label="Zástupný obrázek: krabice Vánoční, velikost Střední">
-                <span aria-hidden="true">🎄🎁</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>690&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Vánoční</span> <span class="product__size">Střední</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Vánoční – Střední</span></a>
-              </div>
-            </article>
-          </li>
-          <li data-filter-item data-tema="vanocni" data-velikost="velky">
-            <article class="product">
-              <p class="ribbon">Sezónní</p>
-              <div class="placeholder placeholder--vanocni" role="img" aria-label="Zástupný obrázek: krabice Vánoční, velikost Velký">
-                <span aria-hidden="true">🎄🎁⭐</span>
-              </div>
-              <p class="burst"><span class="visually-hidden">Cena: </span>990&nbsp;Kč</p>
-              <div class="product__body">
-                <h3 class="product__title"><span class="product__name">Vánoční</span> <span class="product__size">Velký</span></h3>
-                <dl class="specs">
-                  <div><dt>Složení</dt><dd>doplníme</dd></div>
-                  <div><dt>Alergeny</dt><dd>doplníme</dd></div>
-                  <div><dt>Hmotnost</dt><dd>doplníme</dd></div>
-                  <div><dt>Trvanlivost</dt><dd>doplníme</dd></div>
-                </dl>
-                <a class="btn btn--block" href="objednavka.html">Objednat <span class="visually-hidden">krabici Vánoční – Velký</span></a>
-              </div>
-            </article>
-          </li>
-        </ul>
-
-        <p class="filter__empty" data-filter-empty hidden>Takovou kombinaci zatím nemáme. Zkus jiný filtr.</p>
-
-        <p class="footnote">Přesné složení, alergeny, hmotnost a trvanlivost u každé krabice doplníme. Máš alergii, nebo něco nejíš? <a href="kontakt.html">Napiš nám</a> ještě před objednáním.</p>
+        <section class="notice-card" id="slozeni" aria-labelledby="slozeni-nadpis" data-reveal>
+          <span class="notice-card__badge" aria-hidden="true">!</span>
+          <h3 class="notice-card__title" id="slozeni-nadpis">Složení, alergeny, trvanlivost</h3>
+          <p class="notice-card__todo">Doplníme podle štítků před spuštěním.</p>
+          <dl class="spec-list">
+            <div>
+              <dt>Složení</dt>
+              <dd>Doplníme podle štítků před spuštěním.</dd>
+            </div>
+            <div>
+              <dt>Alergeny</dt>
+              <dd>Box obsahuje <strong class="allergen">arašídy</strong>, <strong class="allergen">mléko</strong> a <strong class="allergen">pšenici</strong>. Přesné údaje u jednotlivých výrobků doplníme podle štítků.</dd>
+            </div>
+            <div>
+              <dt>Trvanlivost</dt>
+              <dd>Doplníme podle štítků před spuštěním.</dd>
+            </div>
+          </dl>
+        </section>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="cta-nadpis">
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="section" id="cena" aria-labelledby="cena-nadpis">
       <div class="container">
-        <div class="ticket">
-          <div class="ticket__main">
-            <h2 class="ticket__title" id="cta-nadpis">Máš vybráno?</h2>
-            <p>Objednávka zabere jen pár minut. Podívej se, jak na to.</p>
-          </div>
-          <div class="ticket__stub">
-            <a class="btn btn--cream btn--large" href="objednavka.html">Objednat</a>
-          </div>
+        <h2 class="section-title" id="cena-nadpis">Kolik zaplatíš</h2>
+        <p class="section-lead">Ceny jsou za 1 box. Platí se převodem předem.</p>
+        <div class="price-table-wrap" data-reveal>
+          <table class="price-table">
+            <caption class="visually-hidden">Cena za 1 box podle způsobu předání</caption>
+            <thead>
+              <tr>
+                <th scope="col">Způsob předání</th>
+                <th scope="col">Box</th>
+                <th scope="col">Doprava</th>
+                <th scope="col">Celkem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Osobně v Praze</th>
+                <td>490 Kč</td>
+                <td>zdarma</td>
+                <td class="total">490 Kč</td>
+              </tr>
+              <tr>
+                <th scope="row">Zásilkovna / AlzaBox</th>
+                <td>490 Kč</td>
+                <td>89 Kč</td>
+                <td class="total">579 Kč</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <p class="table-note">Objednáváš víc kusů? Přesnou částku ti potvrdíme e-mailem. Víc v sekci <a href="doprava-a-platba.html">Doprava a platba</a>.</p>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+    <section class="section section--navy cta" aria-labelledby="cta-nadpis">
+      <div class="container" data-reveal>
+        <h2 class="section-title" id="cta-nadpis">Chceš ho?</h2>
+        <p>Objednávka přes krátký formulář zabere minutu.</p>
+        <a class="btn btn--big" href="objednavka.html">Objednat</a>
       </div>
     </section>
   </main>
 
+  <div class="divider" aria-hidden="true"></div>
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
-        <p class="site-footer__logo">[NÁZEV]</p>
-        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
-        <p class="neon">Díky a zase přijď!</p>
+        <p class="site-footer__logo"><svg class="star-icon " viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</p>
+        <p>Americký box plný limonád, sladkostí a popcornu. Osobně v Praze, nebo Zásilkovnou až k tobě.</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">
         <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
         <ul class="site-footer__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html" aria-current="page">Krabice</a></li>
+          <li><a href="krabice.html" aria-current="page">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>

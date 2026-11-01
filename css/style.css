@@ -1,7 +1,7 @@
 /* ==========================================================================
    [NÁZEV] – styly webu
-   Retro americký diner: třešňově červená, námořnická modrá, krémový papír,
-   chromové lišty, šachovnice, paprsky, jídelní lístek, razítka a vstupenky.
+   Hravý americký diner / retro komiks: červená, tmavě modrá, krémová, žlutá.
+   Tlusté obrysy, „komiksové“ stíny, hvězdy a červenomodré pruhy.
    Mobile first: základ je pro telefon, větší displeje přes min-width.
    ========================================================================== */
 
@@ -11,43 +11,40 @@
 :root {
   color-scheme: light;
 
-  /* Barvy */
-  --color-red: #c4302b;
-  --color-red-dark: #962420;
-  --color-red-hover: #ad2925;
-  --color-neon: #ff8f80;
-  --color-navy: #1f3557;
-  --color-navy-dark: #15253f;
-  --color-navy-hover: #2a4670;
-  --color-blue: #2e5d8a;
-  --color-sky: #bcd6ea;
-  --color-cream: #f4e9d2;
-  --color-cream-shade: #ebdbbb;
-  --color-paper: #fbf6ea;
-  --color-white-paper: #fffdf6;
-  --color-ink: #2b2420;
-  --color-ink-soft: #5b4f45;
+  /* Hlavní barvy */
+  --red: #D62839;
+  --navy: #1B2A5C;
+  --cream: #FFF4DC;
+  --yellow: #FFC93C;
 
-  /* Použití barev (tmavé sekce si je přepisují) */
-  --color-bg: var(--color-cream);
-  --color-text: var(--color-ink);
-  --color-heading: var(--color-navy);
-  --color-link: var(--color-red-dark);
-  --color-focus: var(--color-navy);
-  --notch: var(--color-cream);
+  /* Odstíny odvozené z hlavních barev */
+  --red-dark: #A81D2C;
+  --red-light: #E2404F;
+  --red-tint: #FADADD;
+  --navy-dark: #111C40;
+  --navy-soft: #3B4A7E;
+  --navy-tint: #DCE2F2;
+  --yellow-light: #FFD866;
+  --yellow-dark: #E9AE1C;
+  --white: #FFFDF7;
 
-  /* Písma: jedno vlastní (Yellowtail, uložené ve složce fonts), zbytek systémová */
-  --font-script: "Yellowtail", "Brush Script MT", "Snell Roundhand", Georgia, serif;
-  --font-serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Noto Serif", serif;
-  --font-sans: "Franklin Gothic Medium", "Franklin Gothic", "Avenir Next Condensed", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "Courier New", Courier, "Noto Sans Mono", monospace;
+  /* Použití barev */
+  --color-bg: var(--cream);
+  --color-text: var(--navy);
+  --color-muted: var(--navy-soft);
+  --color-link: var(--red-dark);
+  --color-focus: var(--navy);
 
-  /* Velikosti písma */
+  /* Písma (uložená ve složce fonts) */
+  --font-display: "Bangers", "Impact", "Arial Black", sans-serif;
+  --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Velikosti */
   --text-sm: 0.9rem;
   --text-base: 1.0625rem;
   --text-lg: 1.2rem;
-  --text-title: clamp(2.6rem, 2rem + 3vw, 3.75rem);
-  --text-hero: clamp(4rem, 2.4rem + 8vw, 7.5rem);
+  --text-title: clamp(2.5rem, 1.9rem + 3vw, 3.75rem);
+  --text-hero: clamp(3.6rem, 2rem + 7.5vw, 7rem);
 
   /* Rozestupy */
   --space-1: 0.25rem;
@@ -59,41 +56,64 @@
   --space-7: 3rem;
   --space-8: 4rem;
 
+  /* Tvary a komiksové stíny */
+  --border: 3px solid var(--navy);
+  --border-thick: 4px solid var(--navy);
+  --radius-sm: 12px;
+  --radius: 20px;
+  --radius-lg: 28px;
+  --shadow-sm: 3px 3px 0 var(--navy);
+  --shadow: 5px 5px 0 var(--navy);
+  --shadow-lg: 8px 8px 0 var(--navy);
+
   /* Layout */
-  --container: 70rem;
+  --container: 72rem;
   --gutter: 1rem;
   --topbar-height: 2rem;
-  --radius: 10px;
-  --shadow-soft: 0 1px 2px rgba(43, 36, 32, 0.16), 0 18px 30px -18px rgba(43, 36, 32, 0.55);
 
   /* Vzory */
-  --texture-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.32 0 0 0 0 0.2 0 0 0 0.1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --texture-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cdefs%3E%3Cpath id='s' d='M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z'/%3E%3C/defs%3E%3Cg fill='%23f4e9d2' fill-opacity='0.08'%3E%3Cuse href='%23s' transform='translate(16 18)'/%3E%3Cuse href='%23s' transform='translate(100 44) scale(0.55)'/%3E%3Cuse href='%23s' transform='translate(52 104) scale(0.8)'/%3E%3Cuse href='%23s' transform='translate(128 122) scale(0.4)'/%3E%3C/g%3E%3C/svg%3E");
-  --texture-stamp: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -5 3.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
-  --postmark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 170 80'%3E%3Cg fill='none' stroke='%231f3557' stroke-opacity='0.35' stroke-width='2.5'%3E%3Ccircle cx='40' cy='40' r='33'/%3E%3Ccircle cx='40' cy='40' r='26'/%3E%3Cpath d='M80 26q11-9 22 0t22 0 22 0 22 0M80 40q11-9 22 0t22 0 22 0 22 0M80 54q11-9 22 0t22 0 22 0 22 0'/%3E%3C/g%3E%3C/svg%3E");
-  --ornament-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23c4302b' d='M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z'/%3E%3C/svg%3E");
-  --chrome: linear-gradient(180deg, #ffffff 0%, #cfd6dc 30%, #8d98a1 52%, #e3e8eb 72%, #9ba5ad 100%);
-  --checker-navy: conic-gradient(var(--color-navy) 0 25%, var(--color-paper) 0 50%, var(--color-navy) 0 75%, var(--color-paper) 0) 0 0 / 2rem 2rem;
-  --checker-red: conic-gradient(var(--color-red) 0 25%, var(--color-paper) 0 50%, var(--color-red) 0 75%, var(--color-paper) 0) 0 0 / 1.5rem 1.5rem;
-  --burst: polygon(50% 0%, 56.6% 8.5%, 65.5% 2.4%, 69.1% 12.6%, 79.4% 9.5%, 79.7% 20.3%, 90.5% 20.6%, 87.4% 30.9%, 97.6% 34.5%, 91.5% 43.4%, 100% 50%, 91.5% 56.6%, 97.6% 65.5%, 87.4% 69.1%, 90.5% 79.4%, 79.7% 79.7%, 79.4% 90.5%, 69.1% 87.4%, 65.5% 97.6%, 56.6% 91.5%, 50% 100%, 43.4% 91.5%, 34.5% 97.6%, 30.9% 87.4%, 20.6% 90.5%, 20.3% 79.7%, 9.5% 79.4%, 12.6% 69.1%, 2.4% 65.5%, 8.5% 56.6%, 0% 50%, 8.5% 43.4%, 2.4% 34.5%, 12.6% 30.9%, 9.5% 20.6%, 20.3% 20.3%, 20.6% 9.5%, 30.9% 12.6%, 34.5% 2.4%, 43.4% 8.5%);
+  --dots: radial-gradient(rgba(27, 42, 92, 0.1) 1.6px, transparent 1.9px) 0 0 / 14px 14px;
+  --dots-light: radial-gradient(rgba(255, 244, 220, 0.16) 1.8px, transparent 2.1px) 0 0 / 14px 14px;
+  --stripes: repeating-linear-gradient(-45deg, var(--red) 0 12px, var(--cream) 12px 18px, var(--navy) 18px 30px, var(--cream) 30px 36px);
+  --star-yellow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFC93C' d='M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z'/%3E%3C/svg%3E");
+  --stars-night: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cdefs%3E%3Cpath id='s' d='M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z'/%3E%3C/defs%3E%3Cg fill='%23FFF4DC' fill-opacity='0.09'%3E%3Cuse href='%23s' transform='translate(18 20)'/%3E%3Cuse href='%23s' transform='translate(110 48) scale(0.6)'/%3E%3Cuse href='%23s' transform='translate(58 118) scale(0.85)'/%3E%3Cuse href='%23s' transform='translate(146 140) scale(0.45)'/%3E%3C/g%3E%3C/svg%3E");
+  --burst: polygon(50% 0%, 57.6% 11.7%, 69.1% 3.8%, 71.7% 17.6%, 85.4% 14.6%, 82.4% 28.3%, 96.2% 30.9%, 88.3% 42.4%, 100% 50%, 88.3% 57.6%, 96.2% 69.1%, 82.4% 71.7%, 85.4% 85.4%, 71.7% 82.4%, 69.1% 96.2%, 57.6% 88.3%, 50% 100%, 42.4% 88.3%, 30.9% 96.2%, 28.3% 82.4%, 14.6% 85.4%, 17.6% 71.7%, 3.8% 69.1%, 11.7% 57.6%, 0% 50%, 11.7% 42.4%, 3.8% 30.9%, 17.6% 28.3%, 14.6% 14.6%, 28.3% 17.6%, 30.9% 3.8%, 42.4% 11.7%);
 }
 
-/* Písmo Yellowtail (Apache License 2.0, viz fonts/LICENSE.txt) */
+/* Písma: Bangers (nadpisy) a Nunito (text), licence SIL OFL ve složce fonts */
 @font-face {
-  font-family: "Yellowtail";
+  font-family: "Bangers";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/yellowtail-latin-ext.woff2") format("woff2");
+  src: url("../fonts/bangers-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 @font-face {
-  font-family: "Yellowtail";
+  font-family: "Bangers";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/yellowtail-latin.woff2") format("woff2");
+  src: url("../fonts/bangers-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/nunito-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("../fonts/nunito-latin.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -116,11 +136,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--texture-grain), var(--color-bg);
+  background: var(--dots), var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.65;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 main {
@@ -142,25 +163,24 @@ h2,
 h3,
 h4 {
   margin: 0 0 var(--space-4);
-  color: var(--color-heading);
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.2;
-  text-transform: uppercase;
+  color: inherit;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
   text-wrap: balance;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--text-title);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 p,
@@ -175,20 +195,26 @@ p {
   text-wrap: pretty;
 }
 
+strong {
+  font-weight: 800;
+}
+
 a {
   color: var(--color-link);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
 }
 
 a:hover {
-  color: var(--color-red);
-  text-decoration-thickness: 2px;
+  color: var(--red);
+  text-decoration-thickness: 3px;
 }
 
 :focus-visible {
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
+  border-radius: 6px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -201,12 +227,12 @@ a:hover {
 
 /* Cíle odkazů nezajedou pod lepicí hlavičku */
 [id] {
-  scroll-margin-top: 6.5rem;
+  scroll-margin-top: 6rem;
 }
 
 ::selection {
-  background: var(--color-navy);
-  color: var(--color-cream);
+  background: var(--yellow);
+  color: var(--navy);
 }
 
 /* --------------------------------------------------------------------------
@@ -220,7 +246,7 @@ a:hover {
 }
 
 .narrow {
-  max-width: 46rem;
+  max-width: 50rem;
 }
 
 .visually-hidden {
@@ -241,230 +267,115 @@ a:hover {
   left: var(--space-2);
   z-index: 100;
   padding: var(--space-2) var(--space-4);
-  background: var(--color-red);
-  color: var(--color-paper);
-  font-family: var(--font-sans);
-  font-weight: 700;
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--yellow);
+  color: var(--navy);
+  font-weight: 800;
   transform: translateY(-300%);
 }
 
 .skip-link:focus {
   transform: translateY(0);
-  color: var(--color-paper);
+  color: var(--navy);
 }
 
 .todo {
-  color: var(--color-ink-soft);
+  color: var(--color-muted);
   font-style: italic;
-}
-
-/* Malý nápis velkými písmeny s linkami po stranách */
-.kicker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin: 0 0 var(--space-3);
-  color: var(--color-red);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-}
-
-.kicker::before,
-.kicker::after {
-  content: "";
-  width: 2rem;
-  height: 2px;
-  background: currentColor;
-}
-
-.kicker--light {
-  color: var(--color-sky);
 }
 
 /* --------------------------------------------------------------------------
    4. Tlačítka a odkazy
    -------------------------------------------------------------------------- */
 .btn {
-  --btn-bg: var(--color-red);
-  --btn-fg: var(--color-paper);
-  --btn-edge: var(--color-red-dark);
-  --btn-ring: rgba(251, 246, 234, 0.75);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  min-height: 3rem;
-  padding: 0.8rem 1.6rem;
-  border: 0;
-  border-radius: 6px;
-  background: var(--btn-bg);
-  color: var(--btn-fg);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  line-height: 1.2;
+  min-height: 3.1rem;
+  padding: 0.6rem 1.6rem 0.5rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  box-shadow:
-    inset 0 0 0 3px var(--btn-bg),
-    inset 0 0 0 4px var(--btn-ring),
-    0 4px 0 var(--btn-edge),
-    0 9px 14px -8px rgba(43, 36, 32, 0.55);
+  box-shadow: var(--shadow);
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .btn:hover {
-  --btn-bg: var(--color-red-hover);
-  color: var(--btn-fg);
+  background: var(--yellow-light);
+  color: var(--navy);
   text-decoration: none;
-  transform: translateY(-1px);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 var(--navy);
 }
 
 .btn:active {
-  transform: translateY(3px);
-  box-shadow:
-    inset 0 0 0 3px var(--btn-bg),
-    inset 0 0 0 4px var(--btn-ring),
-    0 1px 0 var(--btn-edge),
-    0 2px 4px -2px rgba(43, 36, 32, 0.5);
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--navy);
 }
 
-.btn--navy {
-  --btn-bg: var(--color-navy);
-  --btn-edge: var(--color-navy-dark);
+.btn--red {
+  background: var(--red);
+  color: var(--white);
 }
 
-.btn--navy:hover {
-  --btn-bg: var(--color-navy-hover);
+.btn--red:hover {
+  background: var(--red-light);
+  color: var(--white);
 }
 
-.btn--cream {
-  --btn-bg: var(--color-paper);
-  --btn-fg: var(--color-red-dark);
-  --btn-edge: #c9b48c;
-  --btn-ring: rgba(150, 36, 32, 0.35);
+/* Velké tlačítko s výrazným stínem */
+.btn--big {
+  min-height: 3.75rem;
+  padding: 0.75rem 2.4rem 0.6rem;
+  font-size: 1.9rem;
+  box-shadow: 7px 7px 0 var(--navy);
 }
 
-.btn--cream:hover {
-  --btn-bg: var(--color-white-paper);
-}
-
-.btn--large {
-  min-height: 3.5rem;
-  padding: 1rem 2.2rem;
-  font-size: 1.05rem;
+.btn--big:hover {
+  box-shadow: 10px 10px 0 var(--navy);
 }
 
 .btn--block {
   width: 100%;
 }
 
-.link-arrow {
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5) var(--space-6);
+}
+
+.btn-row--center {
+  justify-content: center;
+}
+
+.link-more {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-transform: uppercase;
+  font-weight: 800;
 }
 
-.link-arrow::after {
+.link-more::after {
   content: "→";
   content: "→" / "";
   transition: transform 0.15s ease;
 }
 
-.link-arrow:hover {
-  color: var(--color-red);
-}
-
-.link-arrow:hover::after {
+.link-more:hover::after {
   transform: translateX(4px);
-}
-
-/* Visačky (odkazy na témata) */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4) var(--space-5);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.tag {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  padding: 0.45rem 1.1rem 0.45rem 1.85rem;
-  border: 2px solid var(--color-navy);
-  border-radius: 4px 12px 12px 4px;
-  background: var(--color-paper);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 6px 10px -8px rgba(43, 36, 32, 0.6);
-  transform: rotate(-2deg);
-  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
-}
-
-.tags li:nth-child(even) .tag {
-  transform: rotate(2deg);
-}
-
-/* Dírka a provázek */
-.tag::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0.75rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin-top: -0.25rem;
-  z-index: 1;
-  border-radius: 50%;
-  background: var(--tag-hole, var(--color-cream));
-  box-shadow: inset 0 0 0 1.5px var(--color-navy);
-}
-
-/* Provázek provlečený dírkou */
-.tag::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -0.85rem;
-  width: 1.85rem;
-  height: 1.1rem;
-  border: 2px solid var(--tag-string, var(--color-navy));
-  border-right: 0;
-  border-bottom: 0;
-  border-radius: 100% 0 0 0;
-  pointer-events: none;
-}
-
-.tag:hover,
-.tags li:nth-child(even) .tag:hover {
-  background: var(--color-navy);
-  color: var(--color-paper);
-  transform: rotate(0deg) translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
@@ -474,39 +385,26 @@ a:hover {
   position: sticky;
   top: calc(-1 * var(--topbar-height));
   z-index: 50;
-  background: var(--texture-grain), var(--color-paper);
-}
-
-/* Chromová lišta s červeným pruhem jako na dineru */
-.site-header::after {
-  content: "";
-  display: block;
-  height: 12px;
-  background:
-    var(--chrome) top / 100% 3px no-repeat,
-    var(--chrome) bottom / 100% 3px no-repeat,
-    var(--color-red);
+  background: var(--cream);
+  border-bottom: var(--border-thick);
 }
 
 .topbar {
   height: var(--topbar-height);
   margin: 0;
   overflow: hidden;
-  background: var(--color-navy);
-  color: var(--color-cream);
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 0.8rem;
+  font-weight: 800;
   line-height: var(--topbar-height);
   text-align: center;
   text-overflow: ellipsis;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
 .topbar span {
-  color: var(--color-neon);
+  color: var(--cream);
 }
 
 .site-header__inner {
@@ -520,35 +418,33 @@ a:hover {
 
 .logo {
   display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--color-red);
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   line-height: 1;
   text-decoration: none;
-}
-
-.logo__name {
-  padding-right: 0.2em;
-  font-family: var(--font-script);
-  font-size: 2.3rem;
-  line-height: 1;
-  text-shadow: 2px 2px 0 var(--color-navy);
-  transform: rotate(-4deg);
-}
-
-.logo__tag {
-  margin-top: 0.1rem;
-  padding-left: 1.4rem;
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
+  text-shadow: 2px 2px 0 var(--navy);
 }
 
 .logo:hover {
-  color: var(--color-red-dark);
+  color: var(--red-light);
+  text-decoration: none;
+}
+
+.logo__star {
+  width: 2.3rem;
+  height: 2.3rem;
+  flex: none;
+  transform: rotate(-12deg);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo__star {
+  transform: rotate(20deg) scale(1.1);
 }
 
 .nav-toggle {
@@ -556,16 +452,14 @@ a:hover {
   align-items: center;
   gap: 0.6rem;
   min-height: 2.75rem;
-  padding: 0.5rem 0.9rem;
-  border: 2px solid var(--color-navy);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--navy);
+  font: inherit;
+  font-weight: 800;
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
 }
 
@@ -573,10 +467,11 @@ a:hover {
 .nav-toggle__icon::before,
 .nav-toggle__icon::after {
   display: block;
-  width: 1.2rem;
-  height: 2px;
+  width: 1.25rem;
+  height: 3px;
+  border-radius: 2px;
   background: currentColor;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, background-color 0.2s ease;
 }
 
 .nav-toggle__icon {
@@ -610,81 +505,1237 @@ a:hover {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* Mobil: menu je sbalené, otevírá se tlačítkem */
+/* Mobil: menu se plynule rozbalí (výška přes řádky mřížky) */
 .site-nav {
-  display: none;
+  display: grid;
   flex-basis: 100%;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows 0.35s ease, visibility 0s linear 0.35s;
 }
 
 .site-nav.is-open {
-  display: block;
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition: grid-template-rows 0.35s ease, visibility 0s;
 }
 
 .site-nav__list {
+  min-height: 0;
   margin: 0;
-  padding: 0 0 var(--space-3);
-  border-top: 2px dotted rgba(31, 53, 87, 0.5);
+  padding: 0 var(--space-2) 0 0;
+  overflow: hidden;
   list-style: none;
 }
 
-.site-nav__list li {
-  border-bottom: 1px dashed rgba(31, 53, 87, 0.3);
+.site-nav__list li:first-child {
+  padding-top: var(--space-2);
+}
+
+.site-nav__list li:last-child {
+  padding-bottom: var(--space-3);
 }
 
 .site-nav__list a {
-  position: relative;
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: 0.85rem 0.25rem;
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+  padding: 0.7rem 1rem;
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 800;
   text-decoration: none;
-  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
 }
 
-.site-nav__list a::before {
-  content: "★";
-  content: "★" / "";
-  color: transparent;
-  font-size: 0.8em;
+.site-nav__list a::after {
+  content: "→";
+  content: "→" / "";
+  color: var(--red);
 }
 
 .site-nav__list a:hover {
-  color: var(--color-red);
+  background: var(--yellow-light);
+  color: var(--navy);
 }
 
 /* Aktivní stránka */
 .site-nav__list a[aria-current="page"] {
-  color: var(--color-red);
+  background: var(--yellow);
 }
 
-.site-nav__list a[aria-current="page"]::before {
-  color: var(--color-red);
+.site-nav__list a[aria-current="page"]::after {
+  content: "★";
+  content: "★" / "";
 }
 
 /* --------------------------------------------------------------------------
-   6. Patička
+   6. Oddělovač sekcí: červenomodré pruhy a hvězdy
    -------------------------------------------------------------------------- */
-.site-footer {
-  background: var(--texture-grain), var(--texture-stars), var(--color-navy);
-  color: var(--color-cream);
-  --color-heading: var(--color-sky);
-  --color-link: var(--color-cream);
-  --color-focus: var(--color-cream);
+.divider {
+  position: relative;
+  height: 1.6rem;
+  background: var(--stripes);
+  border-block: var(--border-thick);
 }
 
-.site-footer::before {
+.divider::after {
   content: "";
-  display: block;
-  height: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7.25rem;
+  height: 2.75rem;
+  padding: 0 0.85rem;
+  border: var(--border-thick);
+  border-radius: 999px;
+  background-color: var(--navy);
+  background-image: var(--star-yellow);
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: space no-repeat;
+  background-size: 1.35rem 1.35rem;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------------------------------
+   7. Sekce a nadpisy
+   -------------------------------------------------------------------------- */
+.section {
+  padding-block: var(--space-8);
+}
+
+.section--yellow {
+  background: var(--dots), var(--yellow);
+  --title-shadow: var(--white);
+}
+
+.section--navy {
+  background: var(--stars-night), var(--dots-light), var(--navy);
+  color: var(--cream);
+  --color-muted: var(--cream);
+  --color-link: var(--yellow);
+  --color-focus: var(--yellow);
+  --title-color: var(--yellow);
+  --title-shadow: var(--red);
+}
+
+.section-title {
+  margin-bottom: var(--space-4);
+  color: var(--title-color, var(--navy));
+  font-size: var(--text-title);
+  text-align: center;
+  text-shadow: 3px 3px 0 var(--title-shadow, var(--yellow));
+}
+
+.section-lead {
+  max-width: 40rem;
+  margin: 0 auto var(--space-7);
+  color: var(--color-muted);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Úvodní pruh podstránek: žluté paprsky */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-7);
   background:
-    var(--chrome) top / 100% 3px no-repeat,
-    var(--chrome) bottom / 100% 3px no-repeat,
-    var(--color-red);
+    var(--dots),
+    repeating-conic-gradient(from 0deg at 50% 120%, var(--yellow) 0deg 6deg, var(--yellow-light) 6deg 12deg);
+  text-align: center;
+}
+
+.page-hero__title {
+  margin: 0 0 var(--space-3);
+  color: var(--red);
+  font-size: clamp(3rem, 2rem + 4.5vw, 5.2rem);
+  text-shadow:
+    -2px -2px 0 var(--navy),
+    2px -2px 0 var(--navy),
+    -2px 2px 0 var(--navy),
+    2px 2px 0 var(--navy),
+    6px 6px 0 var(--navy);
+  transform: rotate(-2deg);
+}
+
+.page-hero__lead {
+  max-width: 38rem;
+  margin: 0 auto;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   8. Úvodní stránka – hero
+   -------------------------------------------------------------------------- */
+.hero {
+  --rays-x: 50%;
+  --rays-y: 78%;
+  position: relative;
+  overflow: hidden;
+  background:
+    var(--dots-light),
+    repeating-conic-gradient(from 0deg at var(--rays-x) var(--rays-y), var(--red) 0deg 7deg, var(--red-light) 7deg 14deg);
+  color: var(--white);
+  --color-link: var(--white);
+  --color-focus: var(--yellow);
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  padding-block: var(--space-7) var(--space-8);
+  text-align: center;
+}
+
+.hero__kicker {
+  display: inline-block;
+  margin: 0 0 var(--space-5);
+  padding: 0.3rem 1rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-2deg);
+}
+
+.hero__title {
+  margin: 0 0 var(--space-4);
+  color: var(--yellow);
+  font-size: var(--text-hero);
+  letter-spacing: 0.03em;
+  line-height: 0.95;
+  text-shadow:
+    -3px -3px 0 var(--navy),
+    3px -3px 0 var(--navy),
+    -3px 3px 0 var(--navy),
+    3px 3px 0 var(--navy),
+    0 -3px 0 var(--navy),
+    0 3px 0 var(--navy),
+    -3px 0 0 var(--navy),
+    3px 0 0 var(--navy),
+    9px 9px 0 var(--navy);
+  transform: rotate(-3deg);
+}
+
+.hero__sub {
+  max-width: 32rem;
+  margin: 0 auto var(--space-6);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hero__sub strong {
+  color: var(--yellow);
+  font-weight: 900;
+}
+
+.hero__actions {
+  justify-content: center;
+}
+
+.hero__actions .link-more {
+  color: var(--white);
+  font-size: 1.1rem;
+}
+
+/* Ilustrace krabice */
+.hero__art {
+  position: relative;
+  width: min(100%, 27rem);
+  margin-inline: auto;
+}
+
+.hero__art::before {
+  content: "";
+  position: absolute;
+  inset: 6% 4% 2%;
+  border: var(--border-thick);
+  border-radius: 50%;
+  background: var(--dots), var(--cream);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  animation: bob 4s ease-in-out infinite;
+}
+
+/* Cenovka ve tvaru výbuchu s komiksovým obrysem */
+.sticker {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  filter:
+    drop-shadow(2px 0 0 var(--navy))
+    drop-shadow(-2px 0 0 var(--navy))
+    drop-shadow(0 2px 0 var(--navy))
+    drop-shadow(0 -2px 0 var(--navy))
+    drop-shadow(4px 4px 0 var(--navy));
+  transform: rotate(10deg);
+}
+
+.sticker__inner {
+  display: grid;
+  place-content: center;
+  width: 7.5rem;
+  aspect-ratio: 1;
+  background: var(--yellow);
+  color: var(--navy);
+  clip-path: var(--burst);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 0.9;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sticker__inner small {
+  display: block;
+  font-size: 0.55em;
+  letter-spacing: 0.08em;
+}
+
+.hero__art .sticker {
+  right: -0.75rem;
+  bottom: -6%;
+}
+
+.hero__art .sticker__inner {
+  width: 6rem;
+  font-size: 1.65rem;
+}
+
+/* SVG ilustrace: barvy a obrysy */
+.hero-box .ink {
+  stroke: var(--navy);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-box .f-red {
+  fill: var(--red);
+}
+
+.hero-box .f-yellow {
+  fill: var(--yellow);
+}
+
+.hero-box .f-yellow-dark {
+  fill: var(--yellow-dark);
+}
+
+.hero-box .f-cream {
+  fill: var(--white);
+}
+
+.hero-box .f-navy {
+  fill: var(--navy);
+}
+
+.hero-box .f-none {
+  fill: none;
+}
+
+.hero-box .ink-thin {
+  stroke: var(--navy);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.hero-box .f-shadow {
+  fill: var(--navy);
+  opacity: 0.18;
+}
+
+.hero-box .swirl {
+  fill: none;
+  stroke: var(--red);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.hero-box .stick {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.hero-box .stick-edge {
+  fill: none;
+  stroke: var(--navy);
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+
+.hero-box .label {
+  fill: var(--cream);
+  font-family: var(--font-display);
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.hero-box .spark {
+  fill: var(--yellow);
+  stroke: var(--navy);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+
+.hero-box .spark-2 {
+  animation-delay: 0.6s;
+}
+
+.hero-box .spark-3 {
+  animation-delay: 1.2s;
+}
+
+.hero-box .spark-4 {
+  animation-delay: 1.8s;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(0.7) rotate(20deg);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Kroky (jak to funguje / postup objednávky)
+   -------------------------------------------------------------------------- */
+.steps {
+  display: grid;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow);
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: -1.3rem;
+  left: var(--space-5);
+  display: grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding-top: 0.15rem;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.step__icon {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.step__title {
+  margin-bottom: var(--space-2);
+  padding-right: 3rem;
+  font-size: 1.75rem;
+}
+
+.step p {
+  margin: 0;
+}
+
+.step a {
+  color: var(--red-dark);
+}
+
+/* --------------------------------------------------------------------------
+   10. Karta boxu
+   -------------------------------------------------------------------------- */
+.box-card {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 12px 14px 0 var(--navy);
+}
+
+/* Zástupný obrázek: barevný blok s emoji */
+.box-card__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 17rem;
+  border-bottom: var(--border-thick);
+  background:
+    var(--dots),
+    repeating-conic-gradient(from 0deg at 50% 50%, var(--yellow) 0deg 9deg, var(--yellow-light) 9deg 18deg);
+}
+
+.combo {
+  position: relative;
+  width: 17rem;
+  height: 15rem;
+  margin: var(--space-5) 0;
+}
+
+.combo__main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 5.5rem;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.combo__item {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 3.3rem;
+  height: 3.3rem;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--white);
+  font-size: 1.65rem;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.combo__item:nth-child(2) { top: 0; left: 12%; transform: rotate(-12deg); }
+.combo__item:nth-child(3) { top: -4%; left: 50%; transform: translateX(-50%) rotate(8deg); }
+.combo__item:nth-child(4) { top: 2%; right: 10%; transform: rotate(14deg); }
+.combo__item:nth-child(5) { top: 40%; right: -4%; transform: rotate(-8deg); }
+.combo__item:nth-child(6) { bottom: 2%; right: 14%; transform: rotate(10deg); }
+.combo__item:nth-child(7) { bottom: -4%; left: 40%; transform: rotate(-6deg); }
+.combo__item:nth-child(8) { top: 40%; left: -4%; transform: rotate(12deg); }
+
+.box-card__media .sticker {
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.box-card__media .sticker__inner {
+  width: 6.5rem;
+  font-size: 1.75rem;
+}
+
+.box-card__body {
+  padding: var(--space-6) var(--space-5);
+}
+
+.box-card__tag {
+  display: inline-block;
+  margin: 0 0 var(--space-3);
+  padding: 0.15rem 0.8rem;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  background: var(--red-tint);
+  color: var(--red-dark);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.box-card__title {
+  margin-bottom: var(--space-2);
+  font-size: clamp(2.4rem, 2rem + 2vw, 3.2rem);
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.box-card__title span {
+  color: var(--red);
+}
+
+.box-card__price {
+  margin: 0 0 var(--space-4);
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-shadow: 3px 3px 0 var(--navy);
+}
+
+.box-card__price small {
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+/* Fakta o boxu jako kulaté štítky */
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  padding: 0.3rem 0.85rem;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--navy);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.facts strong {
+  font-weight: 900;
+}
+
+.box-card__text {
+  margin-bottom: var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   11. Obsah boxu: 7 malých karet
+   -------------------------------------------------------------------------- */
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  --item-bg: var(--yellow);
+  display: flex;
+  flex: 0 1 calc(50% - var(--space-4) / 2);
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4) var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--navy);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: translateY(-4px) rotate(-1.5deg);
+  box-shadow: 7px 8px 0 var(--navy);
+}
+
+.item:nth-child(3n + 2) {
+  --item-bg: var(--red-tint);
+}
+
+.item:nth-child(3n + 3) {
+  --item-bg: var(--navy-tint);
+}
+
+.item__emoji {
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-bottom: var(--space-3);
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--item-bg);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.item__type {
+  margin: 0 0 var(--space-1);
+  color: var(--red-dark);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.item__name {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.item__size {
+  margin: auto 0 0;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  background: var(--navy);
+  color: var(--yellow);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/* --------------------------------------------------------------------------
+   12. Složení, alergeny, trvanlivost
+   -------------------------------------------------------------------------- */
+.notice-card {
+  position: relative;
+  max-width: 50rem;
+  margin: var(--space-8) auto 0;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  background: var(--dots), var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+}
+
+.notice-card__badge {
+  position: absolute;
+  top: -1.6rem;
+  left: var(--space-5);
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding-top: 0.2rem;
+  border: var(--border-thick);
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: var(--shadow-sm);
+}
+
+.notice-card__title {
+  margin-bottom: var(--space-3);
+  font-size: clamp(1.9rem, 1.6rem + 1.5vw, 2.5rem);
+}
+
+.notice-card__todo {
+  display: inline-block;
+  margin-bottom: var(--space-5);
+  padding: 0.3rem 0.9rem;
+  border: 2px dashed var(--navy);
+  border-radius: var(--radius-sm);
+  background: var(--yellow);
+  font-weight: 800;
+}
+
+.spec-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.spec-list div {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--navy);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+}
+
+.spec-list dt {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.spec-list dd {
+  margin: 0;
+}
+
+.allergen {
+  display: inline-block;
+  margin: 0.1rem 0;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--white);
+  font-weight: 900;
+}
+
+/* --------------------------------------------------------------------------
+   13. Karty informací a tabulka cen
+   -------------------------------------------------------------------------- */
+.card-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 9px 0 var(--navy);
+}
+
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-bottom: var(--space-4);
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--yellow);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.card__title {
+  margin-bottom: var(--space-2);
+  font-size: 2rem;
+}
+
+.card__price {
+  display: inline-block;
+  margin: 0 0 var(--space-4);
+  padding: 0.25rem 1rem 0.1rem;
+  border: var(--border);
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  box-shadow: var(--shadow-sm);
+  transform: rotate(-2deg);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.pay-card {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pay-card .card__icon {
+  margin-inline: auto;
+}
+
+.account {
+  display: inline-block;
+  padding: 0.45rem 1.25rem 0.3rem;
+  border: 3px dashed var(--navy);
+  border-radius: var(--radius-sm);
+  background: var(--cream);
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.card .big-link {
+  font-size: 1.25rem;
+  word-break: break-word;
+}
+
+/* Tabulka cen */
+.price-table-wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+  overflow-x: auto;
+  border: var(--border-thick);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+}
+
+.price-table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  color: var(--navy);
+}
+
+.price-table th,
+.price-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.price-table thead th {
+  background: var(--navy);
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.price-table tbody tr + tr > * {
+  border-top: 2px dashed var(--navy);
+}
+
+.price-table tbody tr:nth-child(odd) {
+  background: var(--cream);
+}
+
+.price-table tbody th {
+  font-weight: 800;
+}
+
+.price-table .total {
+  color: var(--red);
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.table-note {
+  max-width: 46rem;
+  margin: var(--space-5) auto 0;
+  color: var(--color-muted);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   14. Výzva k objednání a formulář
+   -------------------------------------------------------------------------- */
+.cta {
+  text-align: center;
+}
+
+.cta .section-title {
+  margin-bottom: var(--space-3);
+}
+
+.cta p {
+  max-width: 36rem;
+  margin: 0 auto var(--space-6);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.section--navy .btn {
+  box-shadow: 6px 6px 0 var(--red);
+}
+
+.section--navy .btn:hover {
+  box-shadow: 9px 9px 0 var(--red);
+}
+
+.section--navy .btn:active {
+  box-shadow: 1px 1px 0 var(--red);
+}
+
+.form-card {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5) var(--space-6);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  color: var(--navy);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-card__title {
+  font-size: clamp(2.2rem, 1.8rem + 2vw, 3rem);
+  text-shadow: 3px 3px 0 var(--yellow);
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.fields li {
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  background: var(--yellow);
+  font-weight: 800;
+}
+
+.form-card__note {
+  margin: var(--space-5) 0 0;
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   15. Časté dotazy
+   -------------------------------------------------------------------------- */
+.faq {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.faq details {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  content: "+" / "";
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: var(--border);
+  border-radius: 50%;
+  background: var(--yellow);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.25s ease, background-color 0.2s ease;
+}
+
+.faq details[open] summary::after {
+  background: var(--red);
+  color: var(--white);
+  transform: rotate(45deg);
+}
+
+.faq details > p {
+  margin: 0;
+  padding: 0 var(--space-5) var(--space-5);
+}
+
+/* --------------------------------------------------------------------------
+   16. Kontakt a textové stránky
+   -------------------------------------------------------------------------- */
+.seller {
+  font-style: normal;
+}
+
+.seller-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.seller-list div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px dashed var(--navy);
+}
+
+.seller-list dt {
+  min-width: 7rem;
+  font-weight: 900;
+}
+
+.seller-list dd {
+  margin: 0;
+}
+
+.seller + .todo {
+  margin: var(--space-4) 0 0;
+}
+
+.doc {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-5);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-lg);
+}
+
+.doc__notice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--navy);
+  border-radius: var(--radius-sm);
+  background: var(--yellow);
+}
+
+.doc__notice p {
+  margin: 0;
+}
+
+.doc__stamp {
+  padding: 0.15rem 0.8rem 0;
+  border: var(--border);
+  border-radius: 8px;
+  background: var(--red);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  transform: rotate(-3deg);
+}
+
+.toc {
+  margin-bottom: var(--space-6);
+  padding: var(--space-5);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.toc__title {
+  margin-bottom: var(--space-3);
+  font-size: 1.6rem;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+
+.toc li::marker {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.toc li + li {
+  margin-top: var(--space-1);
+}
+
+.doc__heading {
+  margin: var(--space-6) 0 var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 3px solid var(--navy);
+  font-size: 1.8rem;
+}
+
+.doc__heading span {
+  color: var(--red);
+}
+
+.doc__closing {
+  margin: var(--space-6) 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   17. Patička
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: var(--stars-night), var(--dots-light), var(--navy);
+  color: var(--cream);
+  --color-link: var(--yellow);
+  --color-focus: var(--yellow);
 }
 
 .site-footer__grid {
@@ -694,49 +1745,32 @@ a:hover {
 }
 
 .site-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   margin: 0 0 var(--space-3);
-  color: var(--color-paper);
-  font-family: var(--font-script);
-  font-size: 2.8rem;
+  color: var(--yellow);
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
   line-height: 1;
-  text-shadow: 3px 3px 0 var(--color-red);
+  text-shadow: 3px 3px 0 var(--red);
 }
 
-.site-footer__brand p {
+.site-footer__logo svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  transform: rotate(-12deg);
+}
+
+.site-footer__brand p:not(.site-footer__logo) {
   max-width: 24rem;
-}
-
-/* Neonový nápis */
-.neon {
-  display: inline-block;
-  margin: var(--space-3) 0 0;
-  color: var(--color-neon);
-  font-family: var(--font-script);
-  font-size: 2.1rem;
-  line-height: 1.1;
-  text-shadow: 0 0 2px #ffd9d3, 0 0 8px rgba(255, 110, 92, 0.85), 0 0 22px rgba(255, 80, 60, 0.55);
-  transform: rotate(-4deg);
-  animation: neon 7s infinite;
-}
-
-@keyframes neon {
-  0%,
-  92%,
-  96%,
-  100% {
-    opacity: 1;
-  }
-
-  93%,
-  95% {
-    opacity: 0.55;
-  }
 }
 
 .site-footer__title {
   margin-bottom: var(--space-3);
-  font-size: 0.78rem;
-  letter-spacing: 0.26em;
+  color: var(--yellow);
+  font-size: 1.6rem;
 }
 
 .site-footer__list {
@@ -749,17 +1783,21 @@ a:hover {
   margin-top: var(--space-2);
 }
 
+.site-footer a {
+  color: var(--cream);
+}
+
 .site-footer a:hover {
-  color: var(--color-white-paper);
+  color: var(--yellow);
 }
 
 .site-footer a[aria-current="page"] {
-  color: var(--color-neon);
+  color: var(--yellow);
   text-decoration-style: wavy;
 }
 
 .site-footer__bottom {
-  border-top: 1px dashed rgba(244, 233, 210, 0.3);
+  border-top: 2px dashed rgba(255, 244, 220, 0.35);
 }
 
 .site-footer__bottom-inner {
@@ -769,10 +1807,7 @@ a:hover {
   justify-content: space-between;
   gap: var(--space-3) var(--space-5);
   padding-block: var(--space-5);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: var(--text-sm);
 }
 
 .site-footer__bottom p {
@@ -789,1618 +1824,62 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   7. Sekce a nadpisy
+   18. Animace při rolování (zapíná je script.js, bez JS je vše vidět)
    -------------------------------------------------------------------------- */
-.section {
-  padding-block: var(--space-8);
+/* Skrytí proběhne okamžitě, animuje se až objevení */
+.js-reveal [data-reveal] {
+  opacity: 0;
+  translate: 0 28px;
 }
 
-/* Noční modrá sekce */
-.section--night {
-  background: var(--texture-grain), var(--texture-stars), var(--color-navy);
-  color: var(--color-cream);
-  --color-heading: var(--color-cream);
-  --color-link: var(--color-cream);
-  --color-focus: var(--color-cream);
+.js-reveal [data-reveal].is-visible {
+  opacity: 1;
+  translate: 0 0;
+  transition:
+    opacity 0.6s ease var(--reveal-delay, 0s),
+    translate 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) var(--reveal-delay, 0s),
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Světle modrá sekce s proužky jako čalounění v boxu */
-.section--sky {
-  background:
-    var(--texture-grain),
-    repeating-linear-gradient(90deg, rgba(251, 246, 234, 0.28) 0 3px, transparent 3px 28px),
-    var(--color-sky);
-  border-block: 3px solid var(--color-navy);
-  --notch: var(--color-sky);
-}
-
-/* Nadpis sekce psacím písmem s ozdobou */
-.title {
-  margin: 0 0 var(--space-6);
-  color: var(--color-heading);
-  font-family: var(--font-script);
-  font-size: var(--text-title);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-align: center;
-  text-transform: none;
-}
-
-.title::after {
-  content: "";
-  display: block;
-  width: 10rem;
-  height: 14px;
-  margin: var(--space-2) auto 0;
-  background:
-    var(--ornament-star) center / 14px 14px no-repeat,
-    linear-gradient(currentColor, currentColor) left center / 42% 2px no-repeat,
-    linear-gradient(currentColor, currentColor) right center / 42% 2px no-repeat;
-}
-
-.section--night .title {
-  text-shadow: 3px 3px 0 var(--color-red);
-}
-
-.lead {
-  max-width: 38rem;
-  margin: calc(-1 * var(--space-4)) auto var(--space-6);
-  color: var(--color-ink-soft);
-  font-size: var(--text-lg);
-  font-style: italic;
-  text-align: center;
-}
-
-/* Úvodní pruh podstránek */
-.page-hero {
-  position: relative;
-  padding-block: var(--space-7) calc(var(--space-7) + 1.5rem);
-  background: var(--texture-grain), var(--texture-stars), var(--color-navy);
-  color: var(--color-cream);
-  text-align: center;
-  --color-heading: var(--color-paper);
-  --color-focus: var(--color-cream);
-}
-
-.page-hero::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 1.5rem;
-  background: var(--checker-red);
-  border-top: 3px solid var(--color-navy-dark);
-}
-
-.page-hero__title {
-  margin: 0 0 var(--space-3);
-  font-family: var(--font-script);
-  font-size: clamp(3rem, 2.2rem + 4vw, 5rem);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.05;
-  text-shadow: 3px 3px 0 var(--color-red), 7px 7px 0 rgba(0, 0, 0, 0.22);
-  text-transform: none;
-  transform: rotate(-3deg);
-}
-
-.page-hero__lead {
-  max-width: 36rem;
-  margin: 0 auto;
-  font-size: var(--text-lg);
-  font-style: italic;
-}
-
-.page-hero .tags {
-  margin-top: var(--space-6);
-  --tag-hole: var(--color-navy);
-  --tag-string: var(--color-sky);
-}
+/* Postupné objevování karet v mřížce */
+.js-reveal [data-reveal-group] > :nth-child(2) { --reveal-delay: 0.08s; }
+.js-reveal [data-reveal-group] > :nth-child(3) { --reveal-delay: 0.16s; }
+.js-reveal [data-reveal-group] > :nth-child(4) { --reveal-delay: 0.24s; }
+.js-reveal [data-reveal-group] > :nth-child(5) { --reveal-delay: 0.32s; }
+.js-reveal [data-reveal-group] > :nth-child(6) { --reveal-delay: 0.4s; }
+.js-reveal [data-reveal-group] > :nth-child(7) { --reveal-delay: 0.48s; }
 
 /* --------------------------------------------------------------------------
-   8. Úvodní stránka – hero s paprsky
-   -------------------------------------------------------------------------- */
-.hero {
-  --burst-x: 50%;
-  --burst-y: 78%;
-  position: relative;
-  overflow: hidden;
-  background:
-    var(--texture-grain),
-    radial-gradient(circle at var(--burst-x) var(--burst-y), rgba(244, 233, 210, 0) 0 14rem, var(--color-cream) 44rem),
-    repeating-conic-gradient(from 0deg at var(--burst-x) var(--burst-y), var(--color-cream) 0deg 7deg, var(--color-cream-shade) 7.5deg 14.5deg, var(--color-cream) 15deg);
-}
-
-/* Šachovnice pod hero */
-.hero::after {
-  content: "";
-  display: block;
-  height: 2rem;
-  background: var(--checker-navy);
-  border-block: 3px solid var(--color-navy);
-}
-
-.hero__inner {
-  display: grid;
-  gap: var(--space-7);
-  align-items: center;
-  padding-block: var(--space-7) var(--space-8);
-  text-align: center;
-}
-
-.hero .kicker {
-  margin-bottom: var(--space-5);
-}
-
-.hero__title {
-  margin: 0 0 var(--space-3);
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: var(--text-hero);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1;
-  text-shadow:
-    1px 1px 0 var(--color-navy),
-    2px 2px 0 var(--color-navy),
-    3px 3px 0 var(--color-navy),
-    4px 4px 0 var(--color-navy),
-    5px 5px 0 var(--color-navy),
-    10px 12px 14px rgba(31, 53, 87, 0.25);
-  text-transform: none;
-  transform: rotate(-3deg);
-}
-
-.hero__slogan {
-  margin-bottom: var(--space-4);
-  color: var(--color-navy);
-  font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem);
-  font-style: italic;
-  line-height: 1.3;
-}
-
-.hero__lead {
-  max-width: 31rem;
-  margin: 0 auto var(--space-6);
-}
-
-.hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-5) var(--space-6);
-}
-
-.hero__visual {
-  position: relative;
-  width: min(100%, 20rem);
-  margin-inline: auto;
-}
-
-.hero__visual .burst {
-  top: -1.75rem;
-  left: -1.25rem;
-  width: 7rem;
-  font-size: 1.35rem;
-}
-
-/* Fotka jako polaroid s lepicí páskou */
-.snapshot {
-  position: relative;
-  margin: 0;
-  padding: 0.85rem 0.85rem 0;
-  background: var(--color-white-paper);
-  box-shadow: 0 1px 2px rgba(43, 36, 32, 0.2), 0 16px 30px -12px rgba(43, 36, 32, 0.5);
-  transform: rotate(3deg);
-}
-
-.snapshot::before {
-  content: "";
-  position: absolute;
-  top: -0.9rem;
-  left: 50%;
-  z-index: 1;
-  width: 6.5rem;
-  height: 1.8rem;
-  margin-left: -3.25rem;
-  background: rgba(235, 219, 187, 0.8);
-  box-shadow: 0 1px 2px rgba(43, 36, 32, 0.15);
-  transform: rotate(-4deg);
-}
-
-.snapshot .placeholder {
-  aspect-ratio: 1;
-}
-
-.snapshot figcaption {
-  padding: var(--space-2) 0 var(--space-3);
-  color: var(--color-navy);
-  font-family: var(--font-script);
-  font-size: 1.7rem;
-  line-height: 1.2;
-  text-align: center;
-}
-
-/* --------------------------------------------------------------------------
-   9. Zástupné obrázky, cenovky, razítka, stužky
-   -------------------------------------------------------------------------- */
-.placeholder {
-  --ph-bg: var(--color-navy);
-  --ph-dot: rgba(251, 246, 234, 0.2);
-  display: grid;
-  place-items: center;
-  aspect-ratio: 16 / 10;
-  background: radial-gradient(var(--ph-dot) 1.5px, transparent 2px) 0 0 / 11px 11px, var(--ph-bg);
-}
-
-/* Kulatý štítek s emoji uprostřed */
-.placeholder > span {
-  display: grid;
-  place-items: center;
-  min-width: 4.75rem;
-  height: 4.75rem;
-  padding: 0 0.9rem;
-  border: 2px dashed var(--color-navy);
-  border-radius: 999px;
-  background: var(--color-paper);
-  box-shadow: 0 0 0 5px var(--color-paper), 0 0 0 7px var(--color-navy);
-  font-size: 1.9rem;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-.snapshot .placeholder > span {
-  min-width: 8.5rem;
-  height: 8.5rem;
-  font-size: 4.25rem;
-}
-
-.placeholder--red,
-.placeholder--palivy {
-  --ph-bg: var(--color-red);
-}
-
-.placeholder--navy,
-.placeholder--gamer {
-  --ph-bg: var(--color-navy);
-}
-
-.placeholder--sky,
-.placeholder--sladky {
-  --ph-bg: var(--color-sky);
-  --ph-dot: rgba(31, 53, 87, 0.16);
-}
-
-.placeholder--vanocni {
-  background: repeating-linear-gradient(45deg, var(--color-red) 0 14px, var(--color-paper) 14px 28px);
-}
-
-/* Kulatá fotka v jídelním lístku */
-.placeholder--round {
-  width: 11rem;
-  aspect-ratio: 1;
-  margin: 0 auto var(--space-5);
-  border: 3px solid var(--color-navy);
-  border-radius: 50%;
-  box-shadow: 0 0 0 6px var(--color-paper), 0 0 0 8px var(--color-navy);
-}
-
-.placeholder--round > span {
-  min-width: 0;
-  height: auto;
-  padding: 0;
-  border: 0;
-  background: none;
-  box-shadow: none;
-  font-size: 2.4rem;
-}
-
-/* Hvězdicová cenovka */
-.burst {
-  position: absolute;
-  z-index: 2;
-  display: grid;
-  place-content: center;
-  width: 5.5rem;
-  aspect-ratio: 1;
-  margin: 0;
-  background: radial-gradient(circle, var(--color-red) 0 57%, var(--color-paper) 57.5% 60%, var(--color-red) 60.5%);
-  color: var(--color-paper);
-  clip-path: var(--burst);
-  font-family: var(--font-sans);
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  white-space: nowrap;
-  transform: rotate(-12deg);
-}
-
-.burst span {
-  display: block;
-  margin-bottom: 0.15rem;
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-/* Gumové razítko */
-.stamp {
-  display: inline-block;
-  margin: 0;
-  padding: 0.25rem 0.7rem;
-  border: 3px double var(--color-red);
-  border-radius: 6px;
-  color: var(--color-red);
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  line-height: 1.3;
-  text-transform: uppercase;
-  -webkit-mask: var(--texture-stamp);
-  mask: var(--texture-stamp);
-  transform: rotate(-8deg);
-}
-
-.stamp--big {
-  padding: 0.4rem 1rem;
-  border-width: 5px;
-  font-size: 1.05rem;
-}
-
-/* Šikmá stužka v rohu karty */
-.ribbon {
-  position: absolute;
-  top: 1rem;
-  left: -2.6rem;
-  z-index: 2;
-  width: 9rem;
-  margin: 0;
-  padding: 0.3rem 0;
-  border-block: 1px dashed rgba(251, 246, 234, 0.7);
-  background: var(--color-red);
-  color: var(--color-paper);
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: 0 0 0 2px var(--color-red), 0 4px 6px -2px rgba(43, 36, 32, 0.4);
-  transform: rotate(-45deg);
-}
-
-/* --------------------------------------------------------------------------
-   10. Co v krabici najdeš (ilustrace)
-   -------------------------------------------------------------------------- */
-.goodies {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.goodies__item {
-  padding: var(--space-5) var(--space-4);
-  text-align: center;
-}
-
-.goodies__item + .goodies__item {
-  border-top: 2px dotted rgba(31, 53, 87, 0.45);
-}
-
-.goodies__title {
-  margin-bottom: var(--space-1);
-  letter-spacing: 0.18em;
-}
-
-.goodies__item p {
-  max-width: 18rem;
-  margin: 0 auto;
-  color: var(--color-ink-soft);
-  font-style: italic;
-}
-
-.icon {
-  width: 4.75rem;
-  height: 4.75rem;
-  margin: 0 auto var(--space-3);
-  overflow: visible;
-}
-
-.icon .ink {
-  stroke: var(--color-navy);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.icon .red {
-  fill: var(--color-red);
-}
-
-.icon .paper {
-  fill: var(--color-white-paper);
-}
-
-.icon .sky {
-  fill: var(--color-sky);
-}
-
-.icon .none {
-  fill: none;
-}
-
-.icon .stripe {
-  fill: none;
-  stroke: var(--color-white-paper);
-  stroke-width: 3.5;
-  stroke-linecap: round;
-}
-
-.icon .straw-edge {
-  fill: none;
-  stroke: var(--color-navy);
-  stroke-width: 6.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.icon .straw {
-  fill: none;
-  stroke: var(--color-red);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-/* --------------------------------------------------------------------------
-   11. Jak to funguje (velké psané číslice)
-   -------------------------------------------------------------------------- */
-.steps {
-  display: grid;
-  gap: var(--space-7);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: step;
-}
-
-.step {
-  position: relative;
-  max-width: 22rem;
-  margin-inline: auto;
-  text-align: center;
-  counter-increment: step;
-}
-
-.step::before {
-  content: counter(step);
-  display: block;
-  margin-bottom: var(--space-1);
-  color: var(--color-paper);
-  font-family: var(--font-script);
-  font-size: 5rem;
-  line-height: 1;
-  text-shadow: 3px 3px 0 var(--color-red);
-}
-
-.step__title {
-  margin-bottom: var(--space-2);
-  letter-spacing: 0.18em;
-}
-
-.step p {
-  margin: 0;
-}
-
-/* --------------------------------------------------------------------------
-   12. Jídelní lístek (rámeček s dvojitou linkou)
-   -------------------------------------------------------------------------- */
-.board {
-  position: relative;
-  padding: var(--space-7) var(--space-5);
-  border: 3px solid var(--color-navy);
-  border-radius: var(--radius);
-  background: var(--texture-grain), var(--color-paper);
-  box-shadow:
-    inset 0 0 0 6px var(--color-paper),
-    inset 0 0 0 7px var(--color-navy),
-    var(--shadow-soft);
-}
-
-.board::before,
-.board::after {
-  content: "★";
-  content: "★" / "";
-  position: absolute;
-  top: 0.9rem;
-  color: var(--color-red);
-  font-size: 1rem;
-  line-height: 1;
-}
-
-.board::before {
-  left: 1.1rem;
-}
-
-.board::after {
-  right: 1.1rem;
-}
-
-.board--narrow {
-  max-width: 44rem;
-  margin-inline: auto;
-}
-
-.board .lead {
-  margin-top: calc(-1 * var(--space-4));
-}
-
-.board__subtitle {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  margin: var(--space-7) 0 var(--space-5);
-  font-size: 0.9rem;
-  letter-spacing: 0.24em;
-}
-
-.board__subtitle::before,
-.board__subtitle::after {
-  content: "";
-  flex: 1;
-  border-top: 2px dotted rgba(31, 53, 87, 0.5);
-}
-
-.board__cta {
-  margin: var(--space-6) 0 0;
-  text-align: center;
-}
-
-.board__note {
-  margin: var(--space-6) 0 0;
-  color: var(--color-ink-soft);
-  font-size: 0.95rem;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Tři velikosti na úvodní stránce */
-.trio {
-  display: grid;
-  gap: var(--space-7);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.trio__item {
-  position: relative;
-  text-align: center;
-}
-
-.trio__name {
-  margin: 0;
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: 2.7rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.05;
-  text-transform: none;
-}
-
-.trio__price {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin: var(--space-1) 0 var(--space-3);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-}
-
-.trio__price::before,
-.trio__price::after {
-  content: "";
-  width: 1.75rem;
-  border-top: 2px dotted currentColor;
-}
-
-.trio__desc {
-  max-width: 19rem;
-  margin: 0 auto var(--space-4);
-  color: var(--color-ink-soft);
-  font-style: italic;
-}
-
-.trio__item .stamp {
-  position: absolute;
-  top: -1.1rem;
-  right: calc(50% - 10.5rem);
-  z-index: 1;
-  transform: rotate(12deg);
-}
-
-/* Ceník s tečkami jako v jídelním lístku */
-.menu-list {
-  max-width: 34rem;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.menu-item + .menu-item {
-  margin-top: var(--space-5);
-}
-
-.menu-item__row {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-3);
-}
-
-.menu-item__name {
-  margin: 0;
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: 2.4rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-transform: none;
-}
-
-.menu-item__dots {
-  flex: 1;
-  min-width: 1.5rem;
-  border-bottom: 3px dotted var(--color-navy);
-  transform: translateY(-0.3rem);
-}
-
-.menu-item__price {
-  margin: 0;
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-
-.menu-item__desc {
-  margin: 0;
-  color: var(--color-ink-soft);
-  font-style: italic;
-}
-
-/* --------------------------------------------------------------------------
-   13. Témata, filtr a karty krabic
-   -------------------------------------------------------------------------- */
-.flavors {
-  display: grid;
-  gap: var(--space-4);
-  margin: 0 0 var(--space-7);
-  padding: 0;
-  list-style: none;
-}
-
-.flavor {
-  --flavor: var(--color-red);
-  padding: var(--space-4) var(--space-5);
-  border-left: 8px solid var(--flavor);
-  border-radius: 4px;
-  background: var(--color-paper);
-  box-shadow: 0 10px 18px -14px rgba(43, 36, 32, 0.7);
-}
-
-.flavor--gamer {
-  --flavor: var(--color-navy);
-}
-
-.flavor--palivy {
-  --flavor: var(--color-red);
-}
-
-.flavor--sladky {
-  --flavor: var(--color-blue);
-}
-
-.flavor--vanocni {
-  --flavor: var(--color-red-dark);
-}
-
-.flavor__name {
-  margin: 0;
-  color: var(--flavor);
-  font-family: var(--font-script);
-  font-size: 2.1rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-transform: none;
-}
-
-.flavor p {
-  margin: 0;
-}
-
-/* Ovládací panel filtru jako jukebox */
-.filter {
-  display: grid;
-  gap: var(--space-4);
-  margin-bottom: var(--space-6);
-  padding: var(--space-5);
-  border-radius: var(--radius);
-  background: var(--texture-grain), var(--color-navy);
-  color: var(--color-cream);
-  box-shadow:
-    inset 0 0 0 4px var(--color-navy),
-    inset 0 0 0 5px rgba(244, 233, 210, 0.4),
-    var(--shadow-soft);
-  --color-focus: var(--color-cream);
-}
-
-.filter__group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.filter__label {
-  flex-basis: 100%;
-  color: var(--color-sky);
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.filter__btn {
-  min-height: 2.6rem;
-  padding: 0.45rem 1rem;
-  border: 2px solid rgba(244, 233, 210, 0.55);
-  border-radius: 4px;
-  background: transparent;
-  color: var(--color-cream);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-
-.filter__btn:hover {
-  border-color: var(--color-cream);
-  background: rgba(244, 233, 210, 0.1);
-}
-
-.filter__btn[aria-pressed="true"] {
-  border-color: var(--color-red);
-  background: var(--color-red);
-  color: var(--color-paper);
-  box-shadow: inset 0 0 0 2px var(--color-red), inset 0 0 0 3px rgba(251, 246, 234, 0.7);
-}
-
-.filter__status {
-  margin: 0;
-  font-size: 0.95rem;
-  font-style: italic;
-}
-
-.filter__empty {
-  padding: var(--space-5);
-  border: 2px dashed var(--color-navy);
-  border-radius: var(--radius);
-  background: var(--color-paper);
-  text-align: center;
-}
-
-.product-grid {
-  display: grid;
-  gap: var(--space-6) var(--space-5);
-  margin: 0 0 var(--space-6);
-  padding: 0;
-  list-style: none;
-}
-
-.product {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  border: 2px solid var(--color-navy);
-  border-radius: 8px;
-  background: var(--color-paper);
-  box-shadow: var(--shadow-soft);
-}
-
-.product .placeholder {
-  border-bottom: 2px solid var(--color-navy);
-}
-
-.product .burst {
-  top: 0.6rem;
-  right: 0.6rem;
-  transform: rotate(10deg);
-}
-
-.product__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: var(--space-4) var(--space-5) var(--space-5);
-  text-align: center;
-}
-
-.product__title {
-  margin: 0 0 var(--space-4);
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.product__name {
-  display: block;
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 1.05;
-}
-
-.product__size {
-  display: block;
-  margin-top: var(--space-1);
-  color: var(--color-navy);
-  font-size: 0.78rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-}
-
-.product .btn {
-  margin-top: auto;
-}
-
-/* Parametry s tečkami (složení, alergeny…) */
-.specs {
-  margin: 0 0 var(--space-5);
-  padding: 0;
-  font-size: 0.92rem;
-  text-align: left;
-}
-
-.specs div {
-  display: flex;
-  align-items: baseline;
-  gap: var(--space-2);
-  padding: 0.15rem 0;
-}
-
-.specs div::before {
-  content: "";
-  order: 2;
-  flex: 1;
-  min-width: 1rem;
-  border-bottom: 2px dotted rgba(31, 53, 87, 0.45);
-}
-
-.specs dt {
-  order: 1;
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.specs dd {
-  order: 3;
-  margin: 0;
-  color: var(--color-ink-soft);
-  font-style: italic;
-  text-align: right;
-}
-
-.footnote {
-  max-width: 40rem;
-  margin: var(--space-6) auto 0;
-  font-style: italic;
-  text-align: center;
-}
-
-.footnote::before {
-  content: "★ ";
-  content: "★ " / "";
-  color: var(--color-red);
-  font-style: normal;
-}
-
-/* --------------------------------------------------------------------------
-   14. Vstupenka (výzva k objednání)
-   -------------------------------------------------------------------------- */
-.ticket {
-  position: relative;
-  display: grid;
-  border-radius: var(--radius);
-  background: var(--texture-grain), var(--color-red);
-  color: var(--color-paper);
-  box-shadow: var(--shadow-soft);
-  outline: 2px dashed rgba(251, 246, 234, 0.55);
-  outline-offset: -11px;
-  --color-heading: var(--color-paper);
-  --color-link: var(--color-paper);
-  --color-focus: var(--color-paper);
-}
-
-/* Půlkruhové výřezy po stranách */
-.ticket::before,
-.ticket::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 2rem;
-  height: 2rem;
-  margin-top: -1rem;
-  border-radius: 50%;
-  background: var(--notch);
-}
-
-.ticket::before {
-  left: -1rem;
-}
-
-.ticket::after {
-  right: -1rem;
-}
-
-.ticket a:not(.btn):hover {
-  color: var(--color-white-paper);
-}
-
-.ticket__main {
-  padding: var(--space-7) var(--space-6) var(--space-5);
-  text-align: center;
-}
-
-.ticket__title {
-  margin: 0 0 var(--space-3);
-  font-family: var(--font-script);
-  font-size: clamp(2.3rem, 1.8rem + 2vw, 3.3rem);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-shadow: 2px 2px 0 var(--color-red-dark);
-  text-transform: none;
-}
-
-.ticket__main p {
-  max-width: 34rem;
-  margin: 0 auto;
-}
-
-.ticket__stub {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  gap: var(--space-3);
-  padding: var(--space-5) var(--space-6) var(--space-7);
-  border-top: 3px dashed rgba(251, 246, 234, 0.6);
-  text-align: center;
-}
-
-.ticket__note {
-  margin: 0;
-  font-size: 0.85rem;
-  font-style: italic;
-}
-
-/* --------------------------------------------------------------------------
-   15. Objednávkový lístek (postup objednávky)
-   -------------------------------------------------------------------------- */
-.check {
-  position: relative;
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: var(--space-6) var(--space-5) var(--space-5) 3.9rem;
-  background:
-    linear-gradient(90deg, transparent 2.95rem, rgba(196, 48, 43, 0.55) 2.95rem 3.1rem, transparent 3.1rem),
-    var(--color-white-paper);
-  box-shadow: 0 1px 2px rgba(43, 36, 32, 0.18), 0 22px 32px -18px rgba(43, 36, 32, 0.55);
-  transform: rotate(-0.6deg);
-}
-
-/* Perforace nahoře, jako by byl lístek vytržený z bloku */
-.check::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 8px;
-  background: radial-gradient(circle at 50% 0, var(--color-cream) 4px, transparent 4.5px) 0 0 / 14px 8px repeat-x;
-}
-
-.check__head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: var(--space-2);
-  margin: 0 0 var(--space-3);
-  padding-bottom: var(--space-2);
-  border-bottom: 2px solid var(--color-navy);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.check__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: row;
-}
-
-.check__row {
-  position: relative;
-  padding: var(--space-3) 0 var(--space-4);
-  border-bottom: 1px dashed rgba(31, 53, 87, 0.35);
-  counter-increment: row;
-}
-
-.check__row::before {
-  content: counter(row);
-  position: absolute;
-  top: 0.35rem;
-  left: -3.4rem;
-  width: 2.4rem;
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: 2.4rem;
-  line-height: 1;
-  text-align: center;
-}
-
-.check__title {
-  margin: 0 0 var(--space-1);
-  font-size: 1rem;
-  letter-spacing: 0.14em;
-}
-
-.check__row p {
-  margin: 0;
-}
-
-.check__total {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-2);
-  margin: var(--space-4) 0 0;
-  padding-top: var(--space-2);
-  border-top: 4px double var(--color-navy);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.check__total span:last-child {
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: 1.8rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-/* --------------------------------------------------------------------------
-   16. Časté dotazy
-   -------------------------------------------------------------------------- */
-.faq {
-  padding: var(--space-3) var(--space-5);
-  border: 3px solid var(--color-navy);
-  border-radius: var(--radius);
-  background: var(--color-paper);
-  box-shadow:
-    inset 0 0 0 6px var(--color-paper),
-    inset 0 0 0 7px var(--color-navy),
-    var(--shadow-soft);
-}
-
-.faq details + details {
-  border-top: 2px dotted rgba(31, 53, 87, 0.45);
-}
-
-.faq summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-4) var(--space-1);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  list-style: none;
-}
-
-.faq summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq summary::after {
-  content: "+";
-  content: "+" / "";
-  display: grid;
-  flex: none;
-  place-items: center;
-  width: 1.9rem;
-  height: 1.9rem;
-  border-radius: 50%;
-  background: var(--color-red);
-  color: var(--color-paper);
-  font-size: 1.25rem;
-  line-height: 1;
-  transition: transform 0.2s ease;
-}
-
-.faq details[open] summary::after {
-  transform: rotate(45deg);
-}
-
-.faq summary:hover {
-  color: var(--color-red);
-}
-
-.faq details > p {
-  margin: 0;
-  padding: 0 var(--space-1) var(--space-5);
-}
-
-/* --------------------------------------------------------------------------
-   17. Doprava (poštovní známky) a platba (účtenky)
-   -------------------------------------------------------------------------- */
-.stamps,
-.receipts {
-  display: grid;
-  gap: var(--space-6);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* Zoubkovaný okraj známky = tečkovaný rámeček v barvě papíru */
-.stamp-card {
-  height: 100%;
-  padding: 0.4rem;
-  border: 10px dotted var(--color-white-paper);
-  background: var(--color-white-paper) padding-box;
-  filter: drop-shadow(0 6px 8px rgba(43, 36, 32, 0.28));
-}
-
-.stamps li:nth-child(odd) .stamp-card {
-  transform: rotate(-1deg);
-}
-
-.stamps li:nth-child(even) .stamp-card {
-  transform: rotate(1.2deg);
-}
-
-.stamp-card__inner {
-  position: relative;
-  height: 100%;
-  padding: var(--space-5);
-  border: 2px solid var(--color-navy);
-  background: var(--color-white-paper);
-}
-
-/* Poštovní razítko */
-.stamp-card__inner::after {
-  content: "";
-  position: absolute;
-  top: 0.75rem;
-  right: 0.5rem;
-  width: 7.5rem;
-  height: 3.6rem;
-  background: var(--postmark) center / contain no-repeat;
-  transform: rotate(-8deg);
-  pointer-events: none;
-}
-
-.stamp-card__label {
-  margin: 0;
-  color: var(--color-red);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-}
-
-.stamp-card__title,
-.receipt__title {
-  margin: 0 0 var(--space-3);
-  color: var(--color-navy);
-  font-family: var(--font-script);
-  font-size: 2.4rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.1;
-  text-transform: none;
-}
-
-.stamp-card .specs {
-  margin: var(--space-4) 0 0;
-}
-
-/* Účtenka se zoubkovaným spodkem */
-.receipt-wrap {
-  filter: drop-shadow(0 6px 8px rgba(43, 36, 32, 0.25));
-}
-
-.receipt {
-  height: 100%;
-  padding: var(--space-5) var(--space-5) var(--space-7);
-  background: var(--color-white-paper);
-  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 18px 100%;
-  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 18px 100%;
-}
-
-.receipt__head,
-.receipt__foot {
-  margin: 0 0 var(--space-3);
-  color: var(--color-ink-soft);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.receipt__head {
-  padding-bottom: var(--space-2);
-  border-bottom: 2px dashed rgba(43, 36, 32, 0.35);
-}
-
-.receipt__title {
-  color: var(--color-red);
-  text-align: center;
-}
-
-.receipt__foot {
-  margin: var(--space-4) 0 0;
-  padding-top: var(--space-2);
-  border-top: 2px dashed rgba(43, 36, 32, 0.35);
-}
-
-/* Tabulka kombinací */
-.table-scroll {
-  overflow-x: auto;
-}
-
-.table {
-  width: 100%;
-  margin: 0;
-  border-collapse: collapse;
-}
-
-.table caption {
-  margin-bottom: var(--space-3);
-  color: var(--color-navy);
-  font-family: var(--font-script);
-  font-size: 2.2rem;
-  line-height: 1.1;
-}
-
-.table th,
-.table td {
-  padding: var(--space-3) var(--space-2);
-  border-bottom: 2px dotted rgba(31, 53, 87, 0.4);
-  text-align: center;
-}
-
-.table thead th {
-  border-bottom: 4px double var(--color-navy);
-  color: var(--color-red);
-  font-family: var(--font-sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.table tbody th {
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-align: left;
-  text-transform: uppercase;
-}
-
-.table tbody tr:last-child > * {
-  border-bottom: 0;
-}
-
-.table .yes {
-  color: var(--color-navy);
-  font-weight: 700;
-}
-
-.table .yes span {
-  color: var(--color-red);
-}
-
-.table .no {
-  color: var(--color-ink-soft);
-  font-style: italic;
-}
-
-/* --------------------------------------------------------------------------
-   18. Kontakt (pohlednice s okrajem letecké pošty)
-   -------------------------------------------------------------------------- */
-.postcard {
-  display: grid;
-  max-width: 62rem;
-  margin: 0 auto;
-  border: 12px solid transparent;
-  border-image: repeating-linear-gradient(-45deg, var(--color-red) 0 14px, var(--color-white-paper) 14px 24px, var(--color-navy) 24px 38px, var(--color-white-paper) 38px 48px) 12;
-  background: var(--texture-grain), var(--color-white-paper);
-  box-shadow: 0 22px 34px -18px rgba(43, 36, 32, 0.55);
-  transform: rotate(-0.5deg);
-}
-
-.postcard__message,
-.postcard__address {
-  position: relative;
-  padding: var(--space-6) var(--space-5);
-}
-
-.postcard__address {
-  border-top: 2px solid rgba(31, 53, 87, 0.25);
-}
-
-.postcard__hello {
-  margin: 0 0 var(--space-4);
-  color: var(--color-red);
-  font-family: var(--font-script);
-  font-size: clamp(2.8rem, 2.2rem + 2vw, 3.6rem);
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.05;
-  text-shadow: 2px 2px 0 var(--color-navy);
-  text-transform: none;
-  transform: rotate(-3deg);
-  transform-origin: left center;
-}
-
-.contact-list {
-  margin: var(--space-5) 0 0;
-}
-
-.contact-list div + div {
-  margin-top: var(--space-4);
-}
-
-.contact-list dt {
-  color: var(--color-ink-soft);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.contact-list dd {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  word-break: break-word;
-}
-
-/* Známka v rohu pohlednice */
-.postcard__stamp {
-  float: right;
-  display: grid;
-  place-items: center;
-  width: 5rem;
-  height: 6rem;
-  margin: 0 0 var(--space-4) var(--space-4);
-  border: 6px dotted var(--color-white-paper);
-  background: var(--color-sky) padding-box;
-  color: var(--color-red);
-  font-size: 2.2rem;
-  line-height: 1;
-  filter: drop-shadow(0 2px 3px rgba(43, 36, 32, 0.3));
-  transform: rotate(4deg);
-}
-
-.postcard__stamp::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  left: -3.4rem;
-  width: 7rem;
-  height: 3.4rem;
-  background: var(--postmark) center / contain no-repeat;
-  transform: rotate(-10deg);
-}
-
-.postcard__label {
-  margin: 0 0 var(--space-4);
-  font-size: 0.85rem;
-  letter-spacing: 0.24em;
-}
-
-.seller {
-  clear: both;
-  font-style: normal;
-}
-
-.address-lines {
-  margin: 0;
-}
-
-.address-lines div {
-  padding: var(--space-2) 0;
-  border-bottom: 2px solid rgba(31, 53, 87, 0.3);
-}
-
-.address-lines dt {
-  color: var(--color-ink-soft);
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.address-lines dd {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.postcard__address .todo {
-  margin: var(--space-4) 0 0;
-  font-size: 0.9rem;
-}
-
-/* --------------------------------------------------------------------------
-   19. Textové stránky (obchodní podmínky, ochrana údajů)
-   -------------------------------------------------------------------------- */
-.document {
-  position: relative;
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: var(--space-7) var(--space-5);
-  border: 3px solid var(--color-navy);
-  border-radius: var(--radius);
-  background: var(--texture-grain), var(--color-paper);
-  box-shadow:
-    inset 0 0 0 6px var(--color-paper),
-    inset 0 0 0 7px var(--color-navy),
-    var(--shadow-soft);
-}
-
-.document__stamp {
-  display: table;
-  margin: 0 auto var(--space-5);
-}
-
-.document__intro {
-  margin-bottom: var(--space-6);
-  text-align: center;
-}
-
-.toc {
-  margin-bottom: var(--space-6);
-  padding: var(--space-5);
-  border: 2px dashed rgba(31, 53, 87, 0.45);
-  border-radius: 6px;
-}
-
-.toc__title {
-  margin-bottom: var(--space-3);
-  font-size: 0.85rem;
-  letter-spacing: 0.24em;
-}
-
-.toc ol {
-  margin: 0;
-  padding-left: 1.5rem;
-}
-
-.toc li::marker {
-  color: var(--color-red);
-  font-family: var(--font-sans);
-  font-weight: 700;
-}
-
-.toc li + li {
-  margin-top: var(--space-1);
-}
-
-.document__heading {
-  margin: var(--space-6) 0 var(--space-2);
-  padding-bottom: var(--space-2);
-  border-bottom: 2px dotted rgba(31, 53, 87, 0.45);
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-}
-
-.document__heading span {
-  color: var(--color-red);
-}
-
-.document__closing {
-  margin: var(--space-7) 0 0;
-  padding-top: var(--space-4);
-  border-top: 4px double var(--color-navy);
-}
-
-/* --------------------------------------------------------------------------
-   20. Větší displeje
+   19. Větší displeje
    -------------------------------------------------------------------------- */
 @media (min-width: 37.5em) {
   :root {
     --gutter: 1.5rem;
   }
 
-  .board {
-    padding: var(--space-7) var(--space-6);
-  }
-
-  .flavors,
-  .product-grid,
-  .stamps,
-  .receipts {
+  .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .filter__label {
-    flex-basis: auto;
-    min-width: 6.5rem;
+  .box-card__body {
+    padding: var(--space-7) var(--space-6);
   }
 
-  .document {
-    padding: var(--space-7) var(--space-7);
+  .notice-card,
+  .doc,
+  .form-card {
+    padding-inline: var(--space-7);
   }
 
-  .document__stamp {
-    position: absolute;
-    top: 1.75rem;
-    right: 1.75rem;
-    margin: 0;
-    transform: rotate(8deg);
+  .item {
+    flex-basis: calc(33.333% - var(--space-4) * 2 / 3);
   }
 
-  .document__intro {
-    max-width: 26rem;
-    text-align: left;
+  .spec-list div {
+    grid-template-columns: 9rem 1fr;
+    align-items: baseline;
+    gap: var(--space-4);
   }
 }
 
@@ -2422,57 +1901,61 @@ a:hover {
   .site-nav.is-open {
     display: block;
     flex-basis: auto;
+    visibility: visible;
+    transition: none;
   }
 
   .site-nav__list {
     display: flex;
-    gap: var(--space-1);
+    gap: var(--space-2);
     padding: 0;
-    border: 0;
+    overflow: visible;
   }
 
-  .site-nav__list li {
-    border: 0;
+  .site-nav__list li:first-child,
+  .site-nav__list li:last-child {
+    padding: 0;
   }
 
   .site-nav__list a {
-    padding: var(--space-2) 0.7rem;
-    font-size: 0.82rem;
+    margin: 0;
+    padding: 0.45rem 0.95rem;
+    border-color: transparent;
+    border-radius: 999px;
+    background: transparent;
+    font-size: 0.98rem;
+    box-shadow: none;
   }
 
-  .site-nav__list a::before {
-    position: absolute;
-    top: -0.6rem;
-    left: 50%;
-    transform: translateX(-50%);
+  .site-nav__list a::after,
+  .site-nav__list a[aria-current="page"]::after {
+    content: none;
+  }
+
+  .site-nav__list a:hover {
+    border-color: var(--navy);
+    background: var(--white);
   }
 
   .site-nav__list a[aria-current="page"] {
-    background: linear-gradient(currentColor, currentColor) bottom center / calc(100% - 1.4rem) 2px no-repeat;
+    border-color: var(--navy);
+    background: var(--yellow);
+    box-shadow: var(--shadow-sm);
   }
 
   .hero {
-    --burst-x: 74%;
-    --burst-y: 52%;
+    --rays-x: 74%;
+    --rays-y: 52%;
   }
 
   .hero__inner {
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: var(--space-8);
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-7);
     padding-block: var(--space-8) 5.5rem;
     text-align: left;
   }
 
-  .hero .kicker {
-    justify-content: flex-start;
-    margin-bottom: 2.25rem;
-  }
-
-  .hero__title {
-    transform-origin: left center;
-  }
-
-  .hero__lead {
+  .hero__sub {
     margin-left: 0;
   }
 
@@ -2480,97 +1963,60 @@ a:hover {
     justify-content: flex-start;
   }
 
-  .hero__visual {
-    width: min(100%, 22rem);
+  .hero__title {
+    transform-origin: left center;
   }
 
-  .goodies {
-    grid-template-columns: repeat(3, 1fr);
+  .hero__art .sticker {
+    right: -0.5rem;
+    bottom: 6%;
   }
 
-  .goodies__item + .goodies__item {
-    border-top: 0;
-    border-left: 2px dotted rgba(31, 53, 87, 0.45);
+  .hero__art .sticker__inner {
+    width: 7.5rem;
+    font-size: 2rem;
   }
 
   .steps {
-    --steps-gap: var(--space-7);
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--steps-gap);
   }
 
-  .step {
-    max-width: none;
+  .items {
+    gap: var(--space-5);
   }
 
-  /* Tečkovaná spojnice mezi čísly */
-  .step + .step::after {
-    content: "";
-    position: absolute;
-    top: 2.6rem;
-    right: calc(50% + 2.75rem);
-    width: calc(100% + var(--steps-gap) - 5.5rem);
-    border-top: 3px dotted rgba(244, 233, 210, 0.5);
+  .item {
+    flex-basis: calc(25% - var(--space-5) * 3 / 4);
   }
 
-  .board {
-    padding: 4rem var(--space-7);
+  .combo {
+    width: 22rem;
+    height: 19rem;
   }
 
-  .trio {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+  .combo__main {
+    font-size: 7rem;
   }
 
-  .trio__item {
-    padding-inline: var(--space-5);
+  .combo__item {
+    width: 4.1rem;
+    height: 4.1rem;
+    font-size: 2.05rem;
   }
 
-  .trio__item + .trio__item {
-    border-left: 2px dotted rgba(31, 53, 87, 0.45);
-  }
-
-  .flavors {
+  .steps--four {
     grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-5);
   }
 
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .box-card {
+    grid-template-columns: 1fr 1.1fr;
   }
 
-  .ticket {
-    grid-template-columns: 1fr auto;
-    align-items: stretch;
-  }
-
-  .ticket__main {
-    padding: var(--space-7) var(--space-7) var(--space-7) 4rem;
-    text-align: left;
-  }
-
-  .ticket__main p {
-    margin: 0;
-  }
-
-  .ticket__stub {
-    min-width: 17rem;
-    padding: var(--space-6) 3.5rem var(--space-6) var(--space-6);
-    border-top: 0;
-    border-left: 3px dashed rgba(251, 246, 234, 0.6);
-  }
-
-  .postcard {
-    grid-template-columns: 1.15fr 1fr;
-  }
-
-  .postcard__message,
-  .postcard__address {
-    padding: var(--space-7);
-  }
-
-  .postcard__address {
-    border-top: 0;
-    border-left: 2px solid rgba(31, 53, 87, 0.25);
+  .box-card__media {
+    min-height: 100%;
+    border-right: var(--border-thick);
+    border-bottom: 0;
   }
 
   .site-footer__grid {
@@ -2579,7 +2025,7 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   21. Omezený pohyb a tisk
+   20. Omezený pohyb a tisk
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: no-preference) {
   html {
@@ -2593,25 +2039,38 @@ a:hover {
   *::after {
     animation: none !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
   }
 }
 
 @media print {
   .site-header,
   .nav-toggle,
-  .filter,
-  .skip-link {
+  .skip-link,
+  .divider {
     display: none !important;
+  }
+
+  .js-reveal [data-reveal] {
+    opacity: 1 !important;
+    translate: none !important;
   }
 
   body,
   .hero,
   .page-hero,
-  .section--night,
-  .section--sky,
+  .section--yellow,
+  .section--navy,
   .site-footer {
     background: #fff;
     color: #000;
-    --color-heading: #000;
   }
+}
+
+/* Hvězdička v logu a v patičce (SVG) */
+.star-icon path {
+  fill: var(--yellow);
+  stroke: var(--navy);
+  stroke-width: 2;
+  stroke-linejoin: round;
 }

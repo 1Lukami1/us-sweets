@@ -1,9 +1,9 @@
 /* ==========================================================================
    [NÁZEV] – skripty webu
-   1. Mobilní menu (hamburger)
-   2. Filtr krabic (stránka krabice.html)
+   1. Mobilní menu (hamburger) s plynulým rozbalením
+   2. Jemné animace při rolování
    3. Hladké rolování na kotvy v rámci stránky
-   Web funguje i bez JavaScriptu: menu je pak v patičce a filtr se nezobrazí.
+   Web funguje i bez JavaScriptu: menu je pak v patičce a obsah je hned vidět.
    Nic se neukládá (žádné cookies ani localStorage).
    ========================================================================== */
 (function () {
@@ -57,15 +57,14 @@
       }
     });
 
-    /* Klik na odkaz nebo mimo menu ho zavře */
+    /* Klik na odkaz v menu nebo kamkoli mimo menu ho zavře */
     document.addEventListener('click', function (event) {
       if (!isOpen()) {
         return;
       }
-      var clickedLink = event.target.closest('a');
       var insideNav = nav.contains(event.target);
       var onToggle = toggle.contains(event.target);
-      if ((insideNav && clickedLink) || (!insideNav && !onToggle)) {
+      if ((insideNav && event.target.closest('a')) || (!insideNav && !onToggle)) {
         setOpen(false);
       }
     });
@@ -79,80 +78,45 @@
   }
 
   /* ------------------------------------------------------------------------
-     2. Filtr krabic
-     HTML: [data-filter] obsahuje skupiny [data-filter-group="tema|velikost"]
-     s tlačítky [data-value]; položky [data-filter-item] mají data-tema
-     a data-velikost. Hodnota „vse“ znamená bez omezení.
-     Výchozí filtr lze nastavit v adrese, např. krabice.html?tema=gamer
+     2. Animace při rolování
+     Prvky s atributem data-reveal se jemně vysunou, když dorazí na obrazovku.
+     Co je vidět už při načtení, se neanimuje (aby nic neproblikávalo).
+     Při „omezeném pohybu“ v systému se animace vůbec nezapnou.
      ------------------------------------------------------------------------ */
-  function initFilter() {
-    var root = document.querySelector('[data-filter]');
-    if (!root) {
+  function initReveal() {
+    if (reducedMotion.matches || !('IntersectionObserver' in window)) {
       return;
     }
 
-    var items = Array.prototype.slice.call(document.querySelectorAll('[data-filter-item]'));
-    var groups = Array.prototype.slice.call(root.querySelectorAll('[data-filter-group]'));
-    var status = root.querySelector('[data-filter-status]');
-    var empty = document.querySelector('[data-filter-empty]');
-    var params = new URLSearchParams(window.location.search);
-    var state = {};
-
-    function buttonsOf(group) {
-      return Array.prototype.slice.call(group.querySelectorAll('button[data-value]'));
+    var elements = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!elements.length) {
+      return;
     }
 
-    groups.forEach(function (group) {
-      var key = group.getAttribute('data-filter-group');
-      var requested = params.get(key);
-      var isValid = buttonsOf(group).some(function (button) {
-        return button.getAttribute('data-value') === requested;
-      });
-      state[key] = isValid ? requested : 'vse';
-
-      group.addEventListener('click', function (event) {
-        var button = event.target.closest('button[data-value]');
-        if (!button) {
-          return;
-        }
-        state[key] = button.getAttribute('data-value');
-        apply();
-      });
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    elements.forEach(function (element) {
+      var rect = element.getBoundingClientRect();
+      if (rect.top < viewportHeight && rect.bottom > 0) {
+        element.classList.add('is-visible');
+      }
     });
 
-    function matches(item) {
-      return Object.keys(state).every(function (key) {
-        return state[key] === 'vse' || item.getAttribute('data-' + key) === state[key];
-      });
-    }
+    document.documentElement.classList.add('js-reveal');
 
-    function apply() {
-      groups.forEach(function (group) {
-        var key = group.getAttribute('data-filter-group');
-        buttonsOf(group).forEach(function (button) {
-          button.setAttribute('aria-pressed', String(button.getAttribute('data-value') === state[key]));
-        });
-      });
-
-      var visible = 0;
-      items.forEach(function (item) {
-        var show = matches(item);
-        item.hidden = !show;
-        if (show) {
-          visible += 1;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
         }
       });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
 
-      if (status) {
-        status.textContent = 'Zobrazeno ' + visible + ' z ' + items.length + ' krabic.';
+    elements.forEach(function (element) {
+      if (!element.classList.contains('is-visible')) {
+        observer.observe(element);
       }
-      if (empty) {
-        empty.hidden = visible !== 0;
-      }
-    }
-
-    root.hidden = false;
-    apply();
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -197,7 +161,7 @@
 
   function init() {
     initMenu();
-    initFilter();
+    initReveal();
     initSmoothScroll();
   }
 

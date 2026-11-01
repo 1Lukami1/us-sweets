@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt – [NÁZEV]</title>
-  <meta name="description" content="Máš dotaz k objednávce nebo ke krabicím? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
+  <meta name="description" content="Máš dotaz k Americkému boxu nebo k objednávce? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1f3557">
+  <meta name="theme-color" content="#1B2A5C">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="[NÁZEV]">
   <meta property="og:title" content="Kontakt – [NÁZEV]">
-  <meta property="og:description" content="Máš dotaz k objednávce nebo ke krabicím? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
+  <meta property="og:description" content="Máš dotaz k Americkému boxu nebo k objednávce? Napiš nám e-mail nebo zprávu na Instagramu. Najdeš tu i údaje prodávajícího.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,12 +25,9 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
-    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
+    <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html">
-        <span class="logo__name">[NÁZEV]</span>
-        <span class="logo__tag">americké dobroty</span>
-      </a>
+      <a class="logo" href="index.html"><svg class="star-icon logo__star" viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -40,7 +37,7 @@
       <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
         <ul class="site-nav__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
@@ -52,60 +49,70 @@
   <main id="obsah" tabindex="-1">
     <section class="page-hero">
       <div class="container">
-        <p class="kicker kicker--light">Ozvi se</p>
         <h1 class="page-hero__title">Kontakt</h1>
-        <p class="page-hero__lead">Máš dotaz k objednávce nebo ke krabicím? Napiš nám, rádi poradíme.</p>
+        <p class="page-hero__lead">Máš dotaz k boxu nebo k objednávce? Napiš nám, rádi poradíme.</p>
+      </div>
+    </section>
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="section" aria-labelledby="napis-nadpis">
+      <div class="container">
+        <h2 class="section-title" id="napis-nadpis">Napiš nám</h2>
+        <p class="section-lead">Odpovídáme na e-mailu i na Instagramu.</p>
+        <ul class="card-grid" data-reveal-group>
+          <li data-reveal>
+            <article class="card">
+              <span class="card__icon" aria-hidden="true">✉️</span>
+              <h3 class="card__title">E-mail</h3>
+              <p><a class="big-link" href="mailto:[E-MAIL]">[E-MAIL]</a></p>
+              <p>Dotazy k objednávkám, k boxu i k dopravě.</p>
+            </article>
+          </li>
+          <li data-reveal>
+            <article class="card">
+              <span class="card__icon" aria-hidden="true">📸</span>
+              <h3 class="card__title">Instagram</h3>
+              <p><a class="big-link" href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></p>
+              <p>Novinky a fotky toho, co v boxu najdeš.</p>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="postcard">
-          <section class="postcard__message" aria-labelledby="napis-nadpis">
-            <h2 class="postcard__hello" id="napis-nadpis">Napiš nám!</h2>
-            <p>Máš dotaz k objednávce, ke krabicím nebo k dopravě? Ozvi se e-mailem nebo zprávou na Instagramu.</p>
-            <dl class="contact-list">
-              <div>
-                <dt>E-mail</dt>
-                <dd><a href="mailto:[E-MAIL]">[E-MAIL]</a></dd>
-              </div>
-              <div>
-                <dt>Instagram</dt>
-                <dd><a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></dd>
-              </div>
-            </dl>
-          </section>
+    <div class="divider" aria-hidden="true"></div>
 
-          <section class="postcard__address" id="prodavajici" aria-labelledby="prodavajici-nadpis">
-            <div class="postcard__stamp" aria-hidden="true">★</div>
-            <h2 class="postcard__label" id="prodavajici-nadpis">Údaje prodávajícího</h2>
-            <address class="seller">
-              <dl class="address-lines">
-                <div><dt>Prodávající</dt><dd>[JMÉNO A PŘÍJMENÍ]</dd></div>
-                <div><dt>Adresa</dt><dd>[ULICE A ČÍSLO, PSČ MĚSTO]</dd></div>
-                <div><dt>IČO</dt><dd>[IČO]</dd></div>
-              </dl>
-            </address>
-            <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
-          </section>
+    <section class="section section--yellow" id="prodavajici" aria-labelledby="prodavajici-nadpis">
+      <div class="container narrow">
+        <h2 class="section-title" id="prodavajici-nadpis">Údaje prodávajícího</h2>
+        <div class="card" data-reveal>
+          <address class="seller">
+            <dl class="seller-list">
+              <div><dt>Prodávající</dt><dd>[JMÉNO A PŘÍJMENÍ]</dd></div>
+              <div><dt>Adresa</dt><dd>[ULICE A ČÍSLO, PSČ MĚSTO]</dd></div>
+              <div><dt>IČO</dt><dd>[IČO]</dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:[E-MAIL]">[E-MAIL]</a></dd></div>
+            </dl>
+          </address>
+          <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="divider" aria-hidden="true"></div>
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
-        <p class="site-footer__logo">[NÁZEV]</p>
-        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
-        <p class="neon">Díky a zase přijď!</p>
+        <p class="site-footer__logo"><svg class="star-icon " viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</p>
+        <p>Americký box plný limonád, sladkostí a popcornu. Osobně v Praze, nebo Zásilkovnou až k tobě.</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">
         <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
         <ul class="site-footer__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>

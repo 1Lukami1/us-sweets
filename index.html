@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[NÁZEV] – dárkové krabice s americkými sladkostmi</title>
-  <meta name="description" content="Dárkové krabice plné amerických sladkostí, slaných snacků a nápojů. Vyber velikost a téma, objednej a potěš sebe nebo své blízké.">
+  <title>[NÁZEV] – Americký box plný dobrot</title>
+  <meta name="description" content="Americký box se 7 dobrotami: limonády, sladkosti a popcorn za 490 Kč. Osobně v Praze zdarma, Zásilkovnou nebo do AlzaBoxu za 89 Kč.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1f3557">
+  <meta name="theme-color" content="#1B2A5C">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="[NÁZEV]">
-  <meta property="og:title" content="[NÁZEV] – dárkové krabice s americkými sladkostmi">
-  <meta property="og:description" content="Dárkové krabice plné amerických sladkostí, slaných snacků a nápojů. Vyber velikost a téma, objednej a potěš sebe nebo své blízké.">
+  <meta property="og:title" content="[NÁZEV] – Americký box plný dobrot">
+  <meta property="og:description" content="Americký box se 7 dobrotami: limonády, sladkosti a popcorn za 490 Kč. Osobně v Praze zdarma, Zásilkovnou nebo do AlzaBoxu za 89 Kč.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,12 +25,9 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
-    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
+    <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html">
-        <span class="logo__name">[NÁZEV]</span>
-        <span class="logo__tag">americké dobroty</span>
-      </a>
+      <a class="logo" href="index.html"><svg class="star-icon logo__star" viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -40,7 +37,7 @@
       <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
         <ul class="site-nav__list">
           <li><a href="index.html" aria-current="page">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -53,175 +50,152 @@
     <section class="hero" aria-labelledby="hero-nadpis">
       <div class="container hero__inner">
         <div class="hero__text">
-          <p class="kicker">Dárkové krabice</p>
-          <h1 class="hero__title" id="hero-nadpis">[NÁZEV]</h1>
-          <p class="hero__slogan">Kousek Ameriky v dárkové krabici.</p>
-          <p class="hero__lead">Americké sladkosti, slané snacky a nápoje poskládané do krabice, která udělá radost. Kamarádovi, rodině, nebo jen tak sobě.</p>
-          <div class="hero__actions">
-            <a class="btn btn--large" href="objednavka.html">Objednat</a>
-            <a class="link-arrow" href="#jak-to-funguje">Jak to funguje</a>
+          <p class="hero__kicker">Limonády · sladkosti · popcorn</p>
+          <h1 class="hero__title" id="hero-nadpis">Ochutnej Ameriku!</h1>
+          <p class="hero__sub"><strong>Americký box</strong> se 7 americkými dobrotami za <strong>490 Kč</strong>. Pro kamaráda, pro rodinu, nebo jen tak pro sebe.</p>
+          <div class="btn-row hero__actions">
+            <a class="btn btn--big" href="objednavka.html">Objednat</a>
+            <a class="link-more" href="krabice.html">Co je v boxu?</a>
           </div>
         </div>
 
-        <div class="hero__visual">
-          <figure class="snapshot">
-            <div class="placeholder placeholder--red" role="img" aria-label="Zástupný obrázek: dárková krabice plná amerických dobrot">
-              <span aria-hidden="true">🎁</span>
-            </div>
-            <figcaption>Fotku doplníme</figcaption>
-          </figure>
-          <p class="burst"><span>už od</span> 390&nbsp;Kč</p>
+        <div class="hero__art">
+          <svg class="hero-box" viewBox="0 0 420 380" role="img" aria-labelledby="hero-box-title" focusable="false">
+            <title id="hero-box-title">Ilustrace: otevřená krabice plná limonád, sladkostí a popcornu</title>
+            <ellipse class="f-shadow" cx="210" cy="352" rx="150" ry="13"/>
+            <path class="f-yellow-dark ink" d="M100 134 L320 134 L306 92 L114 92 Z"/>
+            <path class="f-navy ink" d="M100 134 L320 134 L350 174 L70 174 Z"/>
+            <g transform="rotate(-10 142 130)">
+              <rect class="f-red ink" x="108" y="74" width="68" height="112" rx="14"/>
+              <rect class="f-yellow" x="110.5" y="104" width="63" height="34"/>
+              <path class="f-none ink-thin" d="M110.5 104 H173.5 M110.5 138 H173.5"/>
+              <path class="f-navy" transform="translate(130 109) scale(1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+              <ellipse class="f-cream ink" cx="142" cy="76" rx="34" ry="10"/>
+              <rect class="f-cream ink-thin" x="134" y="70" width="16" height="8" rx="4"/>
+            </g>
+            <path class="stick-edge" d="M298 190 L312 92"/>
+            <path class="stick" d="M298 190 L312 92"/>
+            <circle class="f-yellow ink" cx="314" cy="72" r="30"/>
+            <path class="swirl" d="M314 72 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0 a16 16 0 0 1 -32 0"/>
+            <g class="f-cream ink">
+              <circle cx="203" cy="82" r="14"/>
+              <circle cx="268" cy="82" r="13"/>
+              <circle cx="223" cy="67" r="16"/>
+              <circle cx="250" cy="65" r="15"/>
+              <circle cx="236" cy="84" r="13"/>
+            </g>
+            <path class="f-cream" d="M193 88 H279 L268 196 H204 Z"/>
+            <path class="f-red" d="M210.2 88 H227.4 L229.6 196 H216.8 Z M244.6 88 H261.8 L255.2 196 H242.4 Z"/>
+            <path class="f-none ink" d="M193 88 H279 L268 196 H204 Z"/>
+            <rect class="f-red ink" x="70" y="174" width="280" height="160" rx="8"/>
+            <rect class="f-navy" x="72.5" y="226" width="275" height="54"/>
+            <text class="label" x="210" y="265" text-anchor="middle">AMERICKÝ BOX</text>
+            <path class="f-cream" transform="translate(96 186) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-cream" transform="translate(197 184) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-cream" transform="translate(298 186) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-cream" transform="translate(96 292) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-cream" transform="translate(197 294) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-cream" transform="translate(298 292) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+            <path class="f-yellow ink" d="M70 174 L100 134 L52 104 L22 148 Z"/>
+            <path class="f-yellow ink" d="M350 174 L320 134 L368 104 L398 148 Z"/>
+            <path class="spark" d="M40 60 L46 74 L60 80 L46 86 L40 100 L34 86 L20 80 L34 74 Z"/>
+            <path class="spark spark-2" d="M388 22 L392 34 L404 38 L392 42 L388 54 L384 42 L372 38 L384 34 Z"/>
+            <path class="spark spark-3" d="M398 234 L402 246 L414 250 L402 254 L398 266 L394 254 L382 250 L394 246 Z"/>
+            <path class="spark spark-4" d="M22 236 L25 245 L34 248 L25 251 L22 260 L19 251 L10 248 L19 245 Z"/>
+          </svg>
+          <p class="sticker" aria-hidden="true"><span class="sticker__inner"><small>jen</small>490 Kč</span></p>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="co-najdes-nadpis">
-      <div class="container">
-        <h2 class="title" id="co-najdes-nadpis">Co v krabici najdeš</h2>
-        <ul class="goodies">
-          <li class="goodies__item">
-            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-              <path class="paper ink" d="M20 32 6 20.5 9 32l-3 11.5z"/>
-              <path class="paper ink" d="M44 32l14-11.5L55 32l3 11.5z"/>
-              <ellipse class="red" cx="32" cy="32" rx="14" ry="12.5"/>
-              <path class="stripe" d="M22.5 38.5 35.5 21M28.5 43.5 41.5 26"/>
-              <ellipse class="none ink" cx="32" cy="32" rx="14" ry="12.5"/>
-            </svg>
-            <h3 class="goodies__title">Sladkosti</h3>
-            <p>Čokolády, bonbony, sušenky a další mlsání.</p>
-          </li>
-          <li class="goodies__item">
-            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-              <g class="paper ink">
-                <circle cx="19.5" cy="28" r="4.5"/>
-                <circle cx="44.5" cy="27" r="5"/>
-                <circle cx="23" cy="22.5" r="6"/>
-                <circle cx="40" cy="20.5" r="6.5"/>
-                <circle cx="31.5" cy="17" r="7"/>
-              </g>
-              <path class="paper" d="M17 29h30l-4 29H21z"/>
-              <path class="red" d="M23 29h6l.8 29h-4.4zM35 29h6l-2.4 29h-4.4z"/>
-              <path class="none ink" d="M17 29h30l-4 29H21z"/>
-            </svg>
-            <h3 class="goodies__title">Slané snacky</h3>
-            <p>Chipsy, popcorn, preclíky a jiné křupavé dobroty.</p>
-          </li>
-          <li class="goodies__item">
-            <svg class="icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-              <path class="straw-edge" d="M34 20 38 5h7"/>
-              <path class="straw" d="M34 20 38 5h7"/>
-              <path class="sky ink" d="M18.5 17c4-6.5 23-6.5 27 0z"/>
-              <rect class="sky ink" x="14" y="16" width="36" height="6" rx="3"/>
-              <path class="red" d="M17 22h30l-4 36H21z"/>
-              <path class="paper" d="M18.3 33.5h27.4l-1.1 10H19.4z"/>
-              <path class="red" transform="translate(27.2 33.7) scale(.4)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-              <path class="none ink" d="M17 22h30l-4 36H21zM18.3 33.5h27.4M19.4 43.5h25.2"/>
-            </svg>
-            <h3 class="goodies__title">Nápoje</h3>
-            <p>Limonády a pití s typickou americkou chutí.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="divider" aria-hidden="true"></div>
 
-    <section class="section section--night" id="jak-to-funguje" aria-labelledby="jak-nadpis">
+    <section class="section" id="jak-to-funguje" aria-labelledby="jak-nadpis">
       <div class="container">
-        <h2 class="title" id="jak-nadpis">Jak to funguje</h2>
-        <ol class="steps">
-          <li class="step">
-            <h3 class="step__title">Vyber krabici</h3>
-            <p>Malá, střední, nebo velká? K tomu téma podle chuti: gamer, pálivé, sladké, nebo vánoční.</p>
+        <h2 class="section-title" id="jak-nadpis">Jak to funguje</h2>
+        <p class="section-lead">Tři kroky a box je tvůj.</p>
+        <ol class="steps" data-reveal-group>
+          <li class="step" data-reveal>
+            <span class="step__icon" aria-hidden="true">📝</span>
+            <h3 class="step__title">Vyplň formulář</h3>
+            <p>Jméno, e-mail, počet kusů a způsob předání. Zabere to minutu.</p>
           </li>
-          <li class="step">
-            <h3 class="step__title">Vyplň objednávku</h3>
-            <p>Krátký online formulář zabere pár minut. Pak se ti ozveme e-mailem a objednávku potvrdíme.</p>
+          <li class="step" data-reveal>
+            <span class="step__icon" aria-hidden="true">💸</span>
+            <h3 class="step__title">Zaplať převodem</h3>
+            <p>Po potvrzení objednávky pošli platbu předem na účet [ČÍSLO ÚČTU].</p>
           </li>
-          <li class="step">
-            <h3 class="step__title">Těš se na dárek</h3>
-            <p>Krabici ti předáme osobně, nebo ji pošleme Zásilkovnou. Pak už jen rozbalit a mlsat!</p>
+          <li class="step" data-reveal>
+            <span class="step__icon" aria-hidden="true">🎉</span>
+            <h3 class="step__title">Převezmi box</h3>
+            <p>Osobně v Praze zdarma, nebo Zásilkovnou či do AlzaBoxu za 89 Kč.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="section" id="krabice" aria-labelledby="krabice-nadpis">
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="section section--yellow" id="box" aria-labelledby="box-nadpis">
       <div class="container">
-        <div class="board">
-          <h2 class="title" id="krabice-nadpis">Naše krabice</h2>
-          <p class="lead">Tři velikosti, čtyři témata. Vyber tu, která potěší nejvíc.</p>
-
-          <ul class="trio">
-            <li class="trio__item">
-              <div class="placeholder placeholder--round placeholder--sky" role="img" aria-label="Zástupný obrázek: krabice Malý">
-                <span aria-hidden="true">🎁</span>
-              </div>
-              <h3 class="trio__name">Malý</h3>
-              <p class="trio__price">390 Kč</p>
-              <p class="trio__desc">Malá pozornost, velká radost. Ideální jako drobný dárek nebo první ochutnávka.</p>
-              <a class="link-arrow" href="krabice.html?velikost=maly">Prohlédnout <span class="visually-hidden">krabice Malý</span></a>
-            </li>
-            <li class="trio__item">
-              <p class="stamp">Náš tip</p>
-              <div class="placeholder placeholder--round placeholder--red" role="img" aria-label="Zástupný obrázek: krabice Střední">
-                <span aria-hidden="true">🎁🎁</span>
-              </div>
-              <h3 class="trio__name">Střední</h3>
-              <p class="trio__price">690 Kč</p>
-              <p class="trio__desc">Zlatá střední cesta. Pořádná porce sladkého, slaného i něčeho na zapití.</p>
-              <a class="link-arrow" href="krabice.html?velikost=stredni">Prohlédnout <span class="visually-hidden">krabice Střední</span></a>
-            </li>
-            <li class="trio__item">
-              <div class="placeholder placeholder--round placeholder--navy" role="img" aria-label="Zástupný obrázek: krabice Velký">
-                <span aria-hidden="true">🎁🎁🎁</span>
-              </div>
-              <h3 class="trio__name">Velký</h3>
-              <p class="trio__price">990 Kč</p>
-              <p class="trio__desc">Pro velké mlsouny a společné večery. Tahle krabice jen tak nedojde.</p>
-              <a class="link-arrow" href="krabice.html?velikost=velky">Prohlédnout <span class="visually-hidden">krabice Velký</span></a>
-            </li>
-          </ul>
-
-          <h3 class="board__subtitle">Vyber si téma</h3>
-          <ul class="tags">
-            <li><a class="tag" href="krabice.html?tema=gamer">Gamer</a></li>
-            <li><a class="tag" href="krabice.html?tema=palivy">Pálivý</a></li>
-            <li><a class="tag" href="krabice.html?tema=sladky">Sladký</a></li>
-            <li><a class="tag" href="krabice.html?tema=vanocni">Vánoční</a></li>
-          </ul>
-
-          <p class="board__cta"><a class="btn btn--navy" href="krabice.html">Celá nabídka</a></p>
-        </div>
+        <h2 class="section-title" id="box-nadpis">Náš box</h2>
+        <p class="section-lead">Jeden box, sedm amerických dobrot.</p>
+        <article class="box-card" data-reveal>
+          <div class="box-card__media">
+            <div class="combo" role="img" aria-label="Zástupný obrázek: Americký box a sedm dobrot kolem něj">
+                <span class="combo__main" aria-hidden="true">📦</span>
+                <span class="combo__item" aria-hidden="true">🍓</span>
+                <span class="combo__item" aria-hidden="true">🫐</span>
+                <span class="combo__item" aria-hidden="true">🍇</span>
+                <span class="combo__item" aria-hidden="true">🍬</span>
+                <span class="combo__item" aria-hidden="true">🥜</span>
+                <span class="combo__item" aria-hidden="true">🍿</span>
+                <span class="combo__item" aria-hidden="true">🧀</span>
+            </div>
+            <p class="sticker" aria-hidden="true"><span class="sticker__inner">490 Kč</span></p>
+          </div>
+          <div class="box-card__body">
+            <p class="box-card__tag">7 dobrot v jedné krabici</p>
+            <h3 class="box-card__title" id="box-karta">Americký box <span>(střední)</span></h3>
+            <p class="box-card__price">490 Kč <small>za box</small></p>
+            <ul class="facts">
+              <li><strong>7</strong> kusů</li>
+              <li>cca <strong>1,5 kg</strong></li>
+              <li>cca <strong>30 × 25 × 14 cm</strong></li>
+            </ul>
+            <p class="box-card__text">Dvě limonády, tři sladkosti a dva druhy popcornu. Hodí se jako dárek k narozeninám, na oslavu i jen tak pro radost.</p>
+            <div class="btn-row">
+              <a class="btn btn--red" href="objednavka.html">Objednat</a>
+              <a class="link-more" href="krabice.html#obsah-boxu">Co je uvnitř</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="cta-nadpis">
-      <div class="container">
-        <div class="ticket">
-          <div class="ticket__main">
-            <h2 class="ticket__title" id="cta-nadpis">Hledáš dárek, který překvapí?</h2>
-            <p>Krabice plná amerických dobrot potěší k narozeninám, k Vánocům i jen tak pro radost.</p>
-          </div>
-          <div class="ticket__stub">
-            <a class="btn btn--cream btn--large" href="objednavka.html">Objednat</a>
-          </div>
-        </div>
+    <div class="divider" aria-hidden="true"></div>
+    <section class="section section--navy cta" aria-labelledby="cta-nadpis">
+      <div class="container" data-reveal>
+        <h2 class="section-title" id="cta-nadpis">Udělej někomu radost</h2>
+        <p>Box potěší k narozeninám, na oslavu i jen tak. Osobně v Praze zdarma, Zásilkovnou nebo do AlzaBoxu za 89 Kč.</p>
+        <a class="btn btn--big" href="objednavka.html">Objednat</a>
       </div>
     </section>
   </main>
 
+  <div class="divider" aria-hidden="true"></div>
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
-        <p class="site-footer__logo">[NÁZEV]</p>
-        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
-        <p class="neon">Díky a zase přijď!</p>
+        <p class="site-footer__logo"><svg class="star-icon " viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</p>
+        <p>Americký box plný limonád, sladkostí a popcornu. Osobně v Praze, nebo Zásilkovnou až k tobě.</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">
         <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
         <ul class="site-footer__list">
           <li><a href="index.html" aria-current="page">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
