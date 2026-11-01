@@ -7,7 +7,7 @@
   <meta name="description" content="Jak e-shop [NÁZEV] zachází s osobními údaji zákazníků. Text doplníme před spuštěním.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#1f3557">
+  <meta name="theme-color" content="#1B2A5C">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
   <meta property="og:description" content="Jak e-shop [NÁZEV] zachází s osobními údaji zákazníků. Text doplníme před spuštěním.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23c4302b'/%3E%3Cpath fill='%23fbf6ea' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -25,12 +25,9 @@
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
-    <p class="topbar">Americké sladkosti <span aria-hidden="true">★</span> snacky <span aria-hidden="true">★</span> nápoje</p>
+    <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
     <div class="container site-header__inner">
-      <a class="logo" href="index.html">
-        <span class="logo__name">[NÁZEV]</span>
-        <span class="logo__tag">americké dobroty</span>
-      </a>
+      <a class="logo" href="index.html"><svg class="star-icon logo__star" viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
         <span class="nav-toggle__icon" aria-hidden="true"></span>
@@ -40,7 +37,7 @@
       <nav class="site-nav" id="hlavni-menu" aria-label="Hlavní menu">
         <ul class="site-nav__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
@@ -52,17 +49,19 @@
   <main id="obsah" tabindex="-1">
     <section class="page-hero">
       <div class="container">
-        <p class="kicker kicker--light">Právní informace</p>
         <h1 class="page-hero__title">Ochrana osobních údajů</h1>
         <p class="page-hero__lead">Jak v [NÁZEV] zacházíme s osobními údaji zákazníků.</p>
       </div>
     </section>
+    <div class="divider" aria-hidden="true"></div>
 
     <section class="section">
       <div class="container">
-        <article class="document">
-          <p class="stamp stamp--big document__stamp">Připravujeme</p>
-          <p class="document__intro"><strong>Doplníme před spuštěním.</strong> Tato stránka je zatím jen kostra s nadpisy.</p>
+        <article class="doc">
+          <div class="doc__notice">
+            <span class="doc__stamp">Připravujeme</span>
+            <p><strong>Doplníme před spuštěním.</strong> Tato stránka je zatím jen kostra s nadpisy.</p>
+          </div>
 
           <nav class="toc" aria-labelledby="obsah-zasad">
             <h2 class="toc__title" id="obsah-zasad">Obsah</h2>
@@ -78,49 +77,49 @@
             </ol>
           </nav>
 
-          <h2 class="document__heading" id="spravce"><span>1.</span> Správce osobních údajů</h2>
+          <h2 class="doc__heading" id="spravce"><span>1.</span> Správce osobních údajů</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="jake-udaje"><span>2.</span> Jaké osobní údaje zpracováváme</h2>
+          <h2 class="doc__heading" id="jake-udaje"><span>2.</span> Jaké osobní údaje zpracováváme</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="ucel"><span>3.</span> Účel a právní základ zpracování</h2>
+          <h2 class="doc__heading" id="ucel"><span>3.</span> Účel a právní základ zpracování</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="doba-ulozeni"><span>4.</span> Jak dlouho údaje uchováváme</h2>
+          <h2 class="doc__heading" id="doba-ulozeni"><span>4.</span> Jak dlouho údaje uchováváme</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="prijemci"><span>5.</span> Komu údaje předáváme</h2>
+          <h2 class="doc__heading" id="prijemci"><span>5.</span> Komu údaje předáváme</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="cookies"><span>6.</span> Cookies</h2>
+          <h2 class="doc__heading" id="cookies"><span>6.</span> Cookies</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="prava"><span>7.</span> Práva subjektů údajů</h2>
+          <h2 class="doc__heading" id="prava"><span>7.</span> Práva subjektů údajů</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <h2 class="document__heading" id="kontakt-stiznosti"><span>8.</span> Kontakt a stížnosti</h2>
+          <h2 class="doc__heading" id="kontakt-stiznosti"><span>8.</span> Kontakt a stížnosti</h2>
           <p class="todo">Doplníme před spuštěním.</p>
 
-          <p class="todo document__closing">Tyto zásady jsou platné od: doplníme.</p>
+          <p class="todo doc__closing">Tyto zásady jsou platné od: doplníme.</p>
         </article>
       </div>
     </section>
   </main>
 
+  <div class="divider" aria-hidden="true"></div>
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
-        <p class="site-footer__logo">[NÁZEV]</p>
-        <p>Dárkové krabice plné amerických sladkostí, snacků a nápojů. Pro radost sobě i ostatním.</p>
-        <p class="neon">Díky a zase přijď!</p>
+        <p class="site-footer__logo"><svg class="star-icon " viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> [NÁZEV]</p>
+        <p>Americký box plný limonád, sladkostí a popcornu. Osobně v Praze, nebo Zásilkovnou až k tobě.</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">
         <h2 class="site-footer__title" id="paticka-stranky">Stránky</h2>
         <ul class="site-footer__list">
           <li><a href="index.html">Domů</a></li>
-          <li><a href="krabice.html">Krabice</a></li>
+          <li><a href="krabice.html">Box</a></li>
           <li><a href="objednavka.html">Jak objednat</a></li>
           <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
