@@ -32,23 +32,26 @@ Aktivní stránka se v menu označuje atributem `aria-current="page"`.
 
 ## Retro verze (složka `retro/`)
 
-Stejný obsah, ceny a zástupné hodnoty ve stylu amerického webu z konce 90. let:
-pevná šířka 800 px, tapeta s hvězdami, šedé 3D panely, menu vlevo, běžící text,
-blikající NEW!, 3D tlačítka a odznaky 88 × 31 v patičce. Jen systémová písma
-(Times New Roman, Verdana/Arial, Impact, Courier New), žádné přechody ani emoji.
+Stejný obsah, ceny a zástupné hodnoty ve stylu vintage americké grafiky 50.–60. let
+(diner, plechové cedule, staré obaly a plakáty): neonový nápis, paprsky za nadpisem,
+šachovnicové pásy, zubaté hvězdy s cenou a NEW!, stuhy s nadpisy, štíty ve stylu
+Route 66 pro kroky a ceny, cedule s dvojitým okrajem a nýty, papír se zrnem a rastrem,
+menu jako jídelní lístek s tečkami a polaroidy jako zástupné fotky.
 
 | Soubor | Obsah |
 | --- | --- |
 | `retro/*.html` | Stejných 7 stránek jako moderní verze |
-| `retro/css/style.css` | Retro styl (barvy a písma v proměnných nahoře) |
-| `retro/js/script.js` | Tlačítko „Zastavit animace“ a skok na kotvy |
+| `retro/css/style.css` | Retro styl; barvy a písma v proměnných nahoře |
+| `retro/js/script.js` | Skok na kotvy se správným přesunem fokusu |
+| `retro/fonts/` | Pacifico, Alfa Slab One, Bebas Neue, Merriweather (lokálně, licence SIL OFL) |
 | `retro/img/` | Zatím prázdné |
+
+Barvy: třešňová `#C8102E`, tyrkysová `#5BC8C0`, krémová `#FFF1D6`, tmavě modrá `#14213D`,
+chrom `#D9DEE4`, žlutá `#F4B942`.
 
 Odkazy uvnitř `retro/` vedou jen na retro stránky. Moderní web má v patičce odkaz
 „Retro verze“, retro web odkaz „Moderní verze“ (`../index.html`).
-Běžící text i blikání jdou zastavit tlačítkem a při nastavení „omezit pohyb“ se nehýbou.
 Zástupné hodnoty (tabulka níže) je potřeba nahradit i ve složce `retro/`.
-Datum „Naposledy aktualizováno“ v patičce retro verze se mění ručně.
 
 ## Barvy a písma
 

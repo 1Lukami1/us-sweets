@@ -7,7 +7,7 @@
   <meta name="description" content="Máte dotaz k Americkému boxu nebo k objednávce? Napište nám e-mail nebo zprávu na Instagramu. Najdete tu i údaje prodávajícího.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#000080">
+  <meta name="theme-color" content="#14213D">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,122 +17,116 @@
   <meta property="og:description" content="Máte dotaz k Americkému boxu nebo k objednávce? Napište nám e-mail nebo zprávu na Instagramu. Najdete tu i údaje prodávajícího.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000080'/%3E%3Cpath fill='%23FFFF00' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2314213D'/%3E%3Cpath fill='%23F4B942' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
-  <aside class="marquee" aria-label="Novinky">
-    <div class="marquee__track">
-      <p class="marquee__text">Vítejte na naší domovské stránce! ★ Americký box se 7 dobrotami jen za 490 Kč ★ Osobní předání v Praze ZDARMA ★ Zásilkovna a AlzaBox za 89 Kč ★ Platba převodem předem ★ Webmaster zdraví všechny, kdo dočetli až sem!</p>
+  <header id="nahoru">
+    <div class="checker checker--red" aria-hidden="true"></div>
+    <div class="signboard">
+      <div class="container signboard__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__name neon">[NÁZEV]</span>
+          <span class="brand__tag" lang="en">Fresh from the USA · Since 2026</span>
+        </a>
+        <p class="open-sign neon neon--red" aria-hidden="true">Open</p>
+      </div>
     </div>
-    <button class="btn btn--small" type="button" data-motion-toggle aria-pressed="false" hidden>Zastavit animace</button>
-  </aside>
+    <nav class="menu-board" aria-label="Hlavní menu">
+      <div class="container menu-board__inner">
+        <p class="menu-board__title" aria-hidden="true">Menu</p>
+        <ul class="menu">
+            <li><a href="index.html"><span class="menu__name">Úvod</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">★</span></a></li>
+            <li><a href="krabice.html"><span class="menu__name">Americký box</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">490 Kč</span></a></li>
+            <li><a href="objednavka.html"><span class="menu__name">Jak objednat</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">4 kroky</span></a></li>
+            <li><a href="doprava-a-platba.html"><span class="menu__name">Doprava a platba</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">0–89 Kč</span></a></li>
+            <li><a href="kontakt.html" aria-current="page"><span class="menu__name">Kontakt</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">e-mail</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <div class="page">
-    <header class="banner" id="nahoru">
-      <p class="banner__stars" aria-hidden="true">★ ★ ★ ★ ★</p>
-      <a class="banner__logo" href="index.html">[NÁZEV]</a>
-      <p class="banner__tagline">Domovská stránka Amerického boxu</p>
-      <p class="banner__stars banner__stars--blue" aria-hidden="true">★ ★ ★ ★ ★</p>
-    </header>
+  <main id="obsah" tabindex="-1">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" lang="en">Fresh from the USA</p>
+        <h1 class="page-hero__title">Kontakt</h1>
+        <p class="page-hero__sub">Dotazy k boxu i k objednávkám rádi zodpovíme.</p>
+      </div>
+    </section>
 
-    <div class="layout">
-      <div class="sidebar">
-        <nav class="panel" aria-labelledby="menu-nadpis">
-          <p class="panel__title" id="menu-nadpis">MENU</p>
-          <ul class="menu">
-            <li><a href="index.html">Úvod</a></li>
-            <li><a href="krabice.html">Americký box</a></li>
-            <li><a href="objednavka.html">Jak objednat</a></li>
-            <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
-            <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    <section class="section" aria-labelledby="napis-nadpis">
+      <div class="container narrow">
+        <h2 class="ribbon" id="napis-nadpis"><span>Napište nám</span></h2>
+        <div class="sign sign--menu">
+          <ul class="leaders">
+            <li><span class="leaders__name">E-mail</span><span class="leaders__dots" aria-hidden="true"></span><span class="leaders__value"><a href="mailto:[E-MAIL]">[E-MAIL]</a></span></li>
+            <li><span class="leaders__name">Instagram</span><span class="leaders__dots" aria-hidden="true"></span><span class="leaders__value"><a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></span></li>
           </ul>
-        </nav>
+        </div>
+      </div>
+    </section>
 
-        <aside class="panel quick-order" aria-labelledby="rychla-nadpis">
-          <p class="panel__title" id="rychla-nadpis">RYCHLÁ OBJEDNÁVKA</p>
-          <p class="quick-order__name">Americký box</p>
-          <p class="price">490 Kč</p>
-          <a class="btn btn--order btn--wide" href="objednavka.html"><span class="arrow" aria-hidden="true">► </span>Objednat<span class="arrow" aria-hidden="true"> ◄</span></a>
-        </aside>
+    <div class="checker" aria-hidden="true"></div>
+
+    <section class="section" id="prodavajici" aria-labelledby="prodavajici-nadpis">
+      <div class="container narrow">
+        <h2 class="ribbon ribbon--navy" id="prodavajici-nadpis"><span>Údaje prodávajícího</span></h2>
+        <div class="sign">
+          <address class="seller">
+            <dl>
+              <div><dt>Prodávající</dt><dd>[JMÉNO A PŘÍJMENÍ]</dd></div>
+              <div><dt>Adresa</dt><dd>[ULICE A ČÍSLO, PSČ MĚSTO]</dd></div>
+              <div><dt>IČO</dt><dd>[IČO]</dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:[E-MAIL]">[E-MAIL]</a></dd></div>
+            </dl>
+          </address>
+          <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="checker" aria-hidden="true"></div>
+    <div class="container site-footer__grid">
+      <div>
+        <p class="brand">
+          <span class="brand__name neon">[NÁZEV]</span>
+          <span class="brand__tag" lang="en">Fresh from the USA · Since 2026</span>
+        </p>
+        <p>Americký box se 7 dobrotami za 490 Kč. Osobně v Praze zdarma, Zásilkovna / AlzaBox 89 Kč.</p>
       </div>
 
-      <main class="content" id="obsah" tabindex="-1">
-        <h1>Kontakt</h1>
-        <p>Máte dotaz k boxu nebo k objednávce? Napište nám! Odpovídáme rychleji, než se načte stránka přes vytáčené připojení.</p>
+      <nav aria-labelledby="paticka-menu">
+        <h2 class="site-footer__title" id="paticka-menu">Menu</h2>
+        <ul class="site-footer__list">
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="krabice.html">Americký box</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+          <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+        </ul>
+      </nav>
 
-        <hr>
-
-        <h2>Napište nám</h2>
-        <div class="table-scroll">
-          <table class="table">
-            <caption>Kde nás najdete</caption>
-            <tbody>
-              <tr>
-                <th scope="row">E-mail</th>
-                <td><a href="mailto:[E-MAIL]">[E-MAIL]</a></td>
-              </tr>
-              <tr>
-                <th scope="row">Instagram</th>
-                <td><a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <hr>
-
-        <h2 id="prodavajici">Údaje prodávajícího</h2>
-        <address>
-          <div class="table-scroll">
-            <table class="table">
-              <caption>Prodávající</caption>
-              <tbody>
-                <tr>
-                  <th scope="row">Jméno</th>
-                  <td>[JMÉNO A PŘÍJMENÍ]</td>
-                </tr>
-                <tr>
-                  <th scope="row">Adresa</th>
-                  <td>[ULICE A ČÍSLO, PSČ MĚSTO]</td>
-                </tr>
-                <tr>
-                  <th scope="row">IČO</th>
-                  <td>[IČO]</td>
-                </tr>
-                <tr>
-                  <th scope="row">E-mail</th>
-                  <td><a href="mailto:[E-MAIL]">[E-MAIL]</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </address>
-        <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
-      </main>
+      <div>
+        <h2 class="site-footer__title">Informace</h2>
+        <ul class="site-footer__list">
+          <li>E-mail: <a href="mailto:[E-MAIL]">[E-MAIL]</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></li>
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+        </ul>
+      </div>
     </div>
-
-    <footer class="footer">
-      <p class="footer__links">[ <a href="index.html">Úvod</a> | <a href="krabice.html">Americký box</a> | <a href="objednavka.html">Jak objednat</a> | <a href="doprava-a-platba.html">Doprava a platba</a> | <a href="kontakt.html" aria-current="page">Kontakt</a> ]</p>
-      <p class="footer__links">[ <a href="obchodni-podminky.html">Obchodní podmínky</a> | <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> ]</p>
-      <p>E-mail: <a href="mailto:[E-MAIL]">[E-MAIL]</a> ★ Instagram: <a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></p>
-
-      <ul class="badges" aria-label="Odznaky">
-        <li class="badge badge--navy"><b>Bez cookies</b> <span>jen popcorn</span></li>
-        <li class="badge badge--black"><b>Web 1.0</b> <span>kompatibilní</span></li>
-        <li class="badge badge--yellow"><b>800 × 600</b> <span>doporučeno</span></li>
-        <li class="badge badge--gray"><b>Vyrobeno</b> <span>v HTML a CSS</span></li>
-        <li class="badge badge--red"><b>Počítadlo</b> <span>nemáme :-)</span></li>
-      </ul>
-
-      <p>© 2026 [NÁZEV]. Všechna práva vyhrazena.</p>
-      <p class="footer__updated">Naposledy aktualizováno: 3. 11. 2026</p>
-      <p class="footer__links"><a href="../index.html">Moderní verze</a> ★ <a href="#nahoru">Nahoru</a></p>
-      <p class="small">Nejlépe se zobrazuje v rozlišení 800 × 600. Na telefonu ale taky.</p>
-    </footer>
-  </div>
+    <div class="container site-footer__bottom">
+      <p>© 2026 [NÁZEV]</p>
+      <p><a href="../index.html">Moderní verze</a> · <a href="#nahoru">Nahoru</a></p>
+    </div>
+    <div class="checker checker--red" aria-hidden="true"></div>
+  </footer>
 </body>
 </html>

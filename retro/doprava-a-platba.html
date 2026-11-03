@@ -7,7 +7,7 @@
   <meta name="description" content="Osobní předání v Praze zdarma, Zásilkovna nebo AlzaBox za 89 Kč. Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#000080">
+  <meta name="theme-color" content="#14213D">
 
   <!-- Open Graph (náhled při sdílení odkazu) -->
   <meta property="og:type" content="website">
@@ -17,147 +17,139 @@
   <meta property="og:description" content="Osobní předání v Praze zdarma, Zásilkovna nebo AlzaBox za 89 Kč. Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy) -->
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000080'/%3E%3Cpath fill='%23FFFF00' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2314213D'/%3E%3Cpath fill='%23F4B942' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
-  <aside class="marquee" aria-label="Novinky">
-    <div class="marquee__track">
-      <p class="marquee__text">Vítejte na naší domovské stránce! ★ Americký box se 7 dobrotami jen za 490 Kč ★ Osobní předání v Praze ZDARMA ★ Zásilkovna a AlzaBox za 89 Kč ★ Platba převodem předem ★ Webmaster zdraví všechny, kdo dočetli až sem!</p>
+  <header id="nahoru">
+    <div class="checker checker--red" aria-hidden="true"></div>
+    <div class="signboard">
+      <div class="container signboard__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__name neon">[NÁZEV]</span>
+          <span class="brand__tag" lang="en">Fresh from the USA · Since 2026</span>
+        </a>
+        <p class="open-sign neon neon--red" aria-hidden="true">Open</p>
+      </div>
     </div>
-    <button class="btn btn--small" type="button" data-motion-toggle aria-pressed="false" hidden>Zastavit animace</button>
-  </aside>
+    <nav class="menu-board" aria-label="Hlavní menu">
+      <div class="container menu-board__inner">
+        <p class="menu-board__title" aria-hidden="true">Menu</p>
+        <ul class="menu">
+            <li><a href="index.html"><span class="menu__name">Úvod</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">★</span></a></li>
+            <li><a href="krabice.html"><span class="menu__name">Americký box</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">490 Kč</span></a></li>
+            <li><a href="objednavka.html"><span class="menu__name">Jak objednat</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">4 kroky</span></a></li>
+            <li><a href="doprava-a-platba.html" aria-current="page"><span class="menu__name">Doprava a platba</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">0–89 Kč</span></a></li>
+            <li><a href="kontakt.html"><span class="menu__name">Kontakt</span><span class="menu__dots" aria-hidden="true"></span><span class="menu__price" aria-hidden="true">e-mail</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  <div class="page">
-    <header class="banner" id="nahoru">
-      <p class="banner__stars" aria-hidden="true">★ ★ ★ ★ ★</p>
-      <a class="banner__logo" href="index.html">[NÁZEV]</a>
-      <p class="banner__tagline">Domovská stránka Amerického boxu</p>
-      <p class="banner__stars banner__stars--blue" aria-hidden="true">★ ★ ★ ★ ★</p>
-    </header>
+  <main id="obsah" tabindex="-1">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow" lang="en">Fresh from the USA</p>
+        <h1 class="page-hero__title">Doprava a platba</h1>
+        <p class="page-hero__sub">Osobně v Praze zdarma, Zásilkovna / AlzaBox 89 Kč. Platba převodem předem.</p>
+      </div>
+    </section>
 
-    <div class="layout">
-      <div class="sidebar">
-        <nav class="panel" aria-labelledby="menu-nadpis">
-          <p class="panel__title" id="menu-nadpis">MENU</p>
-          <ul class="menu">
-            <li><a href="index.html">Úvod</a></li>
-            <li><a href="krabice.html">Americký box</a></li>
-            <li><a href="objednavka.html">Jak objednat</a></li>
-            <li><a href="doprava-a-platba.html" aria-current="page">Doprava a platba</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+    <section class="section" id="doprava" aria-labelledby="doprava-nadpis">
+      <div class="container">
+        <h2 class="ribbon" id="doprava-nadpis"><span>Doprava</span></h2>
+        <div class="sign-grid">
+          <div class="sign sign--teal">
+            <span class="shield shield--wide" aria-hidden="true"><span class="shield__label">Cena</span><span class="shield__value">0 Kč</span></span>
+            <h3 class="sign__title">Osobně v Praze</h3>
+            <p><strong>Zdarma.</strong> Místo a čas předání domluvíme e-mailem.</p>
+          </div>
+          <div class="sign sign--yellow">
+            <span class="shield shield--wide" aria-hidden="true"><span class="shield__label">Cena</span><span class="shield__value">89 Kč</span></span>
+            <h3 class="sign__title">Zásilkovna / AlzaBox</h3>
+            <p><strong>89 Kč</strong> paušálně. Box pošleme na výdejní místo Zásilkovny nebo do AlzaBoxu, který si vyberete.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="checker" aria-hidden="true"></div>
+
+    <section class="section" id="platba" aria-labelledby="platba-nadpis">
+      <div class="container narrow">
+        <h2 class="ribbon ribbon--navy" id="platba-nadpis"><span>Platba</span></h2>
+        <div class="sign sign--navy center">
+          <p class="sign__title">Převodem předem</p>
+          <p>Po potvrzení objednávky pošlete platbu na účet:</p>
+          <p class="ticket">[ČÍSLO ÚČTU]</p>
+          <p>Celkovou částku vám napíšeme v potvrzení objednávky. Box předáme nebo odešleme po připsání platby. Jiné způsoby platby zatím nenabízíme.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--teal" id="celkem" aria-labelledby="cena-nadpis">
+      <div class="container narrow">
+        <h2 class="ribbon" id="cena-nadpis"><span>Kolik zaplatíte celkem</span></h2>
+        <div class="sign">
+          <ul class="leaders leaders--prices">
+            <li><span class="leaders__name">Osobně v Praze<small>doprava zdarma</small></span><span class="leaders__dots" aria-hidden="true"></span><span class="leaders__value">490 Kč</span></li>
+            <li><span class="leaders__name">Zásilkovna / AlzaBox<small>490 Kč + doprava 89 Kč</small></span><span class="leaders__dots" aria-hidden="true"></span><span class="leaders__value">579 Kč</span></li>
           </ul>
-        </nav>
+          <p class="note">Ceny jsou za 1 box. Platba převodem předem. Při více kusech vám přesnou částku potvrdíme e-mailem.</p>
+        </div>
+      </div>
+    </section>
 
-        <aside class="panel quick-order" aria-labelledby="rychla-nadpis">
-          <p class="panel__title" id="rychla-nadpis">RYCHLÁ OBJEDNÁVKA</p>
-          <p class="quick-order__name">Americký box</p>
-          <p class="price">490 Kč</p>
-          <a class="btn btn--order btn--wide" href="objednavka.html"><span class="arrow" aria-hidden="true">► </span>Objednat<span class="arrow" aria-hidden="true"> ◄</span></a>
-        </aside>
+    <section class="poster" aria-labelledby="poster-nadpis">
+      <div class="container">
+        <p class="poster__script" lang="en">Take one home</p>
+        <h2 class="poster__title" id="poster-nadpis">Objednejte si Americký box</h2>
+        <p>490 Kč za box. Osobně v Praze zdarma, Zásilkovna / AlzaBox 89 Kč.</p>
+        <a class="btn btn--order btn--yellow" href="objednavka.html">Objednat</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="checker" aria-hidden="true"></div>
+    <div class="container site-footer__grid">
+      <div>
+        <p class="brand">
+          <span class="brand__name neon">[NÁZEV]</span>
+          <span class="brand__tag" lang="en">Fresh from the USA · Since 2026</span>
+        </p>
+        <p>Americký box se 7 dobrotami za 490 Kč. Osobně v Praze zdarma, Zásilkovna / AlzaBox 89 Kč.</p>
       </div>
 
-      <main class="content" id="obsah" tabindex="-1">
-        <h1>Doprava a platba</h1>
-        <p>Krabice umí cestovat dvěma způsoby. Zaplatit jde jedním. Čtěte prosím níže:</p>
-        <p class="center"><a href="#doprava">[ Doprava ]</a> <a href="#platba">[ Platba ]</a> <a href="#celkem">[ Kolik celkem ]</a></p>
+      <nav aria-labelledby="paticka-menu">
+        <h2 class="site-footer__title" id="paticka-menu">Menu</h2>
+        <ul class="site-footer__list">
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="krabice.html">Americký box</a></li>
+          <li><a href="objednavka.html">Jak objednat</a></li>
+          <li><a href="doprava-a-platba.html" aria-current="page">Doprava a platba</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
 
-        <hr>
-
-        <h2 id="doprava">Doprava</h2>
-        <div class="table-scroll">
-          <table class="table">
-            <caption>Způsoby předání</caption>
-            <thead>
-              <tr>
-                <th scope="col">Způsob</th>
-                <th scope="col">Cena</th>
-                <th scope="col">Jak to funguje</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Osobní předání v Praze</th>
-                <td class="money total">ZDARMA</td>
-                <td>Místo a čas domluvíme e-mailem.</td>
-              </tr>
-              <tr>
-                <th scope="row">Zásilkovna / AlzaBox</th>
-                <td class="money total">89 Kč</td>
-                <td>Pošleme na výdejní místo Zásilkovny nebo do AlzaBoxu, který si vyberete. Paušální cena.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <hr>
-
-        <h2 id="platba">Platba</h2>
-        <p>Platí se <strong>převodem předem</strong> na účet:</p>
-        <p class="account">[ČÍSLO ÚČTU]</p>
-        <p>Celkovou částku vám napíšeme v potvrzení objednávky. Box předáme nebo odešleme, jakmile platba dorazí na účet. Jiné způsoby platby zatím nenabízíme (ani šeky, ani výměnu za kazety).</p>
-
-        <hr>
-
-        <h2 id="celkem">Kolik zaplatíte celkem</h2>
-        <div class="table-scroll">
-          <table class="table">
-            <caption>Cena za 1 box podle způsobu předání</caption>
-            <thead>
-              <tr>
-                <th scope="col">Způsob předání</th>
-                <th scope="col">Box</th>
-                <th scope="col">Doprava</th>
-                <th scope="col">Celkem</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Osobně v Praze</th>
-                <td class="money">490 Kč</td>
-                <td class="money">ZDARMA</td>
-                <td class="money total">490 Kč</td>
-              </tr>
-              <tr>
-                <th scope="row">Zásilkovna / AlzaBox</th>
-                <td class="money">490 Kč</td>
-                <td class="money">89 Kč</td>
-                <td class="money total">579 Kč</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="small">Ceny jsou za 1 box. Objednáváte víc kusů? Přesnou částku vám potvrdíme e-mailem.</p>
-
-        <hr>
-
-        <h2>Máte jasno?</h2>
-        <p>Klikněte zde pro objednávku:</p>
-        <p class="center"><a class="btn btn--order" href="objednavka.html"><span class="arrow" aria-hidden="true">► </span>Objednat<span class="arrow" aria-hidden="true"> ◄</span></a></p>
-      </main>
+      <div>
+        <h2 class="site-footer__title">Informace</h2>
+        <ul class="site-footer__list">
+          <li>E-mail: <a href="mailto:[E-MAIL]">[E-MAIL]</a></li>
+          <li>Instagram: <a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></li>
+          <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+          <li><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></li>
+        </ul>
+      </div>
     </div>
-
-    <footer class="footer">
-      <p class="footer__links">[ <a href="index.html">Úvod</a> | <a href="krabice.html">Americký box</a> | <a href="objednavka.html">Jak objednat</a> | <a href="doprava-a-platba.html" aria-current="page">Doprava a platba</a> | <a href="kontakt.html">Kontakt</a> ]</p>
-      <p class="footer__links">[ <a href="obchodni-podminky.html">Obchodní podmínky</a> | <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> ]</p>
-      <p>E-mail: <a href="mailto:[E-MAIL]">[E-MAIL]</a> ★ Instagram: <a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></p>
-
-      <ul class="badges" aria-label="Odznaky">
-        <li class="badge badge--navy"><b>Bez cookies</b> <span>jen popcorn</span></li>
-        <li class="badge badge--black"><b>Web 1.0</b> <span>kompatibilní</span></li>
-        <li class="badge badge--yellow"><b>800 × 600</b> <span>doporučeno</span></li>
-        <li class="badge badge--gray"><b>Vyrobeno</b> <span>v HTML a CSS</span></li>
-        <li class="badge badge--red"><b>Počítadlo</b> <span>nemáme :-)</span></li>
-      </ul>
-
-      <p>© 2026 [NÁZEV]. Všechna práva vyhrazena.</p>
-      <p class="footer__updated">Naposledy aktualizováno: 3. 11. 2026</p>
-      <p class="footer__links"><a href="../index.html">Moderní verze</a> ★ <a href="#nahoru">Nahoru</a></p>
-      <p class="small">Nejlépe se zobrazuje v rozlišení 800 × 600. Na telefonu ale taky.</p>
-    </footer>
-  </div>
+    <div class="container site-footer__bottom">
+      <p>© 2026 [NÁZEV]</p>
+      <p><a href="../index.html">Moderní verze</a> · <a href="#nahoru">Nahoru</a></p>
+    </div>
+    <div class="checker checker--red" aria-hidden="true"></div>
+  </footer>
 </body>
 </html>
