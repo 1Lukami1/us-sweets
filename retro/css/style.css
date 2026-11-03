@@ -1,0 +1,966 @@
+/* ==========================================================================
+   [NÁZEV] – RETRO VERZE
+   Styl amerického webu z konce 90. let: pevná šířka 800 px, tapeta
+   s hvězdami, šedé 3D panely, systémová písma, blikající NEW!
+   Žádné přechody, žádné zaoblené rohy, žádné jemné stíny.
+   Do 700 px se menu přesune nad obsah a vše se skládá pod sebe.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Proměnné: barvy, písma, tapeta
+   -------------------------------------------------------------------------- */
+:root {
+  /* Barvy (jen tyhle, žádné pastely) */
+  --navy: #000080;
+  --red: #FF0000;
+  --white: #FFFFFF;
+  --yellow: #FFFF00;
+  --gray: #C0C0C0;
+  --black: #000000;
+  --paper: #FFFFCC;
+  --link: #0000EE;
+  --visited: #551A8B;
+
+  /* Písma (jen systémová) */
+  --font-text: "Times New Roman", Times, serif;
+  --font-menu: Verdana, Arial, Helvetica, sans-serif;
+  --font-title: Impact, "Arial Black", "Arial Narrow", Arial, sans-serif;
+  --font-price: "Courier New", Courier, monospace;
+
+  /* Tapeta: bílé hvězdy na námořnické modré */
+  --wallpaper: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cdefs%3E%3Cpath id='s' d='M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z'/%3E%3C/defs%3E%3Cg fill='%23FFFFFF'%3E%3Cuse href='%23s' transform='translate(10 10) scale(.75)'/%3E%3Cuse href='%23s' transform='translate(70 22) scale(.45)'/%3E%3Cuse href='%23s' transform='translate(38 64) scale(.6)'/%3E%3Cuse href='%23s' transform='translate(88 80) scale(.8)'/%3E%3Cuse href='%23s' transform='translate(8 96) scale(.4)'/%3E%3Cuse href='%23s' transform='translate(100 2) scale(.3)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* --------------------------------------------------------------------------
+   2. Základ
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--navy);
+  background-image: var(--wallpaper);
+  color: var(--black);
+  font-family: var(--font-text);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+p,
+ul,
+ol,
+dl,
+table {
+  margin: 0 0 14px;
+}
+
+ul,
+ol {
+  padding-left: 26px;
+}
+
+li + li {
+  margin-top: 4px;
+}
+
+/* Odkazy jako v roce 1998 */
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+a:hover,
+a:active {
+  color: var(--red);
+}
+
+:focus-visible {
+  outline: 2px dotted var(--black);
+  outline-offset: 2px;
+}
+
+main:focus {
+  outline: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Nadpisy ve stylu WordArt: tučně, velké, červený a modrý stín */
+h1 {
+  margin: 0 0 14px;
+  color: var(--red);
+  font-family: var(--font-title);
+  font-size: 40px;
+  font-weight: 900;
+  font-synthesis: none;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 0 var(--navy), 4px 4px 0 var(--yellow);
+}
+
+h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0 var(--red);
+}
+
+h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Vodorovná čára s tlustým vkládaným okrajem */
+hr {
+  height: 0;
+  margin: 24px 0;
+  border: 3px inset var(--gray);
+}
+
+/* --------------------------------------------------------------------------
+   3. Pomocné třídy
+   -------------------------------------------------------------------------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 10;
+  padding: 8px 12px;
+  background: var(--yellow);
+  color: var(--black);
+  border: 3px outset var(--yellow);
+  font-family: var(--font-menu);
+  font-weight: bold;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  color: var(--black);
+}
+
+.center {
+  text-align: center;
+}
+
+.read-below {
+  color: var(--navy);
+  font-family: var(--font-menu);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.todo {
+  font-style: italic;
+}
+
+.small {
+  font-size: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Běžící text nahoře (bez <marquee>)
+   -------------------------------------------------------------------------- */
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: var(--black);
+  color: var(--yellow);
+  border-bottom: 3px outset var(--gray);
+  font-family: var(--font-menu);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.marquee :focus-visible {
+  outline-color: var(--yellow);
+}
+
+.marquee__track {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee__text {
+  display: inline-block;
+  margin: 0;
+  padding-left: 100%;
+  animation: marquee 32s linear infinite;
+}
+
+.marquee:hover .marquee__text {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Zastavené animace (tlačítko nebo nastavení systému): text stojí a zalamuje se */
+.motion-paused .marquee__track {
+  white-space: normal;
+}
+
+.motion-paused .marquee__text {
+  padding-left: 0;
+  animation: none;
+}
+
+.motion-paused .new {
+  animation: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. Tlačítka (3D)
+   -------------------------------------------------------------------------- */
+.btn,
+.btn:visited {
+  display: inline-block;
+  min-height: 44px;
+  padding: 10px 16px;
+  background: var(--gray);
+  color: var(--black);
+  border: 3px outset var(--gray);
+  font-family: var(--font-menu);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.btn:active {
+  border-style: inset;
+  padding: 11px 15px 9px 17px;
+  color: var(--black);
+}
+
+.btn--small,
+.btn--small:visited {
+  min-height: 36px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.btn--small:active {
+  padding: 7px 9px 5px 11px;
+}
+
+/* Nejvýraznější prvek: žluté tlačítko Objednat */
+.btn--order,
+.btn--order:visited {
+  min-height: 56px;
+  padding: 12px 24px;
+  background: var(--yellow);
+  border: 5px outset var(--yellow);
+  font-family: var(--font-title);
+  font-size: 26px;
+  font-weight: 900;
+  font-synthesis: none;
+  letter-spacing: 1px;
+}
+
+.btn--order:active {
+  padding: 13px 23px 11px 25px;
+}
+
+.btn--order .arrow {
+  color: var(--red);
+}
+
+.btn--wide {
+  display: block;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. Stránka jako tabulka: banner, menu vlevo, obsah vpravo, patička
+   -------------------------------------------------------------------------- */
+.page {
+  width: 800px;
+  max-width: calc(100% - 16px);
+  margin: 14px auto 28px;
+  padding: 4px;
+  background: var(--gray);
+  border: 4px outset var(--gray);
+}
+
+.banner {
+  margin-bottom: 4px;
+  padding: 12px 10px 10px;
+  background: var(--yellow);
+  border: 3px inset var(--gray);
+  text-align: center;
+}
+
+.banner__stars {
+  margin: 0;
+  color: var(--red);
+  font-family: var(--font-menu);
+  font-size: 22px;
+  letter-spacing: 10px;
+  line-height: 1.2;
+}
+
+.banner__stars--blue {
+  color: var(--navy);
+}
+
+.banner__logo,
+.banner__logo:visited {
+  display: inline-block;
+  margin: 6px 0 2px;
+  color: var(--red);
+  font-family: var(--font-title);
+  font-size: 58px;
+  font-weight: 900;
+  font-synthesis: none;
+  letter-spacing: 2px;
+  line-height: 1.05;
+  text-decoration: none;
+  text-shadow: 3px 3px 0 var(--navy);
+}
+
+.banner__logo:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+.banner__tagline {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 184px minmax(0, 1fr);
+  gap: 4px;
+}
+
+/* Levé menu */
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 4px;
+}
+
+.panel {
+  padding: 6px;
+  background: var(--gray);
+  border: 3px outset var(--gray);
+}
+
+.panel__title {
+  margin: 0 0 8px;
+  padding: 3px 6px;
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-menu);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-menu);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.menu li + li {
+  margin-top: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 4px 8px 18px;
+  text-indent: -14px;
+}
+
+.menu a::before {
+  content: "► ";
+  content: "► " / "";
+  color: var(--navy);
+}
+
+/* Aktivní stránka */
+.menu a[aria-current="page"],
+.menu a[aria-current="page"]:visited {
+  background: var(--white);
+  color: var(--black);
+  border: 2px inset var(--gray);
+  text-decoration: none;
+}
+
+.menu a[aria-current="page"]::before {
+  color: var(--red);
+}
+
+/* Rychlá objednávka v levém sloupci */
+.quick-order {
+  text-align: center;
+}
+
+.quick-order__name {
+  margin: 0;
+  font-family: var(--font-menu);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.quick-order .price {
+  margin: 4px 0 8px;
+  padding: 2px 4px;
+  background: var(--white);
+  border: 2px inset var(--gray);
+  font-size: 26px;
+}
+
+.quick-order .btn--order,
+.quick-order .btn--order:visited {
+  padding-inline: 4px;
+  font-size: 19px;
+  white-space: nowrap;
+}
+
+.quick-order .btn--order:active {
+  padding-inline: 5px 3px;
+}
+
+/* Obsah */
+.content {
+  min-width: 0;
+  padding: 16px 20px 24px;
+  background: var(--paper);
+  border: 3px inset var(--gray);
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   7. Produkt, NEW!, ceny, zástupné fotky
+   -------------------------------------------------------------------------- */
+.product {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.product ul {
+  padding-left: 22px;
+}
+
+.price {
+  margin: 0 0 10px;
+  color: var(--red);
+  font-family: var(--font-price);
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.price small {
+  color: var(--black);
+  font-size: 16px;
+}
+
+/* Blikající odznak NEW! */
+.new {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 7px;
+  background: var(--red);
+  color: var(--yellow);
+  border: 3px outset var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-shadow: none;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+}
+
+/* Zástupné fotky s tlustým vystouplým rámem */
+.photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: var(--white);
+  border: 5px outset var(--gray);
+  color: var(--black);
+  font-family: var(--font-price);
+  font-size: 15px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.photo--big {
+  width: 220px;
+  height: 170px;
+}
+
+.photo--small {
+  width: 104px;
+  height: 72px;
+  border-width: 4px;
+  font-size: 12px;
+}
+
+.order-call {
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------
+   8. Tabulky
+   -------------------------------------------------------------------------- */
+.table-scroll {
+  max-width: 100%;
+  margin: 0 0 14px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  margin: 0;
+  background: var(--white);
+  border: 3px outset var(--gray);
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.table caption {
+  padding: 2px 0 6px;
+  color: var(--navy);
+  font-family: var(--font-menu);
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 6px 8px;
+  border: 2px inset var(--gray);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-menu);
+  font-size: 14px;
+}
+
+.table tbody th {
+  font-weight: bold;
+}
+
+.table tfoot td {
+  background: var(--gray);
+  font-weight: bold;
+}
+
+.money {
+  font-family: var(--font-price);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.table .total {
+  background: var(--yellow);
+  font-size: 20px;
+}
+
+.goods td:first-child {
+  width: 1%;
+}
+
+.goods__type {
+  display: block;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   9. Rámečky: důležité, ve výstavbě, číslo účtu
+   -------------------------------------------------------------------------- */
+.warning {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  background: var(--white);
+  border: 4px double var(--red);
+}
+
+.warning__title {
+  margin: 0 0 8px;
+  color: var(--red);
+  font-family: var(--font-menu);
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.spec-list {
+  margin: 10px 0 0;
+}
+
+.spec-list dt {
+  color: var(--navy);
+  font-family: var(--font-menu);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.spec-list dd {
+  margin: 0 0 10px 20px;
+}
+
+.allergen {
+  padding: 0 4px;
+  background: var(--yellow);
+  color: var(--black);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.construction {
+  margin: 0 0 18px;
+  padding: 14px;
+  background: var(--yellow);
+  border: 6px dashed var(--black);
+  text-align: center;
+}
+
+.construction strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-title);
+  font-size: 28px;
+  font-synthesis: none;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.construction p {
+  margin: 0;
+}
+
+.account {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 8px 14px;
+  background: var(--white);
+  border: 3px inset var(--gray);
+  font-family: var(--font-price);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Často kladené dotazy */
+address {
+  font-style: normal;
+}
+
+.faq-answer {
+  margin-bottom: 18px;
+}
+
+.back-link {
+  font-family: var(--font-menu);
+  font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Patička s odznaky 88 × 31
+   -------------------------------------------------------------------------- */
+.footer {
+  margin-top: 4px;
+  padding: 14px 12px 12px;
+  background: var(--white);
+  border: 3px inset var(--gray);
+  font-size: 16px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0 0 10px;
+}
+
+.footer__links {
+  font-family: var(--font-menu);
+  font-size: 15px;
+}
+
+.footer__links a {
+  display: inline-block;
+  padding: 10px 3px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.badges li + li {
+  margin-top: 0;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 88px;
+  height: 31px;
+  overflow: hidden;
+  border: 1px solid var(--black);
+  font-family: var(--font-menu);
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.badge b {
+  font-size: 10px;
+}
+
+.badge--navy {
+  background: var(--navy);
+  color: var(--yellow);
+}
+
+.badge--black {
+  background: var(--black);
+  color: var(--yellow);
+}
+
+.badge--yellow {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.badge--gray {
+  background: var(--gray);
+  color: var(--black);
+}
+
+.badge--red {
+  background: var(--red);
+  color: var(--black);
+}
+
+.footer__updated {
+  font-family: var(--font-price);
+  font-size: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   11. Úzký displej (do 700 px): menu nad obsahem, vše pod sebou
+   -------------------------------------------------------------------------- */
+@media (max-width: 700px) {
+  body {
+    font-size: 17px;
+  }
+
+  .page {
+    max-width: calc(100% - 12px);
+    margin: 6px auto 16px;
+  }
+
+  .banner__logo,
+  .banner__logo:visited {
+    font-size: 42px;
+  }
+
+  .banner__tagline {
+    font-size: 17px;
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 2px 8px;
+  }
+
+  .quick-order {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 4px 10px;
+    text-align: left;
+  }
+
+  .quick-order .panel__title {
+    grid-column: 1 / -1;
+  }
+
+  .quick-order .btn--order {
+    grid-row: 2 / span 2;
+    grid-column: 2;
+    padding-inline: 14px;
+  }
+
+  .content {
+    padding: 14px 12px 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .product {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .photo--big {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .btn--order,
+  .btn--order:visited {
+    font-size: 23px;
+  }
+
+  .table {
+    border-spacing: 1px;
+  }
+
+  .table th,
+  .table td {
+    padding: 4px 5px;
+    font-size: 15px;
+  }
+
+  .table thead th {
+    font-size: 12px;
+  }
+
+  .money {
+    font-size: 15px;
+  }
+
+  .table .total {
+    font-size: 17px;
+  }
+
+  .photo--small {
+    width: 78px;
+    height: 60px;
+    font-size: 11px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. Omezený pohyb a tisk
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    white-space: normal;
+  }
+
+  .marquee__text {
+    padding-left: 0;
+    animation: none;
+  }
+
+  .new {
+    animation: none;
+  }
+}
+
+@media print {
+  body {
+    background: var(--white);
+  }
+
+  .marquee,
+  .sidebar,
+  .skip-link {
+    display: none !important;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

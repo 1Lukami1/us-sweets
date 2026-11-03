@@ -30,6 +30,26 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 Hlavička a patička jsou na všech stránkách stejné. Když je měníš, uprav je ve všech 7 souborech.
 Aktivní stránka se v menu označuje atributem `aria-current="page"`.
 
+## Retro verze (složka `retro/`)
+
+Stejný obsah, ceny a zástupné hodnoty ve stylu amerického webu z konce 90. let:
+pevná šířka 800 px, tapeta s hvězdami, šedé 3D panely, menu vlevo, běžící text,
+blikající NEW!, 3D tlačítka a odznaky 88 × 31 v patičce. Jen systémová písma
+(Times New Roman, Verdana/Arial, Impact, Courier New), žádné přechody ani emoji.
+
+| Soubor | Obsah |
+| --- | --- |
+| `retro/*.html` | Stejných 7 stránek jako moderní verze |
+| `retro/css/style.css` | Retro styl (barvy a písma v proměnných nahoře) |
+| `retro/js/script.js` | Tlačítko „Zastavit animace“ a skok na kotvy |
+| `retro/img/` | Zatím prázdné |
+
+Odkazy uvnitř `retro/` vedou jen na retro stránky. Moderní web má v patičce odkaz
+„Retro verze“, retro web odkaz „Moderní verze“ (`../index.html`).
+Běžící text i blikání jdou zastavit tlačítkem a při nastavení „omezit pohyb“ se nehýbou.
+Zástupné hodnoty (tabulka níže) je potřeba nahradit i ve složce `retro/`.
+Datum „Naposledy aktualizováno“ v patičce retro verze se mění ručně.
+
 ## Barvy a písma
 
 V `css/style.css` nahoře: červená `#D62839`, tmavě modrá `#1B2A5C`, krémová `#FFF4DC`,
@@ -39,7 +59,7 @@ jsou ve složce `fonts/`.
 
 ## Zástupné hodnoty k nahrazení
 
-Hledej ve všech HTML souborech (např. „Najít a nahradit ve všech souborech“):
+Hledej ve všech HTML souborech včetně složky `retro/` (např. „Najít a nahradit ve všech souborech“):
 
 | Hledej | Nahraď za |
 | --- | --- |

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – [NÁZEV] (retro verze)</title>
+  <meta name="description" content="Máte dotaz k Americkému boxu nebo k objednávce? Napište nám e-mail nebo zprávu na Instagramu. Najdete tu i údaje prodávajícího.">
+  <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#000080">
+
+  <!-- Open Graph (náhled při sdílení odkazu) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="[NÁZEV]">
+  <meta property="og:title" content="Kontakt – [NÁZEV] (retro verze)">
+  <meta property="og:description" content="Máte dotaz k Americkému boxu nebo k objednávce? Napište nám e-mail nebo zprávu na Instagramu. Najdete tu i údaje prodávajícího.">
+  <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy) -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000080'/%3E%3Cpath fill='%23FFFF00' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <aside class="marquee" aria-label="Novinky">
+    <div class="marquee__track">
+      <p class="marquee__text">Vítejte na naší domovské stránce! ★ Americký box se 7 dobrotami jen za 490 Kč ★ Osobní předání v Praze ZDARMA ★ Zásilkovna a AlzaBox za 89 Kč ★ Platba převodem předem ★ Webmaster zdraví všechny, kdo dočetli až sem!</p>
+    </div>
+    <button class="btn btn--small" type="button" data-motion-toggle aria-pressed="false" hidden>Zastavit animace</button>
+  </aside>
+
+  <div class="page">
+    <header class="banner" id="nahoru">
+      <p class="banner__stars" aria-hidden="true">★ ★ ★ ★ ★</p>
+      <a class="banner__logo" href="index.html">[NÁZEV]</a>
+      <p class="banner__tagline">Domovská stránka Amerického boxu</p>
+      <p class="banner__stars banner__stars--blue" aria-hidden="true">★ ★ ★ ★ ★</p>
+    </header>
+
+    <div class="layout">
+      <div class="sidebar">
+        <nav class="panel" aria-labelledby="menu-nadpis">
+          <p class="panel__title" id="menu-nadpis">MENU</p>
+          <ul class="menu">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="krabice.html">Americký box</a></li>
+            <li><a href="objednavka.html">Jak objednat</a></li>
+            <li><a href="doprava-a-platba.html">Doprava a platba</a></li>
+            <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <aside class="panel quick-order" aria-labelledby="rychla-nadpis">
+          <p class="panel__title" id="rychla-nadpis">RYCHLÁ OBJEDNÁVKA</p>
+          <p class="quick-order__name">Americký box</p>
+          <p class="price">490 Kč</p>
+          <a class="btn btn--order btn--wide" href="objednavka.html"><span class="arrow" aria-hidden="true">► </span>Objednat<span class="arrow" aria-hidden="true"> ◄</span></a>
+        </aside>
+      </div>
+
+      <main class="content" id="obsah" tabindex="-1">
+        <h1>Kontakt</h1>
+        <p>Máte dotaz k boxu nebo k objednávce? Napište nám! Odpovídáme rychleji, než se načte stránka přes vytáčené připojení.</p>
+
+        <hr>
+
+        <h2>Napište nám</h2>
+        <div class="table-scroll">
+          <table class="table">
+            <caption>Kde nás najdete</caption>
+            <tbody>
+              <tr>
+                <th scope="row">E-mail</th>
+                <td><a href="mailto:[E-MAIL]">[E-MAIL]</a></td>
+              </tr>
+              <tr>
+                <th scope="row">Instagram</th>
+                <td><a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr>
+
+        <h2 id="prodavajici">Údaje prodávajícího</h2>
+        <address>
+          <div class="table-scroll">
+            <table class="table">
+              <caption>Prodávající</caption>
+              <tbody>
+                <tr>
+                  <th scope="row">Jméno</th>
+                  <td>[JMÉNO A PŘÍJMENÍ]</td>
+                </tr>
+                <tr>
+                  <th scope="row">Adresa</th>
+                  <td>[ULICE A ČÍSLO, PSČ MĚSTO]</td>
+                </tr>
+                <tr>
+                  <th scope="row">IČO</th>
+                  <td>[IČO]</td>
+                </tr>
+                <tr>
+                  <th scope="row">E-mail</th>
+                  <td><a href="mailto:[E-MAIL]">[E-MAIL]</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </address>
+        <p class="todo">Další údaje (např. zápis v živnostenském rejstříku) doplníme před spuštěním.</p>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__links">[ <a href="index.html">Úvod</a> | <a href="krabice.html">Americký box</a> | <a href="objednavka.html">Jak objednat</a> | <a href="doprava-a-platba.html">Doprava a platba</a> | <a href="kontakt.html" aria-current="page">Kontakt</a> ]</p>
+      <p class="footer__links">[ <a href="obchodni-podminky.html">Obchodní podmínky</a> | <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a> ]</p>
+      <p>E-mail: <a href="mailto:[E-MAIL]">[E-MAIL]</a> ★ Instagram: <a href="https://www.instagram.com/[ÚČET]/">[@ÚČET]</a></p>
+
+      <ul class="badges" aria-label="Odznaky">
+        <li class="badge badge--navy"><b>Bez cookies</b> <span>jen popcorn</span></li>
+        <li class="badge badge--black"><b>Web 1.0</b> <span>kompatibilní</span></li>
+        <li class="badge badge--yellow"><b>800 × 600</b> <span>doporučeno</span></li>
+        <li class="badge badge--gray"><b>Vyrobeno</b> <span>v HTML a CSS</span></li>
+        <li class="badge badge--red"><b>Počítadlo</b> <span>nemáme :-)</span></li>
+      </ul>
+
+      <p>© 2026 [NÁZEV]. Všechna práva vyhrazena.</p>
+      <p class="footer__updated">Naposledy aktualizováno: 3. 11. 2026</p>
+      <p class="footer__links"><a href="../index.html">Moderní verze</a> ★ <a href="#nahoru">Nahoru</a></p>
+      <p class="small">Nejlépe se zobrazuje v rozlišení 800 × 600. Na telefonu ale taky.</p>
+    </footer>
+  </div>
+</body>
+</html>
