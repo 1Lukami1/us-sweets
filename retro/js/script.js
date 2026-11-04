@@ -1,5 +1,5 @@
 /* ==========================================================================
-   [NÁZEV] – RETRO VERZE – skripty webu
+   Big Chug – RETRO VERZE – skripty webu
    (upravená kopie js/script.js z moderní verze)
    Skok na kotvy (#id) se správným přesunem fokusu, aby klávesnice
    i čtečky obrazovky pokračovaly od místa, kam odkaz vede.

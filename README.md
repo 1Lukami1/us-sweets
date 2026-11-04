@@ -1,4 +1,4 @@
-# [NÁZEV] – web e-shopu s Americkým boxem
+# Big Chug – web e-shopu s Americkým boxem
 
 Statický vícestránkový web (HTML + CSS + JS, bez frameworků a knihoven).
 Stačí otevřít `index.html` v prohlížeči, žádný server ani instalace nejsou potřeba.
@@ -66,7 +66,7 @@ Hledej ve všech HTML souborech včetně složky `retro/` (např. „Najít a na
 
 | Hledej | Nahraď za |
 | --- | --- |
-| `[NÁZEV]` | název obchodu |
+| `Big Chug` | název obchodu |
 | `[ČÍSLO ÚČTU]` | číslo bankovního účtu |
 | `[odkaz na Google formulář]` | adresa formuláře (je v `href` tlačítka v `objednavka.html`); poznámku pod tlačítkem pak smaž |
 | `[E-MAIL]` | e-mail (je i v odkazech `mailto:`) |

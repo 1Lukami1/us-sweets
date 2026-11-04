@@ -1,5 +1,5 @@
 /* ==========================================================================
-   [NÁZEV] – skripty webu
+   Big Chug – skripty webu
    1. Mobilní menu (hamburger) s plynulým rozbalením
    2. Jemné animace při rolování
    3. Hladké rolování na kotvy v rámci stránky
