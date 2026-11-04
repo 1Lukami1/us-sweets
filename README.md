@@ -30,29 +30,6 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 Hlavička a patička jsou na všech stránkách stejné. Když je měníš, uprav je ve všech 7 souborech.
 Aktivní stránka se v menu označuje atributem `aria-current="page"`.
 
-## Retro verze (složka `retro/`)
-
-Stejný obsah, ceny a zástupné hodnoty ve stylu vintage americké grafiky 50.–60. let
-(diner, plechové cedule, staré obaly a plakáty): neonový nápis, paprsky za nadpisem,
-šachovnicové pásy, zubaté hvězdy s cenou a NEW!, stuhy s nadpisy, štíty ve stylu
-Route 66 pro kroky a ceny, cedule s dvojitým okrajem a nýty, papír se zrnem a rastrem,
-menu jako jídelní lístek s tečkami a polaroidy jako zástupné fotky.
-
-| Soubor | Obsah |
-| --- | --- |
-| `retro/*.html` | Stejných 7 stránek jako moderní verze |
-| `retro/css/style.css` | Retro styl; barvy a písma v proměnných nahoře |
-| `retro/js/script.js` | Skok na kotvy se správným přesunem fokusu |
-| `retro/fonts/` | Pacifico, Alfa Slab One, Bebas Neue, Merriweather (lokálně, licence SIL OFL) |
-| `retro/img/` | Zatím prázdné |
-
-Barvy: třešňová `#C8102E`, tyrkysová `#5BC8C0`, krémová `#FFF1D6`, tmavě modrá `#14213D`,
-chrom `#D9DEE4`, žlutá `#F4B942`.
-
-Odkazy uvnitř `retro/` vedou jen na retro stránky. Moderní web má v patičce odkaz
-„Retro verze“, retro web odkaz „Moderní verze“ (`../index.html`).
-Zástupné hodnoty (tabulka níže) je potřeba nahradit i ve složce `retro/`.
-
 ## Barvy a písma
 
 V `css/style.css` nahoře: červená `#D62839`, tmavě modrá `#1B2A5C`, krémová `#FFF4DC`,
@@ -62,7 +39,7 @@ jsou ve složce `fonts/`.
 
 ## Zástupné hodnoty k nahrazení
 
-Hledej ve všech HTML souborech včetně složky `retro/` (např. „Najít a nahradit ve všech souborech“):
+Hledej ve všech HTML souborech (např. „Najít a nahradit ve všech souborech“):
 
 | Hledej | Nahraď za |
 | --- | --- |
