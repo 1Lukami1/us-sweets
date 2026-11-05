@@ -1097,20 +1097,6 @@ a:hover {
   box-shadow: var(--shadow-sm);
 }
 
-/* Malé fotky produktů v kruzích */
-.combo__item {
-  overflow: hidden;
-}
-
-.combo__item img {
-  display: block;
-  width: 80%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
-
 .combo__item:nth-child(2) { top: 0; left: 12%; transform: rotate(-12deg); }
 .combo__item:nth-child(3) { top: -4%; left: 50%; transform: translateX(-50%) rotate(8deg); }
 .combo__item:nth-child(4) { top: 2%; right: 10%; transform: rotate(14deg); }
@@ -1118,6 +1104,47 @@ a:hover {
 .combo__item:nth-child(6) { bottom: 2%; right: 14%; transform: rotate(10deg); }
 .combo__item:nth-child(7) { bottom: -4%; left: 40%; transform: rotate(-6deg); }
 .combo__item:nth-child(8) { top: 40%; left: -4%; transform: rotate(12deg); }
+
+/* Ukázka 4 produktů v kartě boxu: mřížka 2 × 2 z bílých karet */
+.snaps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  width: min(100%, 21rem);
+  margin: 0;
+  padding: 8rem var(--space-5) var(--space-6);
+  list-style: none;
+}
+
+.snap {
+  padding: var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  transform: rotate(-3deg);
+}
+
+.snap:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.snap:nth-child(3) {
+  transform: rotate(3deg);
+}
+
+.snap:nth-child(4) {
+  transform: rotate(-2deg);
+}
+
+.snap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
 
 .box-card__media .sticker {
   top: 0.75rem;
@@ -2056,6 +2083,11 @@ a:hover {
 
   .box-card {
     grid-template-columns: 1fr 1.1fr;
+  }
+
+  .snaps {
+    width: min(100%, 24rem);
+    padding: 8.5rem var(--space-6) var(--space-7);
   }
 
   .box-card__media {
