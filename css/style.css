@@ -802,12 +802,238 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.hero-box {
+/* --------------------------------------------------------------------------
+   Scéna: otevřená kartonová krabice se 7 produkty (hero i karta „Náš box“)
+   Zadní část krabice je za produkty, přední stěna před nimi.
+   -------------------------------------------------------------------------- */
+.scene {
+  --kraft: #C69C6D;
+  --kraft-shade: #A87D4F;
+  --kraft-deep: #7A5634;
   position: relative;
+  width: min(100%, 26rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.hero__art .scene {
+  animation: bob 4s ease-in-out infinite;
+}
+
+.scene__box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: auto;
   overflow: visible;
-  animation: bob 4s ease-in-out infinite;
+}
+
+.scene__box--back {
+  z-index: 1;
+}
+
+.scene__box--front {
+  z-index: 3;
+}
+
+.scene .sb-ink {
+  stroke: var(--navy);
+  stroke-width: 6;
+  stroke-linejoin: round;
+}
+
+.scene .sb-ink-thin {
+  stroke: var(--navy);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+.scene .sb-ground {
+  fill: var(--navy);
+  opacity: 0.2;
+}
+
+.scene .sb-flap,
+.scene .sb-kraft {
+  fill: var(--kraft);
+}
+
+.scene .sb-flap-back {
+  fill: var(--kraft-shade);
+}
+
+.scene .sb-inside {
+  fill: var(--kraft-deep);
+}
+
+.scene .sb-offset {
+  fill: var(--navy);
+}
+
+.scene .sb-rim {
+  fill: var(--kraft-shade);
+}
+
+.scene .sb-tape {
+  fill: #E3C79B;
+}
+
+.scene .sb-star {
+  fill: var(--yellow);
+}
+
+.scene .sb-label,
+.scene .sb-label-shadow {
+  font-family: var(--font-display);
+  font-size: 74px;
+  letter-spacing: 2px;
+}
+
+.scene .sb-label {
+  fill: var(--red);
+  stroke: var(--navy);
+  stroke-width: 2.5;
+  paint-order: stroke;
+}
+
+.scene .sb-label-shadow {
+  fill: var(--navy);
+}
+
+/* Produkt: výřez fotky bez bílého okraje, bílé pozadí zmizí přes multiply */
+.scene__item {
+  --tilt: 0deg;
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: var(--ar);
+  transform: rotate(var(--tilt));
+  transform-origin: 50% 100%;
+}
+
+/* Bílé pozadí fotky se vystřihne filtrem (viz .svg-defs v index.html),
+   jemný stín pak kopíruje tvar produktu */
+.scene__item img {
+  position: absolute;
+  top: var(--img-y);
+  left: var(--img-x);
+  width: var(--img-w);
+  max-width: none;
+  height: var(--img-h);
+  filter: url("#bez-bileho") drop-shadow(3px 5px 3px rgba(20, 33, 61, 0.45));
+}
+
+/* Neviditelný blok s definicí SVG filtru */
+.svg-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.scene__item--dr-pepper {
+  --ar: 283 / 556;
+  --img-w: 201.41%;
+  --img-h: 102.52%;
+  --img-x: -49.12%;
+  --img-y: -0.72%;
+}
+
+.scene__item--fanta-berry {
+  --ar: 296 / 562;
+  --img-w: 192.57%;
+  --img-h: 101.42%;
+  --img-x: -45.95%;
+  --img-y: -1.07%;
+}
+
+.scene__item--nerds {
+  --ar: 508 / 514;
+  --img-w: 112.20%;
+  --img-h: 110.89%;
+  --img-x: -8.27%;
+  --img-y: -2.53%;
+}
+
+.scene__item--sour-patch {
+  --ar: 421 / 524;
+  --img-w: 100.24%;
+  --img-h: 101.15%;
+  --img-x: 0.00%;
+  --img-y: -0.38%;
+}
+
+.scene__item--reese-sticks {
+  --ar: 570 / 147;
+  --img-w: 100.00%;
+  --img-h: 387.76%;
+  --img-x: 0.00%;
+  --img-y: -147.62%;
+}
+
+.scene__item--popcorn-butter {
+  --ar: 546 / 331;
+  --img-w: 104.40%;
+  --img-h: 172.21%;
+  --img-x: -1.47%;
+  --img-y: -36.56%;
+}
+
+.scene__item--popcorn-cheez {
+  --ar: 546 / 326;
+  --img-w: 104.40%;
+  --img-h: 174.85%;
+  --img-x: -1.47%;
+  --img-y: -37.12%;
+}
+
+.scene__item--nerds {
+  left: 13%;
+  bottom: 38%;
+  width: 22%;
+  --tilt: -8deg;
+}
+
+.scene__item--dr-pepper {
+  left: 33%;
+  bottom: 29%;
+  width: 16.5%;
+  --tilt: -4deg;
+}
+
+.scene__item--fanta-berry {
+  left: 49%;
+  bottom: 29%;
+  width: 16.5%;
+  --tilt: 4deg;
+}
+
+.scene__item--sour-patch {
+  left: 66%;
+  bottom: 37%;
+  width: 20%;
+  --tilt: 8deg;
+}
+
+.scene__item--popcorn-butter {
+  left: 2%;
+  bottom: 35%;
+  width: 22%;
+  --tilt: -8deg;
+}
+
+.scene__item--reese-sticks {
+  left: 37%;
+  bottom: 40%;
+  width: 26%;
+  --tilt: -5deg;
+}
+
+.scene__item--popcorn-cheez {
+  left: 76%;
+  bottom: 35%;
+  width: 22%;
+  --tilt: 8deg;
 }
 
 /* Cenovka ve tvaru výbuchu s komiksovým obrysem */
@@ -846,106 +1072,13 @@ a:hover {
 }
 
 .hero__art .sticker {
+  top: -0.5rem;
   right: -0.75rem;
-  bottom: -6%;
 }
 
 .hero__art .sticker__inner {
   width: 6rem;
   font-size: 1.65rem;
-}
-
-/* SVG ilustrace: barvy a obrysy */
-.hero-box .ink {
-  stroke: var(--navy);
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.hero-box .f-red {
-  fill: var(--red);
-}
-
-.hero-box .f-yellow {
-  fill: var(--yellow);
-}
-
-.hero-box .f-yellow-dark {
-  fill: var(--yellow-dark);
-}
-
-.hero-box .f-cream {
-  fill: var(--white);
-}
-
-.hero-box .f-navy {
-  fill: var(--navy);
-}
-
-.hero-box .f-none {
-  fill: none;
-}
-
-.hero-box .ink-thin {
-  stroke: var(--navy);
-  stroke-width: 3;
-  stroke-linejoin: round;
-}
-
-.hero-box .f-shadow {
-  fill: var(--navy);
-  opacity: 0.18;
-}
-
-.hero-box .swirl {
-  fill: none;
-  stroke: var(--red);
-  stroke-width: 6;
-  stroke-linecap: round;
-}
-
-.hero-box .stick {
-  fill: none;
-  stroke: var(--white);
-  stroke-width: 7;
-  stroke-linecap: round;
-}
-
-.hero-box .stick-edge {
-  fill: none;
-  stroke: var(--navy);
-  stroke-width: 13;
-  stroke-linecap: round;
-}
-
-.hero-box .label {
-  fill: var(--cream);
-  font-family: var(--font-display);
-  font-size: 34px;
-  letter-spacing: 2px;
-}
-
-.hero-box .spark {
-  fill: var(--yellow);
-  stroke: var(--navy);
-  stroke-width: 3;
-  stroke-linejoin: round;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: twinkle 2.6s ease-in-out infinite;
-}
-
-.hero-box .spark-2 {
-  animation-delay: 0.6s;
-}
-
-.hero-box .spark-3 {
-  animation-delay: 1.2s;
-}
-
-.hero-box .spark-4 {
-  animation-delay: 1.8s;
 }
 
 @keyframes bob {
@@ -956,17 +1089,6 @@ a:hover {
 
   50% {
     transform: translateY(-10px) rotate(1deg);
-  }
-}
-
-@keyframes twinkle {
-  0%,
-  100% {
-    transform: scale(1) rotate(0deg);
-  }
-
-  50% {
-    transform: scale(0.7) rotate(20deg);
   }
 }
 
@@ -1104,47 +1226,6 @@ a:hover {
 .combo__item:nth-child(6) { bottom: 2%; right: 14%; transform: rotate(10deg); }
 .combo__item:nth-child(7) { bottom: -4%; left: 40%; transform: rotate(-6deg); }
 .combo__item:nth-child(8) { top: 40%; left: -4%; transform: rotate(12deg); }
-
-/* Ukázka 4 produktů v kartě boxu: mřížka 2 × 2 z bílých karet */
-.snaps {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-5);
-  width: min(100%, 21rem);
-  margin: 0;
-  padding: 8rem var(--space-5) var(--space-6);
-  list-style: none;
-}
-
-.snap {
-  padding: var(--space-3);
-  border: var(--border);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow);
-  transform: rotate(-3deg);
-}
-
-.snap:nth-child(2) {
-  transform: rotate(2deg);
-}
-
-.snap:nth-child(3) {
-  transform: rotate(3deg);
-}
-
-.snap:nth-child(4) {
-  transform: rotate(-2deg);
-}
-
-.snap img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-}
 
 .box-card__media .sticker {
   top: 0.75rem;
@@ -2040,8 +2121,8 @@ a:hover {
   }
 
   .hero__art .sticker {
+    top: 0;
     right: -0.5rem;
-    bottom: 6%;
   }
 
   .hero__art .sticker__inner {
@@ -2083,11 +2164,6 @@ a:hover {
 
   .box-card {
     grid-template-columns: 1fr 1.1fr;
-  }
-
-  .snaps {
-    width: min(100%, 24rem);
-    padding: 8.5rem var(--space-6) var(--space-7);
   }
 
   .box-card__media {
