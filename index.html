@@ -24,6 +24,12 @@
 <body>
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <filter id="bez-bileho" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -4 -4 -4 11.6 0"/>
+    </filter>
+  </svg>
+
   <header class="site-header" id="nahoru">
     <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
     <div class="container site-header__inner">
@@ -60,49 +66,33 @@
         </div>
 
         <div class="hero__art">
-          <svg class="hero-box" viewBox="0 0 420 380" role="img" aria-labelledby="hero-box-title" focusable="false">
-            <title id="hero-box-title">Ilustrace: otevřená krabice plná limonád, sladkostí a popcornu</title>
-            <ellipse class="f-shadow" cx="210" cy="352" rx="150" ry="13"/>
-            <path class="f-yellow-dark ink" d="M100 134 L320 134 L306 92 L114 92 Z"/>
-            <path class="f-navy ink" d="M100 134 L320 134 L350 174 L70 174 Z"/>
-            <g transform="rotate(-10 142 130)">
-              <rect class="f-red ink" x="108" y="74" width="68" height="112" rx="14"/>
-              <rect class="f-yellow" x="110.5" y="104" width="63" height="34"/>
-              <path class="f-none ink-thin" d="M110.5 104 H173.5 M110.5 138 H173.5"/>
-              <path class="f-navy" transform="translate(130 109) scale(1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-              <ellipse class="f-cream ink" cx="142" cy="76" rx="34" ry="10"/>
-              <rect class="f-cream ink-thin" x="134" y="70" width="16" height="8" rx="4"/>
-            </g>
-            <path class="stick-edge" d="M298 190 L312 92"/>
-            <path class="stick" d="M298 190 L312 92"/>
-            <circle class="f-yellow ink" cx="314" cy="72" r="30"/>
-            <path class="swirl" d="M314 72 a4 4 0 0 1 8 0 a8 8 0 0 1 -16 0 a12 12 0 0 1 24 0 a16 16 0 0 1 -32 0"/>
-            <g class="f-cream ink">
-              <circle cx="203" cy="82" r="14"/>
-              <circle cx="268" cy="82" r="13"/>
-              <circle cx="223" cy="67" r="16"/>
-              <circle cx="250" cy="65" r="15"/>
-              <circle cx="236" cy="84" r="13"/>
-            </g>
-            <path class="f-cream" d="M193 88 H279 L268 196 H204 Z"/>
-            <path class="f-red" d="M210.2 88 H227.4 L229.6 196 H216.8 Z M244.6 88 H261.8 L255.2 196 H242.4 Z"/>
-            <path class="f-none ink" d="M193 88 H279 L268 196 H204 Z"/>
-            <rect class="f-red ink" x="70" y="174" width="280" height="160" rx="8"/>
-            <rect class="f-navy" x="72.5" y="226" width="275" height="54"/>
-            <text class="label" x="210" y="265" text-anchor="middle">AMERICKÝ BOX</text>
-            <path class="f-cream" transform="translate(96 186) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-cream" transform="translate(197 184) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-cream" transform="translate(298 186) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-cream" transform="translate(96 292) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-cream" transform="translate(197 294) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-cream" transform="translate(298 292) scale(1.1)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
-            <path class="f-yellow ink" d="M70 174 L100 134 L52 104 L22 148 Z"/>
-            <path class="f-yellow ink" d="M350 174 L320 134 L368 104 L398 148 Z"/>
-            <path class="spark" d="M40 60 L46 74 L60 80 L46 86 L40 100 L34 86 L20 80 L34 74 Z"/>
-            <path class="spark spark-2" d="M388 22 L392 34 L404 38 L392 42 L388 54 L384 42 L372 38 L384 34 Z"/>
-            <path class="spark spark-3" d="M398 234 L402 246 L414 250 L402 254 L398 266 L394 254 L382 250 L394 246 Z"/>
-            <path class="spark spark-4" d="M22 236 L25 245 L34 248 L25 251 L22 260 L19 251 L10 248 L19 245 Z"/>
-          </svg>
+          <div class="scene">
+            <svg class="scene__box scene__box--back" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+              <ellipse class="sb-ground" cx="222" cy="306" rx="196" ry="12"/>
+              <path class="sb-flap-back sb-ink" d="M106 40 L334 40 L348 90 L92 90 Z"/>
+              <path class="sb-flap sb-ink" d="M60 130 L92 90 L44 56 L10 100 Z"/>
+              <path class="sb-flap sb-ink" d="M380 130 L348 90 L396 56 L430 100 Z"/>
+              <path class="sb-inside sb-ink" d="M92 90 L348 90 L380 130 L60 130 Z"/>
+            </svg>
+              <span class="scene__item scene__item--dr-pepper"><img src="img/dr-pepper.jpg" alt="Dr Pepper Strawberries &amp; Cream" width="570" height="570" decoding="async"></span>
+              <span class="scene__item scene__item--fanta-berry"><img src="img/fanta-berry.jpg" alt="Fanta Berry" width="570" height="570" decoding="async"></span>
+              <span class="scene__item scene__item--nerds"><img src="img/nerds.jpg" alt="Nerds jahoda a hrozny" width="570" height="570" decoding="async"></span>
+              <span class="scene__item scene__item--sour-patch"><img src="img/sour-patch.jpg" alt="Sour Patch Kids Blue Raspberry" width="422" height="530" decoding="async"></span>
+              <span class="scene__item scene__item--reese-sticks"><img src="img/reese-sticks.jpg" alt="Reese's Sticks King Size" width="570" height="570" decoding="async"></span>
+              <span class="scene__item scene__item--popcorn-butter"><img src="img/popcorn-butter.jpg" alt="Jolly Time Healthy Pop Butter" width="570" height="570" decoding="async"></span>
+              <span class="scene__item scene__item--popcorn-cheez"><img src="img/popcorn-cheez.jpg" alt="Jolly Time The Big Cheez" width="570" height="570" decoding="async"></span>
+            <svg class="scene__box scene__box--front" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+              <rect class="sb-offset" x="70" y="140" width="320" height="170" rx="10"/>
+              <rect class="sb-kraft sb-ink" x="60" y="130" width="320" height="170" rx="10"/>
+              <rect class="sb-rim" x="63" y="133" width="314" height="12"/>
+              <rect class="sb-tape sb-ink-thin" x="196" y="127" width="48" height="42" rx="2"/>
+              <path class="sb-star sb-ink-thin" transform="translate(203 177) scale(1.42)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+              <g transform="rotate(-3 220 252)">
+                <text class="sb-label-shadow" x="224" y="272" text-anchor="middle">BIG CHUG</text>
+                <text class="sb-label" x="220" y="268" text-anchor="middle">BIG CHUG</text>
+              </g>
+            </svg>
+          </div>
           <p class="sticker" aria-hidden="true"><span class="sticker__inner"><small>jen</small> 490 Kč</span></p>
         </div>
       </div>
@@ -142,12 +132,33 @@
         <p class="section-lead">Jeden box, sedm amerických dobrot.</p>
         <article class="box-card" data-reveal>
           <div class="box-card__media">
-            <ul class="snaps" aria-label="Ukázka obsahu boxu">
-              <li class="snap"><img src="img/dr-pepper.jpg" alt="Dr Pepper Strawberries &amp; Cream" width="570" height="570" loading="lazy" decoding="async"></li>
-              <li class="snap"><img src="img/fanta-berry.jpg" alt="Fanta Berry" width="570" height="570" loading="lazy" decoding="async"></li>
-              <li class="snap"><img src="img/nerds.jpg" alt="Nerds jahoda a hrozny" width="570" height="570" loading="lazy" decoding="async"></li>
-              <li class="snap"><img src="img/reese-sticks.jpg" alt="Reese's Sticks King Size" width="570" height="570" loading="lazy" decoding="async"></li>
-            </ul>
+            <div class="scene">
+              <svg class="scene__box scene__box--back" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+                <ellipse class="sb-ground" cx="222" cy="306" rx="196" ry="12"/>
+                <path class="sb-flap-back sb-ink" d="M106 40 L334 40 L348 90 L92 90 Z"/>
+                <path class="sb-flap sb-ink" d="M60 130 L92 90 L44 56 L10 100 Z"/>
+                <path class="sb-flap sb-ink" d="M380 130 L348 90 L396 56 L430 100 Z"/>
+                <path class="sb-inside sb-ink" d="M92 90 L348 90 L380 130 L60 130 Z"/>
+              </svg>
+                <span class="scene__item scene__item--dr-pepper"><img src="img/dr-pepper.jpg" alt="Dr Pepper Strawberries &amp; Cream" width="570" height="570" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--fanta-berry"><img src="img/fanta-berry.jpg" alt="Fanta Berry" width="570" height="570" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--nerds"><img src="img/nerds.jpg" alt="Nerds jahoda a hrozny" width="570" height="570" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--sour-patch"><img src="img/sour-patch.jpg" alt="Sour Patch Kids Blue Raspberry" width="422" height="530" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--reese-sticks"><img src="img/reese-sticks.jpg" alt="Reese's Sticks King Size" width="570" height="570" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--popcorn-butter"><img src="img/popcorn-butter.jpg" alt="Jolly Time Healthy Pop Butter" width="570" height="570" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--popcorn-cheez"><img src="img/popcorn-cheez.jpg" alt="Jolly Time The Big Cheez" width="570" height="570" loading="lazy" decoding="async"></span>
+              <svg class="scene__box scene__box--front" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+                <rect class="sb-offset" x="70" y="140" width="320" height="170" rx="10"/>
+                <rect class="sb-kraft sb-ink" x="60" y="130" width="320" height="170" rx="10"/>
+                <rect class="sb-rim" x="63" y="133" width="314" height="12"/>
+                <rect class="sb-tape sb-ink-thin" x="196" y="127" width="48" height="42" rx="2"/>
+                <path class="sb-star sb-ink-thin" transform="translate(203 177) scale(1.42)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+                <g transform="rotate(-3 220 252)">
+                  <text class="sb-label-shadow" x="224" y="272" text-anchor="middle">BIG CHUG</text>
+                  <text class="sb-label" x="220" y="268" text-anchor="middle">BIG CHUG</text>
+                </g>
+              </svg>
+            </div>
             <p class="sticker" aria-hidden="true"><span class="sticker__inner">490 Kč</span></p>
           </div>
           <div class="box-card__body">
