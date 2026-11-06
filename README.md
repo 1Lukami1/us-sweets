@@ -15,7 +15,7 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 
 | Soubor | Obsah |
 | --- | --- |
-| `index.html` | Úvod: hero s ilustrací krabice, jak to funguje, karta boxu, výzva k objednávce |
+| `index.html` | Úvod: hero s krabicí a 7 produkty, jak to funguje, karta boxu, co je v krabici, výzva k objednávce |
 | `krabice.html` | Detail boxu, 7 karet s obsahem, složení/alergeny/trvanlivost, ceník |
 | `objednavka.html` | Postup objednání, tlačítko na Google formulář, ceník, časté dotazy |
 | `doprava-a-platba.html` | Osobní předání v Praze, Zásilkovna / AlzaBox, platba převodem, ceník |
@@ -25,7 +25,7 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 | `css/style.css` | Veškeré styly; barvy a písma jsou v proměnných na začátku souboru |
 | `js/script.js` | Mobilní menu, animace při rolování, hladké rolování |
 | `fonts/` | Písma Bangers (nadpisy) a Nunito (text), uložená lokálně, licence SIL OFL |
-| `img/` | Fotky 7 produktů (`dr-pepper.jpg`, `fanta-berry.jpg`, `nerds.jpg`, `sour-patch.jpg`, `reese-sticks.jpg`, `popcorn-butter.jpg`, `popcorn-cheez.jpg`); fotka krabice v hero je zatím zástupná |
+| `img/` | Fotky 7 produktů (`dr-pepper.jpg`, `fanta-berry.jpg`, `nerds.jpg`, `sour-patch.jpg`, `reese-sticks.jpg`, `popcorn-butter.jpg`, `popcorn-cheez.jpg`); v hero a v kartě „Náš box“ z nich vykukují z nakreslené krabice |
 
 Hlavička a patička jsou na všech stránkách stejné. Když je měníš, uprav je ve všech 7 souborech.
 Aktivní stránka se v menu označuje atributem `aria-current="page"`.
@@ -58,6 +58,6 @@ Hledej ve všech HTML souborech (např. „Najít a nahradit ve všech souborech
 - [ ] Nahradit všechny zástupné hodnoty
 - [ ] Doplnit složení, alergeny a trvanlivost podle štítků (`krabice.html`)
 - [ ] Doplnit obchodní podmínky a ochranu osobních údajů
-- [ ] Nahradit zástupnou fotku krabice (hero a karta boxu) vlastní fotkou do `img/`
+- [ ] Případně nahradit nakreslenou krabici (hero a karta boxu) vlastní fotkou do `img/`
 - [ ] Doplnit `og:url` a `og:image` (absolutní adresy)
 - [ ] Odstranit `<meta name="robots" content="noindex">` ze všech stránek
