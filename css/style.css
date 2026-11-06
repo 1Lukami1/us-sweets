@@ -1586,6 +1586,84 @@ a:hover {
   white-space: nowrap;
 }
 
+/* Telefon: tabulka bez posouvání do strany, každý řádek jako karta */
+@media (max-width: 37.49em) {
+  .price-table-wrap {
+    overflow: hidden;
+  }
+
+  .price-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .price-table,
+  .price-table tbody {
+    display: block;
+  }
+
+  .price-table tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: var(--space-1) var(--space-3);
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .price-table tbody tr + tr {
+    border-top: 2px dashed var(--navy);
+  }
+
+  .price-table tbody tr + tr > * {
+    border-top: 0;
+  }
+
+  .price-table th,
+  .price-table td {
+    display: block;
+    padding: 0;
+  }
+
+  .price-table tbody th {
+    grid-column: 1;
+    font-size: 1.05rem;
+  }
+
+  .price-table td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: 800;
+  }
+
+  .price-table td:not(.total) {
+    grid-column: 1;
+    font-size: 0.95rem;
+  }
+
+  .price-table .total {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    font-size: clamp(1.6rem, 1rem + 3vw, 2rem);
+  }
+
+  .price-table td.total::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--navy);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-align: right;
+  }
+
+  .price-table .total {
+    text-align: right;
+  }
+}
+
 .table-note {
   max-width: 46rem;
   margin: var(--space-5) auto 0;
