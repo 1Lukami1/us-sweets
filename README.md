@@ -8,8 +8,8 @@ Stačí otevřít `index.html` v prohlížeči, žádný server ani instalace ne
 ## Nabídka
 
 Jeden produkt: **Americký box (střední)** za **490 Kč** (7 kusů, cca 1,5 kg,
-krabice cca 30 × 25 × 14 cm). Doprava: osobně v Praze zdarma, Zásilkovna / AlzaBox 89 Kč.
-Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
+krabice cca 30 × 25 × 14 cm). Doprava: Zásilkovna / AlzaBox 89 Kč.
+Platba převodem předem. Celkem 579 Kč za box včetně dopravy.
 
 ## Struktura
 
@@ -18,7 +18,7 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 | `index.html` | Úvod: hero s krabicí a 7 produkty, jak to funguje, karta boxu, co je v krabici, výzva k objednávce |
 | `krabice.html` | Detail boxu, 7 karet s obsahem, složení/alergeny/trvanlivost, ceník |
 | `objednavka.html` | Postup objednání, tlačítko na Google formulář, ceník, časté dotazy |
-| `doprava-a-platba.html` | Osobní předání v Praze, Zásilkovna / AlzaBox, platba převodem, ceník |
+| `doprava-a-platba.html` | Zásilkovna / AlzaBox, platba převodem, ceník |
 | `kontakt.html` | E-mail, Instagram, údaje prodávajícího |
 | `obchodni-podminky.html` | Kostra s nadpisy |
 | `ochrana-osobnich-udaju.html` | Kostra s nadpisy |

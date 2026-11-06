@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Doprava a platba – Big Chug</title>
-  <meta name="description" content="Osobní předání v Praze zdarma, Zásilkovna nebo AlzaBox za 89 Kč. Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.">
+  <meta name="description" content="Doprava Zásilkovnou nebo do AlzaBoxu za 89 Kč. Platba převodem předem. Celkem 579 Kč za box včetně dopravy.">
   <!-- Web zatím není zveřejněný: vyhledávače ho nemají indexovat. Před spuštěním smazat. -->
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#1B2A5C">
@@ -14,18 +14,18 @@
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Big Chug">
   <meta property="og:title" content="Doprava a platba – Big Chug">
-  <meta property="og:description" content="Osobní předání v Praze zdarma, Zásilkovna nebo AlzaBox za 89 Kč. Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.">
+  <meta property="og:description" content="Doprava Zásilkovnou nebo do AlzaBoxu za 89 Kč. Platba převodem předem. Celkem 579 Kč za box včetně dopravy.">
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=202611062134">
-  <script src="js/script.js?v=202611062134" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202611062144">
+  <script src="js/script.js?v=202611062144" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
 
   <header class="site-header" id="nahoru">
-    <p class="topbar">Osobně v Praze zdarma <span aria-hidden="true">★</span> Zásilkovna / AlzaBox 89 Kč</p>
+    <p class="topbar">Zásilkovna / AlzaBox 89 Kč <span aria-hidden="true">★</span> Platba převodem předem</p>
     <div class="container site-header__inner">
       <a class="logo" href="index.html"><svg class="star-icon logo__star" viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> <span class="logo__text"><span class="logo__name">Big Chug</span><span class="logo__slogan">Amerika v krabici.</span></span></a>
 
@@ -50,7 +50,7 @@
     <section class="page-hero">
       <div class="container">
         <h1 class="page-hero__title">Doprava a platba</h1>
-        <p class="page-hero__lead">Osobně v Praze zdarma, nebo Zásilkovnou či do AlzaBoxu za 89 Kč. Platí se převodem předem.</p>
+        <p class="page-hero__lead">Zásilkovnou nebo do AlzaBoxu za 89 Kč. Platí se převodem předem.</p>
       </div>
     </section>
     <div class="divider" aria-hidden="true"></div>
@@ -58,16 +58,8 @@
     <section class="section" id="doprava" aria-labelledby="doprava-nadpis">
       <div class="container">
         <h2 class="section-title" id="doprava-nadpis">Doprava</h2>
-        <p class="section-lead">Vyber si, jak se k tobě box dostane.</p>
-        <ul class="card-grid" data-reveal-group>
-          <li data-reveal>
-            <article class="card">
-              <span class="card__icon" aria-hidden="true">🤝</span>
-              <h3 class="card__title">Osobně v Praze</h3>
-              <p class="card__price">Zdarma</p>
-              <p>Box ti předáme osobně v Praze. Místo a čas spolu domluvíme e-mailem.</p>
-            </article>
-          </li>
+        <p class="section-lead">Box ti pošleme na výdejní místo, které si vybereš.</p>
+        <ul class="card-grid card-grid--single" data-reveal-group>
           <li data-reveal>
             <article class="card">
               <span class="card__icon" aria-hidden="true">📦</span>
@@ -90,7 +82,7 @@
           <h3 class="card__title">Převodem předem</h3>
           <p>Po potvrzení objednávky pošli platbu na účet:</p>
           <p class="account">[ČÍSLO ÚČTU]</p>
-          <p>Celkovou částku ti napíšeme v potvrzení objednávky. Box předáme nebo odešleme, jakmile platba dorazí na účet.</p>
+          <p>Celkovou částku ti napíšeme v potvrzení objednávky. Box odešleme, jakmile platba dorazí na účet.</p>
           <p class="todo">Jiné způsoby platby zatím nenabízíme.</p>
         </article>
       </div>
@@ -103,22 +95,16 @@
         <p class="section-lead">Ceny jsou za 1 box. Platí se převodem předem.</p>
         <div class="price-table-wrap" data-reveal>
           <table class="price-table">
-            <caption class="visually-hidden">Cena za 1 box podle způsobu předání</caption>
+            <caption class="visually-hidden">Cena za 1 box včetně dopravy</caption>
             <thead>
               <tr>
-                <th scope="col">Způsob předání</th>
+                <th scope="col">Způsob dopravy</th>
                 <th scope="col">Box</th>
                 <th scope="col">Doprava</th>
                 <th scope="col">Celkem</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Osobně v Praze</th>
-                <td data-label="Box">490 Kč</td>
-                <td data-label="Doprava">zdarma</td>
-                <td class="total" data-label="Celkem">490 Kč</td>
-              </tr>
               <tr>
                 <th scope="row">Zásilkovna / AlzaBox</th>
                 <td data-label="Box">490 Kč</td>
@@ -147,7 +133,7 @@
     <div class="container site-footer__grid">
       <div class="site-footer__brand">
         <p class="site-footer__logo"><svg class="star-icon " viewBox="-2 -2 28 28" aria-hidden="true" focusable="false"><path d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/></svg> Big Chug</p>
-        <p>Americký box plný limonád, sladkostí a popcornu. Osobně v Praze, nebo Zásilkovnou až k tobě.</p>
+        <p>Americký box plný limonád, sladkostí a popcornu. Zásilkovnou nebo do AlzaBoxu až k tobě.</p>
       </div>
 
       <nav aria-labelledby="paticka-stranky">

@@ -1449,6 +1449,12 @@ a:hover {
   list-style: none;
 }
 
+/* Jen jedna karta: vystředit, ne roztahovat do mřížky */
+.card-grid.card-grid--single {
+  grid-template-columns: minmax(0, 32rem);
+  justify-content: center;
+}
+
 .card {
   position: relative;
   height: 100%;
