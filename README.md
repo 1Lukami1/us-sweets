@@ -30,6 +30,9 @@ Platba převodem předem. Celkem 490 Kč osobně, 579 Kč se zásilkou.
 Hlavička a patička jsou na všech stránkách stejné. Když je měníš, uprav je ve všech 7 souborech.
 Aktivní stránka se v menu označuje atributem `aria-current="page"`.
 
+Odkazy na `css/style.css` a `js/script.js` mají v HTML číslo verze (`?v=…`). Po každé změně
+CSS nebo JS ho ve všech 7 stránkách zvyš, jinak může prohlížeč použít starý uložený soubor.
+
 ## Barvy a písma
 
 V `css/style.css` nahoře: červená `#D62839`, tmavě modrá `#1B2A5C`, krémová `#FFF4DC`,
