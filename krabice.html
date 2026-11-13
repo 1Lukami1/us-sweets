@@ -18,8 +18,8 @@
   <!-- DOPLNIT před spuštěním: og:url a og:image (musí to být absolutní adresy, např. https://www.example.cz/img/og.jpg) -->
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23D62839'/%3E%3Cpath fill='%23FFC93C' stroke='%231B2A5C' stroke-width='5' stroke-linejoin='round' d='M50 12L60 38.2L88 39.6L66.2 57.3L73.5 84.4L50 69L26.5 84.4L33.8 57.3L12 39.6L40 38.2Z'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=202611062144">
-  <script src="js/script.js?v=202611062144" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=202611131722">
+  <script src="js/script.js?v=202611131722" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
@@ -59,15 +59,32 @@
       <div class="container">
         <article class="box-card" data-reveal>
           <div class="box-card__media">
-            <div class="combo" role="img" aria-label="Zástupný obrázek: Americký box a sedm dobrot kolem něj">
-                <span class="combo__main" aria-hidden="true">📦</span>
-                <span class="combo__item" aria-hidden="true">🍓</span>
-                <span class="combo__item" aria-hidden="true">🫐</span>
-                <span class="combo__item" aria-hidden="true">🍇</span>
-                <span class="combo__item" aria-hidden="true">🍬</span>
-                <span class="combo__item" aria-hidden="true">🥜</span>
-                <span class="combo__item" aria-hidden="true">🍿</span>
-                <span class="combo__item" aria-hidden="true">🧀</span>
+            <div class="scene">
+              <svg class="scene__box scene__box--back" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+                <ellipse class="sb-ground" cx="222" cy="306" rx="196" ry="12"/>
+                <path class="sb-flap-back sb-ink" d="M106 40 L334 40 L348 90 L92 90 Z"/>
+                <path class="sb-flap sb-ink" d="M60 130 L92 90 L44 56 L10 100 Z"/>
+                <path class="sb-flap sb-ink" d="M380 130 L348 90 L396 56 L430 100 Z"/>
+                <path class="sb-inside sb-ink" d="M92 90 L348 90 L380 130 L60 130 Z"/>
+              </svg>
+                <span class="scene__item scene__item--dr-pepper"><img src="img/vystrizene/dr-pepper.webp" alt="Dr Pepper Strawberries &amp; Cream" width="274" height="547" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--fanta-berry"><img src="img/vystrizene/fanta-berry.webp" alt="Fanta Berry" width="287" height="553" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--nerds"><img src="img/vystrizene/nerds.webp" alt="Nerds jahoda a hrozny" width="500" height="505" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--sour-patch"><img src="img/vystrizene/sour-patch.webp" alt="Sour Patch Kids Blue Raspberry" width="412" height="516" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--reese-sticks"><img src="img/vystrizene/reese-sticks.webp" alt="Reese's Sticks King Size" width="569" height="138" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--popcorn-butter"><img src="img/vystrizene/popcorn-butter.webp" alt="Jolly Time Healthy Pop Butter" width="538" height="323" loading="lazy" decoding="async"></span>
+                <span class="scene__item scene__item--popcorn-cheez"><img src="img/vystrizene/popcorn-cheez.webp" alt="Jolly Time The Big Cheez" width="538" height="323" loading="lazy" decoding="async"></span>
+              <svg class="scene__box scene__box--front" viewBox="0 0 440 320" aria-hidden="true" focusable="false">
+                <rect class="sb-offset" x="70" y="140" width="320" height="170" rx="10"/>
+                <rect class="sb-kraft sb-ink" x="60" y="130" width="320" height="170" rx="10"/>
+                <rect class="sb-rim" x="63" y="133" width="314" height="12"/>
+                <rect class="sb-tape sb-ink-thin" x="196" y="127" width="48" height="42" rx="2"/>
+                <path class="sb-star sb-ink-thin" transform="translate(203 177) scale(1.42)" d="M12 0.5L14.8 8.1L22.9 8.4L16.6 13.5L18.8 21.3L12 16.8L5.2 21.3L7.4 13.5L1.1 8.4L9.2 8.1Z"/>
+                <g transform="rotate(-3 220 252)">
+                  <text class="sb-label-shadow" x="224" y="272" text-anchor="middle">BIG CHUG</text>
+                  <text class="sb-label" x="220" y="268" text-anchor="middle">BIG CHUG</text>
+                </g>
+              </svg>
             </div>
             <p class="sticker" aria-hidden="true"><span class="sticker__inner">490 Kč</span></p>
           </div>

@@ -1149,44 +1149,6 @@ a:hover {
     repeating-conic-gradient(from 0deg at 50% 50%, var(--yellow) 0deg 9deg, var(--yellow-light) 9deg 18deg);
 }
 
-.combo {
-  position: relative;
-  width: 17rem;
-  height: 15rem;
-  margin: var(--space-5) 0;
-}
-
-.combo__main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 5.5rem;
-  line-height: 1;
-  transform: translate(-50%, -50%);
-}
-
-.combo__item {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  width: 3.3rem;
-  height: 3.3rem;
-  border: var(--border);
-  border-radius: 50%;
-  background: var(--white);
-  font-size: 1.65rem;
-  line-height: 1;
-  box-shadow: var(--shadow-sm);
-}
-
-.combo__item:nth-child(2) { top: 0; left: 12%; transform: rotate(-12deg); }
-.combo__item:nth-child(3) { top: -4%; left: 50%; transform: translateX(-50%) rotate(8deg); }
-.combo__item:nth-child(4) { top: 2%; right: 10%; transform: rotate(14deg); }
-.combo__item:nth-child(5) { top: 40%; right: -4%; transform: rotate(-8deg); }
-.combo__item:nth-child(6) { bottom: 2%; right: 14%; transform: rotate(10deg); }
-.combo__item:nth-child(7) { bottom: -4%; left: 40%; transform: rotate(-6deg); }
-.combo__item:nth-child(8) { top: 40%; left: -4%; transform: rotate(12deg); }
-
 .box-card__media .sticker {
   top: 0.75rem;
   right: 0.75rem;
@@ -2186,20 +2148,6 @@ a:hover {
     flex-basis: calc(25% - var(--space-5) * 3 / 4);
   }
 
-  .combo {
-    width: 22rem;
-    height: 19rem;
-  }
-
-  .combo__main {
-    font-size: 7rem;
-  }
-
-  .combo__item {
-    width: 4.1rem;
-    height: 4.1rem;
-    font-size: 2.05rem;
-  }
 
   .steps--four {
     grid-template-columns: repeat(4, 1fr);
