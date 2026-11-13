@@ -425,14 +425,14 @@ a:hover {
 /* Logo Big Chug (logo/big-chug-logo.svg) */
 @media (max-width: 21.25em) {
   .logo__img {
-    height: 3.8rem !important;
+    height: 5rem !important;
   }
 }
 
 .logo__img {
   display: block;
   width: auto;
-  height: 4.2rem;
+  height: 5.6rem;
   transition: transform 0.2s ease;
 }
 
@@ -442,7 +442,7 @@ a:hover {
 
 @media (min-width: 56em) {
   .logo__img {
-    height: 4.6rem;
+    height: 6.4rem;
   }
 }
 
