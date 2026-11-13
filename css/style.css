@@ -425,14 +425,17 @@ a:hover {
 /* Logo Big Chug (logo/big-chug-logo.svg) */
 @media (max-width: 21.25em) {
   .logo__img {
-    height: 5rem !important;
+    height: 5.05rem !important;
   }
 }
 
+/* Logo je o 1,25rem vyšší než místo v liště: záporný okraj ho
+   nechá vyplnit i vnitřní odsazení lišty, takže lišta nezvětší výšku */
 .logo__img {
   display: block;
   width: auto;
-  height: 5.6rem;
+  height: 5.45rem;
+  margin-block: -0.625rem;
   transition: transform 0.2s ease;
 }
 
@@ -442,7 +445,7 @@ a:hover {
 
 @media (min-width: 56em) {
   .logo__img {
-    height: 6.4rem;
+    height: 5.85rem;
   }
 }
 
